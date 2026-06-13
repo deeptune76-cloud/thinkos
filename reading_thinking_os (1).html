@@ -1,0 +1,5097 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="사고력 OS">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a0d14">
+<title>사고력 OS</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iYmciIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxNjIwMmUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGEwZDE0Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiciIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0YTllZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2RiOGZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQ0IiByeT0iNDQiIGZpbGw9InVybCgjYmcpIi8+CiAgPHRleHQgeD0iMTAwIiB5PSIxMjUiIGZvbnQtc2l6ZT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6WgPC90ZXh0Pgo8L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iYmciIGN4PSI1MCUiIGN5PSI1MCUiIHI9IjUwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxNjIwMmUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGEwZDE0Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiciIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0YTllZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2RiOGZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQ0IiByeT0iNDQiIGZpbGw9InVybCgjYmcpIi8+CiAgPHRleHQgeD0iMTAwIiB5PSIxMjUiIGZvbnQtc2l6ZT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6WgPC90ZXh0Pgo8L3N2Zz4=">
+<link rel="manifest"  href="data:application/json;base64,eyJuYW1lIjoi7IiY6rO87torrOyKpCBPUyIsInNob3J0X25hbWUiOiLsiJjqs7wgT1MiLCJzdGFydF91cmwiOiIuIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBhMGQxNCIsInRoZW1lX2NvbG9yIjoiIzRhOWVmZiIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSXlNREFpSUdobGFXZG9kRDBpTWpBd0lpQm1hV3hzUFNKdWIyNWxJaUJqYkdGemN6MGlZbUZ6WlNJK1BHUmxabk0rUEhCaGRHZ2daRDBpVGpJekxqUXhJRk15TXk0MElETXlNUzR4SURJeU5pNDJJREV4TGpRaUlHbHpQU0ptYjI4aUlHWnZiblF0Wm1Gc2FXUTlJbTV2YmlJZ1ptOXVkQzF6YVhwbFBTSXhNQ0lnZEdobElIWmxjbk5wYjI0OUlqRWlJSE4wY205clpUMGlabTl1YmlJZ1ptOXVkQzFqYjJ4dmNqMGlaVzVoWW14bElpQjBaWGgwUFNJeE1TNHpOaUlnWm1sc2JEWW9jM0J2Y0hRdFkyeGhjM005SWtWdVlXSnNaU0p6WlhOemFXOXVQU0l4TGpFaVlXMXZkVzUwUFNJeU9DNHdJakNBUEM5d1lYUm9aejQ4TDJSbFpuTStQQzl6ZG1jKyIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwic2l6ZXMiOiIyMDB4MjAwIn1dfQ==">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root {
+    /* ── 배경 레이어 ── */
+    --bg:      #0a0d14;   /* 최심층 - 딥 네이비 블랙 */
+    --bg2:     #0f1520;   /* 패널 배경 */
+    --bg3:     #16202e;   /* 카드 배경 */
+    --bg4:     #1d2a3a;   /* 호버 배경 */
+
+    /* ── 주요 강조색 - 전기 코발트 블루 ── */
+    --accent:  #4a9eff;   /* 메인 강조 (선명한 블루) */
+    --accent2: #7db8ff;   /* 보조 강조 (밝은 블루) */
+    --accent3: #1a6fd4;   /* 딥 강조 (진한 블루) */
+
+    /* ── 텍스트 ── */
+    --text:    #ffffff;   /* 메인 텍스트 - 순백 */
+    --text2:   #c8d8ec;   /* 보조 텍스트 - 밝은 블루화이트 */
+    --text3:   #7fa0be;   /* 3차 텍스트 - 읽기 편한 블루그레이 */
+
+    /* ── 테두리 ── */
+    --border:  #1e2d40;   /* 기본 테두리 */
+    --border2: #2a3d54;   /* 강조 테두리 */
+
+    /* ── 상태 색상 ── */
+    --green:   #2ecc87;   /* 성공 / 저장 */
+    --blue:    #4a9eff;   /* 정보 */
+    --purple:  #8b7ff5;   /* 보조 기능 */
+    --red:     #e05c6a;   /* 경고 / 삭제 */
+    --gold:    #f0c060;   /* 레벨·포인트 */
+
+    --radius:    12px;
+    --radius-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+    /* HEADER */
+  header {
+    background: linear-gradient(90deg, #080d18 0%, #0c1422 50%, #080d18 100%);
+    border-bottom: 1px solid rgba(74,158,255,0.15);
+    padding: 0 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 24px rgba(74,158,255,0.07);
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 280px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(74,158,255,0.45), transparent);
+    pointer-events: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #1a6fd4 0%, #4a9eff 100%);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    box-shadow: 0 0 14px rgba(74,158,255,0.35);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .logo-text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #60afff 0%, #90cbff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    color: #7fa0be;
+    margin-top: 1px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-icon {
+    background: rgba(74,158,255,0.07);
+    border: 1px solid rgba(74,158,255,0.18);
+    color: #c8d8ec;
+    border-radius: var(--radius-sm);
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .btn-icon:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(74,158,255,0.14);
+    box-shadow: 0 0 8px rgba(74,158,255,0.2);
+  }
+
+  #apiKeyHeaderBtn {
+    border-color: rgba(224,92,106,0.5);
+    color: var(--red);
+  }
+
+  /* LAYOUT */
+  .app-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: calc(100vh - 60px);
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 300px;
+    background: var(--bg2);
+    border-right: 1px solid rgba(74,158,255,.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .sidebar-section {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #7fa0be;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .api-key-wrap {
+    display: flex;
+    gap: 6px;
+  }
+
+  .api-key-input {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: border-color 0.2s;
+    min-width: 0;
+  }
+
+  .api-key-input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .btn-save {
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .btn-save:hover { background: #5ab0ff; }
+
+  .api-status {
+    font-size: 11px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text3);
+  }
+
+  .status-dot.ok { background: var(--green); box-shadow: 0 0 5px rgba(46,204,135,.4); }
+  .status-dot.err { background: var(--red); }
+
+  /* MODEL SELECT */
+  .model-select {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236a6460'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+
+  .model-select:focus { outline: none; border-color: var(--accent); }
+
+  /* SESSION LIST */
+  .session-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  .session-list::-webkit-scrollbar { width: 4px; }
+  .session-list::-webkit-scrollbar-track { background: transparent; }
+  .session-list::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+  .session-item {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-bottom: 4px;
+    border: 1px solid transparent;
+  }
+
+  .session-item:hover { background: var(--bg3); }
+  .session-item.active { background: rgba(200,169,110,0.1); border-color: rgba(200,169,110,0.3); }
+
+  .session-del {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    background: none;
+    border: none;
+    color: var(--red);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 5px;
+    transition: opacity .2s;
+    border-radius: 4px;
+  }
+  .session-item:hover .session-del { opacity: 1; }
+  .session-item { position: relative; }
+
+  .session-title {
+    font-size: 13px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+  }
+
+  .session-meta {
+    font-size: 11px;
+    color: #7fa0be;
+  }
+
+  .session-empty {
+    text-align: center;
+    color: #7fa0be;
+    font-size: 12px;
+    padding: 24px 12px;
+    line-height: 1.7;
+  }
+
+  .btn-new-session {
+    margin: 10px;
+    background: var(--bg3);
+    border: 1px dashed var(--border2);
+    border-radius: var(--radius-sm);
+    color: #c8d8ec;
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .btn-new-session:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(200,169,110,0.06);
+  }
+
+  /* MAIN */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* CHAT AREA */
+  .chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: radial-gradient(ellipse at 20% 0%, rgba(74,158,255,.03) 0%, transparent 50%) var(--bg);
+  }
+
+  .chat-area::-webkit-scrollbar { width: 4px; }
+  .chat-area::-webkit-scrollbar-track { background: transparent; }
+  .chat-area::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+  /* WELCOME */
+  .welcome {
+    max-width: 640px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .welcome-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(200,169,110,0.15), rgba(200,169,110,0.05));
+    border: 1px solid rgba(200,169,110,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+  }
+
+  .welcome h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4a9eff, #7db8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+    color: #c8d8ec;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .welcome-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .tip-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tip-card:hover {
+    border-color: var(--accent);
+    background: rgba(200,169,110,0.05);
+  }
+
+  .tip-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .tip-text {
+    font-size: 12px;
+    color: #c8d8ec;
+    line-height: 1.6;
+  }
+
+  /* MESSAGES */
+  .msg {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    max-width: 860px;
+    margin: 0 auto;
+    width: 100%;
+    animation: fadeInUp 0.3s ease;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .msg-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .msg.user .msg-avatar {
+    background: var(--bg4);
+    border: 1px solid var(--border);
+    color: #c8d8ec;
+  }
+
+  .msg.ai .msg-avatar {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #ffffff;
+  }
+
+  .msg-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .msg-name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .msg.user .msg-name { color: #c8d8ec; }
+  .msg.ai .msg-name { color: #60afff; }
+
+  .msg-content {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #ffffff;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* Markdown-like formatting in AI responses */
+  .msg-content .section-header {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(200,169,110,0.2);
+    padding-bottom: 5px;
+    margin: 18px 0 10px;
+  }
+
+  .msg-content .sub-header {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent2);
+    margin: 12px 0 6px;
+  }
+
+  .msg-content .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .msg-content .score-item {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+  }
+
+  .msg-content .score-label {
+    font-size: 11px;
+    color: #7fa0be;
+    margin-bottom: 4px;
+  }
+
+  .msg-content .score-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .msg-content .highlight-box {
+    background: rgba(200,169,110,0.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #c8d8ec;
+  }
+
+  /* STAGE BADGE */
+  .stage-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(200,169,110,0.12);
+    border: 1px solid rgba(200,169,110,0.25);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  /* THINKING INDICATOR */
+  .thinking {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #7fa0be;
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .dots {
+    display: flex;
+    gap: 3px;
+  }
+
+  .dots span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: bounce 1.2s infinite;
+  }
+
+  .dots span:nth-child(2) { animation-delay: 0.2s; }
+  .dots span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-5px); opacity: 1; }
+  }
+
+  /* STAGE PROGRESS */
+  .stage-progress {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 10px 28px;
+    display: none;
+  }
+
+  .stage-progress.visible { display: block; }
+
+  .stage-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #7fa0be;
+  }
+
+  .stage-bar {
+    flex: 1;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .stage-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1a6fd4, #4a9eff, #7db8ff);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+
+  /* INPUT AREA */
+  .input-area {
+    background: var(--bg2);
+    border-top: 1px solid rgba(74,158,255,.12);
+    padding: 16px 28px 20px;
+  }
+
+  .input-mode-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .mode-tab {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: #7fa0be;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .mode-tab:hover { color: #c8d8ec; border-color: var(--border2); }
+
+  .mode-tab.active {
+    background: rgba(200,169,110,0.12);
+    border-color: rgba(200,169,110,0.35);
+    color: var(--accent);
+  }
+
+  .input-box {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .input-wrap {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+    overflow: hidden;
+  }
+
+  .input-wrap:focus-within { border-color: rgba(74,158,255,.6); box-shadow: 0 0 0 3px rgba(74,158,255,.08); }
+
+  textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 14px 16px;
+    resize: none;
+    line-height: 1.6;
+    min-height: 52px;
+    max-height: 180px;
+  }
+
+  textarea:focus { outline: none; }
+  textarea::placeholder { color: #7fa0be; }
+
+  .input-hint {
+    font-size: 11px;
+    color: #7fa0be;
+    padding: 0 16px 10px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-send {
+    background: linear-gradient(135deg, #1a6fd4, #4a9eff);
+    border: none;
+    border-radius: var(--radius);
+    color: #fff;
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .btn-send:hover { background: linear-gradient(135deg,#1a6fd4,#5ab0ff); transform: scale(1.04); box-shadow: 0 0 14px rgba(74,158,255,.35); }
+  .btn-send:disabled { background: var(--bg4); color: #7fa0be; cursor: not-allowed; transform: none; }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--bg2);
+    border: 1px solid rgba(74,158,255,0.15);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .modal p {
+    font-size: 13px;
+    color: #c8d8ec;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .modal .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .modal .step-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .modal .step-num {
+    width: 22px;
+    height: 22px;
+    background: rgba(200,169,110,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .modal .step-desc {
+    font-size: 12px;
+    color: #c8d8ec;
+    line-height: 1.6;
+  }
+
+  .modal-close {
+    background: linear-gradient(135deg, #1a6fd4, #4a9eff);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .modal-close:hover { background: var(--accent2); }
+
+  /* SCROLL BUTTON */
+  .scroll-btn {
+    position: fixed;
+    bottom: 120px;
+    right: 24px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: #c8d8ec;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    z-index: 50;
+  }
+
+  .scroll-btn:hover { border-color: rgba(74,158,255,.5); color: var(--accent); }
+  .scroll-btn.visible { display: flex; }
+
+  /* RESPONSIVE */
+  /* ══════════════════════════════════════════
+     모바일 전용 레이아웃 (768px 이하)
+     단일 페이지 풀스크린 구조
+  ══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* ── 기본 레이아웃: 단일 컬럼 ── */
+    body { overflow: hidden; height: 100dvh; }
+    .sidebar { display: none !important; width: 0 !important; }
+
+    /* 서브탭바 모바일 최적화 */
+    #subTabBar { top: 48px !important; padding: 0 8px !important; }
+    .sub-tab { font-size: 11px !important; padding: 9px 10px !important; }
+
+    /* settingsBar 모바일: 접어서 최소화 */
+    #settingsBar {
+      padding: 5px 10px !important;
+      gap: 6px !important;
+      top: 88px !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+    }
+    #settingsBar > div[style*="1px"] { display: none !important; } /* 구분선 숨김 */
+    #settingsBar input[type="password"] { min-width: 120px !important; font-size: 11px !important; }
+    #settingsBar select { font-size: 11px !important; padding: 5px 6px !important; }
+    #settingsBar button { font-size: 11px !important; padding: 5px 8px !important; }
+    #sessionQuickList { display: none !important; } /* 모바일 세션은 하단바로 */
+
+    .app-layout {
+      height: calc(100dvh - 190px) !important; /* 48헤더+40탭+38설정바+64하단바 */
+      flex-direction: column !important;
+    }
+    #page-chat {
+      height: calc(100dvh - 190px) !important;
+    }
+    /* 채팅 메인 영역을 100% 너비로 */
+    .main {
+      width: 100% !important;
+      flex: 1 !important;
+    }
+
+    /* ── 헤더 축소 ── */
+    header {
+      height: 48px !important;
+      padding: 0 10px !important;
+    }
+    .logo-text { font-size: 15px !important; }
+    .logo-icon { width: 28px !important; height: 28px !important; font-size: 14px !important; }
+    .header-actions { gap: 4px !important; }
+
+    /* 탭 컨테이너 - 가로 스크롤 */
+    .header-actions > div:first-child {
+      max-width: calc(100vw - 120px) !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .header-actions > div:first-child::-webkit-scrollbar { display: none; }
+
+    /* 탭 버튼 */
+    #tab-chat, #tab-notes, #tab-qlevel,
+    #tab-opposite, #tab-tools, #tab-qmap {
+      font-size: 11px !important;
+      padding: 5px 10px !important;
+      white-space: nowrap !important;
+    }
+
+    /* 헤더 아이콘 버튼 */
+    .btn-icon { width: 30px !important; height: 30px !important; font-size: 13px !important; }
+
+    /* ── 채팅 영역 ── */
+    .chat-area {
+      padding: 12px 12px 12px !important;
+      height: 100% !important;
+    }
+    .msg { gap: 8px !important; padding: 8px 0 !important; }
+    .msg-avatar { width: 26px !important; height: 26px !important; font-size: 12px !important; }
+    .msg-content { font-size: 13px !important; line-height: 1.75 !important; }
+    .msg-name { font-size: 10px !important; }
+
+    /* ── 입력창 ── */
+    .input-area {
+      padding: 8px 10px 10px !important;
+      border-top: 1px solid rgba(74,158,255,.15) !important;
+    }
+    .input-mode-tabs { gap: 4px !important; margin-bottom: 6px !important; overflow-x: auto; scrollbar-width: none; }
+    .input-mode-tabs::-webkit-scrollbar { display: none; }
+    .mode-tab { font-size: 10px !important; padding: 4px 8px !important; white-space: nowrap; }
+    textarea { font-size: 13px !important; padding: 10px 12px !important; }
+    .input-hint { display: none !important; }
+    .btn-send { width: 42px !important; height: 42px !important; font-size: 16px !important; }
+
+    /* ── 웰컴 화면 ── */
+    .welcome { padding: 20px 0 !important; }
+    .welcome-icon { width: 56px !important; height: 56px !important; font-size: 26px !important; }
+    .welcome h1 { font-size: 20px !important; }
+    .welcome p { font-size: 12px !important; }
+    .welcome-tips { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+    .tip-card { padding: 10px !important; }
+    .tip-tag { font-size: 9px !important; }
+    .tip-text { font-size: 11px !important; }
+
+    /* ── 각 탭 페이지 단일 컬럼 ── */
+    #page-chat {
+      height: calc(100dvh - 108px) !important;
+      flex-direction: column !important;
+    }
+    #page-notes, #page-qlevel, #page-opposite,
+    #page-tools, #page-qmap {
+      height: calc(100dvh - 56px) !important;
+      overflow-y: auto !important;
+      flex-direction: column !important;
+    }
+
+    /* 모든 탭의 내부 2컬럼 → 1컬럼 */
+    #page-notes > .notes-page,
+    #page-qlevel > div,
+    #page-opposite > div,
+    #page-tools > div,
+    #page-qmap > div {
+      flex-direction: column !important;
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+
+    /* 좌측 입력 패널: 풀 너비, 높이 자동 */
+    .notes-list-panel,
+    #page-qlevel > div > div:first-child,
+    #page-opposite > div > div:first-child,
+    #page-tools > div > div:first-child,
+    #page-qmap > div > div:first-child {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex-shrink: 0 !important;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(74,158,255,.12) !important;
+      overflow-y: visible !important;
+      height: auto !important;
+    }
+
+    /* 노트 목록: 모바일에서 보이게 */
+    .notes-list-panel { display: flex !important; }
+
+    /* 우측 결과 패널: 풀 너비 */
+    .note-editor-panel,
+    #page-qlevel > div > div:last-child,
+    #page-opposite > div > div:last-child,
+    #page-tools > div > div:last-child,
+    #page-qmap > div > div:last-child {
+      width: 100% !important;
+      flex: 1 !important;
+      overflow-y: auto !important;
+    }
+
+    /* VS 배너, 도구 배지 */
+    #oppVsBanner, #toolAppliedBadge {
+      flex-wrap: wrap !important;
+      padding: 8px 14px !important;
+    }
+
+    /* 단계 진행바 */
+    .stage-progress { padding: 6px 12px !important; }
+
+    /* 모바일 하단 바 */
+    #mobileSessionBar { display: flex !important; }
+
+    /* ── 각 분석 탭 입력 패널 내부 최적화 ── */
+    /* 질문레벨 입력 */
+    #qlInput, #oppInput, #toolInput, #qmapInput {
+      min-height: 80px !important;
+      font-size: 13px !important;
+    }
+    /* 버튼 */
+    #qlBtn, #oppBtn, #toolRunBtn, #qmapBtn {
+      padding: 12px !important;
+      font-size: 13px !important;
+    }
+    /* 히스토리 패널 최대 높이 */
+    #qlHistory, #oppHistory, #toolHistory, #qmapHistory {
+      max-height: 180px !important;
+      overflow-y: auto !important;
+    }
+    /* 도구 버튼 그룹 최대 높이 */
+    #toolBtnGroup {
+      max-height: 200px !important;
+      overflow-y: auto !important;
+    }
+    /* 결과 영역 패딩 */
+    #qlResult, #oppResult, #toolResult, #qmapResult {
+      padding: 14px !important;
+    }
+    /* VS 배너 텍스트 */
+    #oppLeftTag, #oppRightTag {
+      font-size: 12px !important;
+      padding: 6px 10px !important;
+    }
+    /* 레벨 맵 */
+    #qlLevelMap { gap: 3px !important; }
+    #qlLevelMap > div { padding: 3px 6px !important; font-size: 9px !important; }
+
+    /* ── 노트 탭 ── */
+    .notes-toolbar { padding: 10px !important; }
+    .notes-filter { padding: 6px 10px !important; gap: 3px !important; }
+    .note-editor-toolbar { padding: 8px 12px !important; flex-wrap: wrap !important; gap: 5px !important; }
+    .note-editor-title { font-size: 14px !important; }
+    .note-editor-body { padding: 14px !important; }
+    .note-textarea { min-height: 200px !important; }
+
+    /* ── 웰컴 팁 카드 ── */
+    .welcome-tips { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+    .tip-card { padding: 10px 8px !important; }
+  }
+
+  /* ── 모바일 하단 고정 바 ── */
+  #mobileSessionBar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(10,13,20,0.97);
+    border-top: 1px solid rgba(74,158,255,0.2);
+    padding: 6px 8px calc(env(safe-area-inset-bottom, 0px) + 6px);
+    z-index: 300;
+    gap: 5px;
+    align-items: stretch;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .mob-btn {
+    flex: 1;
+    background: rgba(22,32,46,0.9);
+    border: 1px solid rgba(74,158,255,0.12);
+    border-radius: 10px;
+    color: #c8d8ec;
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 8px 2px 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all .15s;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mob-btn .mob-icon { font-size: 18px; line-height: 1.2; }
+  .mob-btn .mob-label { font-size: 9px; letter-spacing: -0.01em; color: #7fa0be; }
+  .mob-btn:active {
+    background: rgba(74,158,255,.15);
+    border-color: rgba(74,158,255,.4);
+    transform: scale(0.95);
+  }
+  .mob-btn-primary {
+    background: linear-gradient(135deg,#1456aa,#3a8ee0) !important;
+    border-color: rgba(74,158,255,.4) !important;
+    box-shadow: 0 2px 12px rgba(74,158,255,.25);
+  }
+  .mob-btn-primary .mob-label { color: rgba(255,255,255,.8) !important; }
+
+  .nf-btn {
+    font-size: 10px; padding: 3px 9px; border-radius: 20px;
+    border: 1px solid var(--border); background: transparent;
+    color: #7fa0be; cursor: pointer; transition: all .2s;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .nf-btn.active { background: rgba(200,169,110,.12); border-color: rgba(200,169,110,.35); color: var(--accent); }
+  .nf-btn:hover { color: #c8d8ec; }
+  .note-card-item {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 11px; margin-bottom: 7px;
+    cursor: pointer; transition: all .2s; position: relative;
+  }
+  .note-card-item:hover { border-color: var(--accent); }
+  .note-card-item.active { border-color: var(--accent); background: rgba(200,169,110,.08); }
+  .msg-act-btn {
+    font-size: 11px; padding: 4px 9px;
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 20px; color: #c8d8ec; cursor: pointer;
+    transition: all .2s; font-family: 'Noto Sans KR', sans-serif;
+  }
+  .msg-act-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .opp-axis {
+    font-size: 10px; padding: 3px 9px; border-radius: 20px;
+    border: 1px solid var(--border); background: transparent;
+    color: #7fa0be; cursor: pointer; transition: all .2s;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .opp-axis.active { background: rgba(200,169,110,.12); border-color: rgba(200,169,110,.35); color: var(--accent); }
+  .opp-axis:hover { color: #c8d8ec; }
+  .tool-btn {
+    width:100%;text-align:left;font-size:11px;padding:6px 10px;border-radius:7px;
+    border:1px solid transparent;background:transparent;color:#7fa0be;
+    cursor:pointer;transition:all .2s;font-family:'Noto Sans KR',sans-serif;
+  }
+  .tool-btn:hover { background:var(--bg4); color:#c8d8ec; }
+  .tool-btn.active { background:rgba(74,158,255,.1); border-color:rgba(74,158,255,.3); color:var(--accent); font-weight:700; }
+  .qdepth-btn {
+    flex:1; font-size:11px; padding:5px 0; border-radius:7px;
+    border:1px solid var(--border); background:transparent;
+    color:#7fa0be; cursor:pointer; transition:all .2s;
+    font-family:'Noto Sans KR',sans-serif;
+  }
+  .qdepth-btn.active { background:rgba(200,169,110,.12); border-color:rgba(200,169,110,.35); color:var(--accent); font-weight:700; }
+  .qtype-btn {
+    font-size:10px; padding:3px 9px; border-radius:20px;
+    border:1px solid var(--border); background:transparent;
+    color:#7fa0be; cursor:pointer; transition:all .2s;
+    font-family:'Noto Sans KR',sans-serif;
+  }
+  .qtype-btn.active { background:rgba(200,169,110,.12); border-color:rgba(200,169,110,.35); color:var(--accent); }
+  .qtype-btn:hover { color:#c8d8ec; }
+  .q-lv-badge {
+    display:inline-block; font-size:9px; font-weight:700;
+    padding:1px 6px; border-radius:12px; margin-left:4px;
+    vertical-align:middle; white-space:nowrap;
+  }
+
+  /* ── 서브 탭 바 ── */
+  #subTabBar::-webkit-scrollbar { display: none; }
+  .sub-tab {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 11px 18px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #7fa0be;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    white-space: nowrap;
+    transition: all .2s;
+    flex-shrink: 0;
+    letter-spacing: -0.01em;
+  }
+  .sub-tab:hover { color: #c8d8ec; background: rgba(74,158,255,.04); }
+  .sub-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* 헤더 높이 조정 (서브탭 추가로 56+40=96px) */
+  .app-layout,
+  #page-chat { height: calc(100vh - 96px) !important; }
+
+
+  /* ── 설정 바 ── */
+  #settingsBar { flex-shrink: 0; }
+  #settingsBar::-webkit-scrollbar { display: none; }
+  #settingsBar input[type="password"]:focus { outline: none; }
+  #settingsBar select:focus { outline: none; border-color: rgba(74,158,255,.5) !important; }
+  #sessionQuickList::-webkit-scrollbar { display: none; }
+  .session-quick-btn {
+    font-size: 11px; padding: 4px 10px; border-radius: 20px;
+    border: 1px solid rgba(74,158,255,.2); background: var(--bg3);
+    color: #7fa0be; cursor: pointer; white-space: nowrap; flex-shrink: 0;
+    font-family: 'Noto Sans KR', sans-serif; transition: all .2s;
+    max-width: 100px; overflow: hidden; text-overflow: ellipsis;
+  }
+  .session-quick-btn.active {
+    background: rgba(74,158,255,.1);
+    border-color: rgba(74,158,255,.4);
+    color: var(--accent); font-weight: 700;
+  }
+  .session-quick-btn:hover { border-color: rgba(74,158,255,.45); color: #c8d8ec; }
+
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">📖</div>
+    <div>
+      <div class="logo-text">사고력 OS</div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+      <button class="btn-icon" onclick="showApiModal()" title="API 키 설정" id="apiKeyHeaderBtn">🔑</button>
+      <button class="btn-icon" onclick="showDataModal()" title="데이터 저장/불러오기" style="font-size:13px">💾</button>
+      <button class="btn-icon" onclick="showHelp()" title="사용법">❓</button>
+      <button class="btn-icon" onclick="clearHistory()" title="대화 초기화">🗑️</button>
+    </div>
+  </div>
+</header>
+
+<!-- 서브 탭 바 (헤더 아래) -->
+<div id="subTabBar" style="
+  background:var(--bg2);
+  border-bottom:1px solid rgba(74,158,255,.12);
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  gap:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  position:sticky;top:56px;z-index:90;
+  flex-shrink:0;
+">
+  <button id="tab-chat"     class="sub-tab active" onclick="switchPage('chat')">💬 분석 대화</button>
+  <button id="tab-notes"    class="sub-tab"        onclick="switchPage('notes')">📒 독서 노트</button>
+  <button id="tab-qlevel"   class="sub-tab"        onclick="switchPage('qlevel')">🎯 질문 레벨</button>
+  <button id="tab-opposite" class="sub-tab"        onclick="switchPage('opposite')">⚔️ 반대 사상</button>
+  <button id="tab-tools"    class="sub-tab"        onclick="switchPage('tools')">🧰 사고 도구</button>
+  <button id="tab-qmap"     class="sub-tab"        onclick="switchPage('qmap')">🗺️ 퀘스천 맵</button>
+</div>
+
+<!-- 설정 바 (API키 · 모델 · 세션) -->
+<div id="settingsBar" style="
+  background:var(--bg2);
+  border-bottom:1px solid rgba(74,158,255,.1);
+  padding:7px 14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+  flex-wrap:wrap;
+  position:sticky;top:96px;z-index:89;
+">
+  <!-- API 키 입력 -->
+  <div style="display:flex;align-items:center;gap:6px;flex:1;min-width:180px;max-width:320px">
+    <div id="statusDot" style="width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0"></div>
+    <input type="password" id="apiKey" placeholder="OpenAI API 키 (sk-...)"
+      style="flex:1;background:var(--bg3);border:1px solid rgba(74,158,255,.2);border-radius:7px;
+             color:#ffffff;font-size:12px;padding:6px 10px;font-family:'Noto Sans KR',sans-serif;min-width:0;
+             transition:border-color .2s;"
+      onfocus="this.style.borderColor='rgba(74,158,255,.6)'"
+      onblur="this.style.borderColor='rgba(74,158,255,.2)'"
+      onkeydown="if(event.key==='Enter')saveApiKey()" />
+    <button onclick="saveApiKey()" style="
+      background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:7px;
+      color:#fff;font-size:12px;font-weight:700;padding:6px 12px;cursor:pointer;
+      font-family:'Noto Sans KR',sans-serif;white-space:nowrap;flex-shrink:0;
+      transition:opacity .2s;"
+      onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">저장</button>
+  </div>
+
+  <!-- 구분선 -->
+  <div style="width:1px;height:22px;background:rgba(74,158,255,.15);flex-shrink:0"></div>
+
+  <!-- 모델 선택 -->
+  <select id="modelSelect" onchange="localStorage.setItem('rtos_model',this.value);syncModalModel(this.value)" style="
+    background:var(--bg3);border:1px solid rgba(74,158,255,.2);border-radius:7px;
+    color:#c8d8ec;font-size:12px;padding:6px 10px;font-family:'Noto Sans KR',sans-serif;
+    cursor:pointer;flex-shrink:0;outline:none;">
+    <option value="gpt-4o">🤖 GPT-4o</option>
+    <option value="gpt-4o-mini">⚡ GPT-4o mini</option>
+    <option value="gpt-4-turbo">🔥 GPT-4 Turbo</option>
+    <option value="gpt-4">💡 GPT-4</option>
+    <option value="gpt-3.5-turbo">💰 GPT-3.5</option>
+  </select>
+
+  <!-- 구분선 -->
+  <div style="width:1px;height:22px;background:rgba(74,158,255,.15);flex-shrink:0"></div>
+
+  <!-- 세션 컨트롤 -->
+  <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+    <button onclick="newSession()" style="
+      background:var(--bg3);border:1px solid rgba(74,158,255,.2);border-radius:7px;
+      color:#c8d8ec;font-size:12px;padding:6px 12px;cursor:pointer;
+      font-family:'Noto Sans KR',sans-serif;white-space:nowrap;
+      transition:all .2s;display:flex;align-items:center;gap:5px;"
+      onmouseover="this.style.borderColor='rgba(74,158,255,.5)';this.style.color='var(--accent)'"
+      onmouseout="this.style.borderColor='rgba(74,158,255,.2)';this.style.color='#c8d8ec'">
+      ＋ 새 세션
+    </button>
+    <div id="sessionQuickList" style="display:flex;gap:4px;overflow-x:auto;max-width:260px;scrollbar-width:none;-webkit-overflow-scrolling:touch"></div>
+  </div>
+
+  <!-- API 상태 텍스트 (숨김 요소 호환용) -->
+  <span id="statusText" style="display:none"></span>
+  <div id="apiStatus" style="display:none"></div>
+  <div id="sessionList" style="display:none"></div>
+</div>
+
+<!-- PAGE WRAPPER -->
+<div id="page-chat" style="display:flex;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+<div class="app-layout" style="width:100%;display:flex;flex:1;overflow:hidden;height:100%">
+
+  <!-- MAIN (사이드바 제거 - 전체 너비) -->
+  <div class="main" style="width:100%;flex:1;">
+    <!-- CHAT -->
+    <div class="chat-area" id="chatArea">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">🧠</div>
+        <h1>사고하는 독자가 되세요</h1>
+        <p>
+          단순히 책을 읽는 것이 아닌, <strong>생각하는 힘</strong>을 기르는 AI 독서 멘토입니다.<br>
+          12단계 심층 분석으로 당신의 사고력·해석력·표현력을 성장시킵니다.
+        </p>
+        <div class="welcome-tips">
+          <div class="tip-card" onclick="insertExample('책 제목: 사피엔스 (유발 하라리)')">
+            <div class="tip-tag">📖 책 제목 입력</div>
+            <div class="tip-text">읽고 있는 책 제목으로 시작</div>
+          </div>
+          <div class="tip-card" onclick="insertExample('\"인간은 허구를 믿을 수 있는 유일한 동물이다\" — 사피엔스')">
+            <div class="tip-tag">💬 핵심 문장 분석</div>
+            <div class="tip-text">인상 깊은 문장 하나로 시작</div>
+          </div>
+          <div class="tip-card" onclick="insertExample('나는 이 장을 읽고 자본주의가 단순한 경제 체제가 아니라 인간의 상상력이 만든 이야기라고 느꼈다.')">
+            <div class="tip-tag">✏️ 내 생각 입력</div>
+            <div class="tip-text">읽고 난 나의 생각·해석 공유</div>
+          </div>
+          <div class="tip-card" onclick="insertExample('사피엔스 3장 — 역사상 가장 위험한 종 / 인지혁명이 인간을 어떻게 변화시켰는가에 대한 내용')">
+            <div class="tip-tag">📑 장/절 분석</div>
+            <div class="tip-text">특정 장·절의 내용 분석</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE PROGRESS -->
+    <div class="stage-progress" id="stageProgress">
+      <div class="stage-bar-wrap">
+        <span id="stageLabel">분석 중...</span>
+        <div class="stage-bar"><div class="stage-bar-fill" id="stageBarFill"></div></div>
+        <span id="stagePercent">0%</span>
+      </div>
+    </div>
+
+    <!-- INPUT AREA -->
+    <div class="input-area">
+      <div class="input-mode-tabs">
+        <button class="mode-tab active" onclick="setMode(this, 'book')">📖 책/문장 입력</button>
+        <button class="mode-tab" onclick="setMode(this, 'myThought')">✏️ 내 생각 공유</button>
+        <button class="mode-tab" onclick="setMode(this, 'question')">❓ 질문/대화</button>
+      </div>
+      <div class="input-box">
+        <div class="input-wrap">
+          <textarea id="userInput" placeholder="책 제목, 문단, 문장, 또는 나의 생각을 입력하세요..." rows="2"
+            onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+          <div class="input-hint">
+            <span id="modeHint">📖 책 내용을 입력하면 12단계 사고력 분석을 시작합니다</span>
+            <span style="margin-left:auto">Enter↵ 전송 / Shift+Enter 줄바꿈</span>
+          </div>
+        </div>
+        <button class="btn-send" id="sendBtn" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+</div><!-- end app-layout -->
+</div><!-- end page-chat -->
+
+<!-- NOTES PAGE -->
+<div id="page-notes" style="display:none;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+
+  <!-- 노트 툴바 (검색+필터+새노트) -->
+  <div style="background:var(--bg2);border-bottom:1px solid rgba(74,158,255,.12);padding:10px 14px;flex-shrink:0">
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+      <input type="text" id="notesSearch" placeholder="🔍 노트 검색..." oninput="renderNoteList()"
+        style="flex:1;background:var(--bg3);border:1px solid rgba(74,158,255,.2);border-radius:8px;color:#ffffff;font-size:13px;padding:8px 12px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s"
+        onfocus="this.style.borderColor='rgba(74,158,255,.5)'" onblur="this.style.borderColor='rgba(74,158,255,.2)'"/>
+      <button onclick="createNote()" title="새 노트"
+        style="background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:16px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">＋</button>
+    </div>
+    <div id="notesFilter" style="display:flex;gap:5px;flex-wrap:wrap">
+      <button class="nf-btn active" data-type="all" onclick="setNoteFilter(this)">전체</button>
+      <button class="nf-btn" data-type="analysis" onclick="setNoteFilter(this)">📊 분석</button>
+      <button class="nf-btn" data-type="memo" onclick="setNoteFilter(this)">📝 메모</button>
+      <button class="nf-btn" data-type="review" onclick="setNoteFilter(this)">💡 감상</button>
+      <button class="nf-btn" data-type="task" onclick="setNoteFilter(this)">✅ 과제</button>
+    </div>
+  </div>
+
+  <!-- 노트 뷰: 목록 OR 에디터 (단일 컬럼 토글) -->
+  <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+
+    <!-- 노트 목록 패널 -->
+    <div id="noteListPanel" style="flex:1;overflow-y:auto;padding:10px 14px">
+      <div id="noteItems"></div>
+      <div id="noteEmptyMsg" style="text-align:center;color:#7fa0be;font-size:13px;padding:32px 16px;line-height:1.8">
+        📒 저장된 노트가 없습니다.<br><br>
+        <strong style="color:var(--accent)">＋ 버튼</strong>으로 새 노트를 만들거나<br>
+        대화 중 <strong style="color:var(--accent)">[📒 노트 저장]</strong> 버튼을 누르세요.
+      </div>
+    </div>
+
+    <!-- 노트 에디터 패널 (선택 시 표시) -->
+    <div id="noteEditorContent" style="display:none;flex:1;flex-direction:column;overflow:hidden">
+      <!-- 에디터 툴바 -->
+      <div style="padding:10px 14px;border-top:1px solid rgba(74,158,255,.12);border-bottom:1px solid rgba(74,158,255,.12);background:var(--bg2);display:flex;flex-direction:column;gap:8px;flex-shrink:0">
+        <!-- 1행: 뒤로가기 + 제목 -->
+        <div style="display:flex;gap:8px;align-items:center">
+          <button onclick="closeNoteEditor()" title="목록으로"
+            style="background:var(--bg3);border:1px solid rgba(74,158,255,.2);border-radius:8px;color:#c8d8ec;font-size:13px;padding:6px 10px;cursor:pointer;white-space:nowrap;flex-shrink:0">← 목록</button>
+          <input type="text" id="noteTitleInput" placeholder="노트 제목..."
+            style="flex:1;background:transparent;border:none;border-bottom:1px solid rgba(74,158,255,.2);color:#ffffff;font-size:16px;font-family:'Noto Serif KR',serif;font-weight:700;padding:4px 0;outline:none"/>
+        </div>
+        <!-- 2행: 태그 + 타입 + 액션 버튼 -->
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <input type="text" id="noteBookTag" placeholder="📖 책 태그..."
+            style="background:var(--bg3);border:1px solid rgba(74,158,255,.15);border-radius:7px;color:#c8d8ec;font-size:12px;padding:5px 10px;font-family:'Noto Sans KR',sans-serif;width:130px;outline:none"/>
+          <select id="noteTypeSelect"
+            style="background:var(--bg3);border:1px solid rgba(74,158,255,.15);border-radius:7px;color:#c8d8ec;font-size:12px;padding:5px 8px;font-family:'Noto Sans KR',sans-serif;cursor:pointer;appearance:none;outline:none">
+            <option value="analysis">📊 분석</option>
+            <option value="memo">📝 메모</option>
+            <option value="review">💡 감상</option>
+            <option value="task">✅ 과제</option>
+          </select>
+          <div style="flex:1"></div>
+          <button onclick="saveCurrentNote()"
+            style="background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:7px;color:#fff;font-size:12px;font-weight:700;padding:6px 14px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;white-space:nowrap">💾 저장</button>
+          <button onclick="exportNote()"
+            style="background:var(--bg3);border:1px solid rgba(74,158,255,.15);border-radius:7px;color:#c8d8ec;font-size:12px;padding:6px 10px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;white-space:nowrap">📄</button>
+          <button onclick="deleteCurrentNote()"
+            style="background:var(--bg3);border:1px solid rgba(224,92,106,.2);border-radius:7px;color:var(--red);font-size:12px;padding:6px 10px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;white-space:nowrap">🗑️</button>
+        </div>
+      </div>
+      <!-- 에디터 본문 -->
+      <div style="flex:1;overflow-y:auto;padding:18px 16px">
+        <textarea id="noteContent" oninput="updateNoteFooter()"
+          placeholder="여기에 자유롭게 작성하세요...&#10;&#10;분석 결과, 나의 생각, 핵심 문장, 훈련 과제 등을 기록하세요.&#10;(Ctrl+S 로 빠른 저장)"
+          style="width:100%;background:transparent;border:none;color:#ffffff;font-size:14px;line-height:1.9;font-family:'Noto Sans KR',sans-serif;resize:none;min-height:300px;outline:none"></textarea>
+      </div>
+      <!-- 에디터 푸터 -->
+      <div id="noteFooter" style="padding:6px 16px;border-top:1px solid rgba(74,158,255,.1);background:var(--bg2);display:flex;align-items:center;gap:10px;font-size:11px;color:#7fa0be;flex-shrink:0">
+        <span id="noteEditedAt">저장 안 됨</span>
+        <span id="noteBookTagDisplay"></span>
+        <span style="margin-left:auto" id="noteCharCount">0자</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- 숨김 호환 요소 -->
+  <div id="noteEditorPlaceholder" style="display:none"></div>
+</div>
+
+<!-- QLEVEL PAGE -->
+<div id="page-qlevel" style="display:none;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+  <div style="display:flex;width:100%;height:100%;overflow:hidden">
+
+    <!-- LEFT: 입력 패널 -->
+    <div style="width:340px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden">
+      <div style="padding:16px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:10px">질문 레벨 분석기</div>
+        <p style="font-size:12px;color:#c8d8ec;line-height:1.7;margin-bottom:12px">나의 질문이나 생각을 입력하면<br>15단계 질문 레벨을 평가합니다.</p>
+        <textarea id="qlInput" placeholder="분석할 질문이나 생각을 입력하세요...&#10;&#10;예) 사피엔스에서 왜 인간만이 허구를 믿는가?&#10;예) 자본주의의 한계는 무엇인가?&#10;예) 이 내용이 내 삶에 어떤 의미인가?" rows="6"
+          style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:13px;padding:12px;font-family:'Noto Sans KR',sans-serif;resize:none;line-height:1.7"
+          onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))analyzeQLevel()"></textarea>
+        <button onclick="analyzeQLevel()" id="qlBtn"
+          style="margin-top:8px;width:100%;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s">
+          🎯 레벨 분석하기
+        </button>
+        <div style="font-size:10px;color:#7fa0be;text-align:center;margin-top:6px">Ctrl+Enter 로도 분석 가능</div>
+      </div>
+
+      <!-- 레벨 히스토리 -->
+      <div style="padding:12px 14px 8px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:8px">분석 히스토리</div>
+      </div>
+      <div id="qlHistory" style="flex:1;overflow-y:auto;padding:8px">
+        <div style="text-align:center;color:#7fa0be;font-size:12px;padding:20px 10px;line-height:1.7">아직 분석 기록이 없습니다.<br>질문을 입력해 시작하세요.</div>
+      </div>
+      <div style="padding:10px 14px;border-top:1px solid var(--border);display:flex;gap:6px">
+        <button onclick="clearQlHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#7fa0be;font-size:11px;padding:7px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">🗑️ 기록 초기화</button>
+        <button onclick="exportQlHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:11px;padding:7px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'">📄 내보내기</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: 결과 + 레벨 맵 -->
+    <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)">
+
+      <!-- 레벨 맵 (상단 고정) -->
+      <div style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--bg2)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:10px">질문 레벨 로드맵</div>
+        <div id="qlLevelMap" style="display:flex;gap:4px;flex-wrap:wrap">
+        </div>
+      </div>
+
+      <!-- 분석 결과 -->
+      <div style="flex:1;overflow-y:auto;padding:20px 24px" id="qlResult">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#7fa0be;gap:14px;text-align:center">
+          <div style="font-size:44px;opacity:.3">🎯</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:18px;font-weight:700;color:#c8d8ec">질문 레벨 분석기</div>
+          <p style="font-size:13px;line-height:1.8;max-width:380px">
+            왼쪽에 질문이나 생각을 입력하면<br>
+            <strong style="color:var(--accent)">15단계 질문 레벨</strong>로 평가하고<br>
+            현재 강점·부족한 레벨·다음 단계를 안내합니다.<br><br>
+            <span style="font-size:11px;opacity:.7">Lv.1 정보 → Lv.15 지혜 질문자로 성장하세요</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 분석 중 로딩 -->
+      <div id="qlLoading" style="display:none;padding:20px 24px">
+        <div style="display:flex;align-items:center;gap:10px;color:#7fa0be;font-size:13px">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span>질문 레벨 분석 중...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPPOSITE THOUGHT PAGE -->
+<div id="page-opposite" style="display:none;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+  <div style="display:flex;width:100%;height:100%;overflow:hidden">
+
+    <!-- LEFT: 입력 패널 -->
+    <div style="width:320px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden">
+      <div style="padding:16px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:10px">⚔️ 반대 사상 탐색기</div>
+        <p style="font-size:12px;color:#c8d8ec;line-height:1.7;margin-bottom:12px">책·주장·사상을 입력하면<br>충돌하는 반대 사상과 도서를 찾아줍니다.</p>
+        <div style="margin-bottom:8px">
+          <div style="font-size:10px;font-weight:700;color:#c8d8ec;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px">분석할 책 또는 주장</div>
+          <textarea id="oppInput" rows="5" placeholder="예) 사피엔스 — 인지혁명이 인간을 지배하게 했다&#10;예) 자유주의 — 개인의 자유가 최고의 가치다&#10;예) 니체의 권력의지론&#10;예) 자본주의는 인간의 본성에 부합한다"
+            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:13px;padding:11px;font-family:'Noto Sans KR',sans-serif;resize:none;line-height:1.7"
+            onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))analyzeOpposite()"></textarea>
+        </div>
+
+        <!-- 대결 유형 선택 -->
+        <div style="margin-bottom:10px">
+          <div style="font-size:10px;font-weight:700;color:#c8d8ec;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">대결 축 선택</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px" id="oppAxisBtns">
+            <button class="opp-axis active" data-axis="auto" onclick="selectAxis(this)">🔄 자동</button>
+            <button class="opp-axis" data-axis="자유↔질서" onclick="selectAxis(this)">자유 ↔ 질서</button>
+            <button class="opp-axis" data-axis="개인↔공동체" onclick="selectAxis(this)">개인 ↔ 공동체</button>
+            <button class="opp-axis" data-axis="이성↔감성" onclick="selectAxis(this)">이성 ↔ 감성</button>
+            <button class="opp-axis" data-axis="전통↔혁신" onclick="selectAxis(this)">전통 ↔ 혁신</button>
+            <button class="opp-axis" data-axis="경쟁↔협력" onclick="selectAxis(this)">경쟁 ↔ 협력</button>
+            <button class="opp-axis" data-axis="평등↔자유" onclick="selectAxis(this)">평등 ↔ 자유</button>
+            <button class="opp-axis" data-axis="물질↔정신" onclick="selectAxis(this)">물질 ↔ 정신</button>
+          </div>
+        </div>
+
+        <button onclick="analyzeOpposite()" id="oppBtn"
+          style="width:100%;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s">
+          ⚔️ 반대 사상 탐색
+        </button>
+        <div style="font-size:10px;color:#7fa0be;text-align:center;margin-top:5px">Ctrl+Enter 로도 실행</div>
+      </div>
+
+      <!-- 히스토리 -->
+      <div style="padding:10px 14px 6px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase">탐색 히스토리</div>
+      </div>
+      <div id="oppHistory" style="flex:1;overflow-y:auto;padding:8px">
+        <div style="text-align:center;color:#7fa0be;font-size:12px;padding:20px 10px;line-height:1.7">탐색 기록이 없습니다.<br>첫 번째 반대 사상을 탐색해보세요.</div>
+      </div>
+      <div style="padding:10px 14px;border-top:1px solid var(--border);display:flex;gap:6px">
+        <button onclick="clearOppHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#7fa0be;font-size:11px;padding:7px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">🗑️ 기록 초기화</button>
+        <button onclick="exportOppHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:11px;padding:7px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'">📄 내보내기</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: 결과 패널 -->
+    <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)">
+
+      <!-- VS 배너 (결과 있을 때만 표시) -->
+      <div id="oppVsBanner" style="display:none;padding:12px 22px;border-bottom:1px solid var(--border);background:var(--bg2)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div id="oppLeftTag" style="flex:1;background:rgba(91,155,213,.12);border:1px solid rgba(91,155,213,.3);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--blue);text-align:center"></div>
+          <div style="font-size:20px;font-weight:900;color:var(--red);flex-shrink:0">VS</div>
+          <div id="oppRightTag" style="flex:1;background:rgba(212,107,107,.12);border:1px solid rgba(212,107,107,.3);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--red);text-align:center"></div>
+        </div>
+      </div>
+
+      <!-- 결과 영역 -->
+      <div style="flex:1;overflow-y:auto;padding:20px 24px" id="oppResult">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#7fa0be;gap:14px;text-align:center">
+          <div style="font-size:48px;opacity:.25">⚔️</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:18px;font-weight:700;color:#c8d8ec">반대 사상 탐색기</div>
+          <p style="font-size:13px;line-height:1.8;max-width:400px">
+            어떤 책·사상·주장이든 입력하면<br>
+            <strong style="color:var(--accent)">충돌하는 반대 사상과 도서</strong>를 찾아<br>
+            7단계 심층 비교 분석을 제공합니다.<br><br>
+            <span style="font-size:11px;opacity:.7">한 가지 입장에 머무르지 말고, 반대편에서도 생각하세요</span>
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+            <button onclick="insertOppExample('사피엔스 — 인류는 허구를 믿는 능력으로 문명을 만들었다')" style="font-size:11px;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">📖 사피엔스</button>
+            <button onclick="insertOppExample('자유주의 — 개인의 자유와 권리가 사회의 최고 가치다')" style="font-size:11px;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">🗽 자유주의</button>
+            <button onclick="insertOppExample('니체 — 신은 죽었다. 인간은 스스로 가치를 창조해야 한다')" style="font-size:11px;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">⚡ 니체</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 로딩 -->
+      <div id="oppLoading" style="display:none;padding:20px 24px;border-top:1px solid var(--border)">
+        <div style="display:flex;align-items:center;gap:10px;color:#7fa0be;font-size:13px">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span id="oppLoadingText">반대 사상 탐색 중...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THINKING TOOLS PAGE -->
+<div id="page-tools" style="display:none;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+  <div style="display:flex;width:100%;height:100%;overflow:hidden">
+
+    <!-- LEFT: 입력 + 도구 선택 -->
+    <div style="width:310px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden">
+      <div style="padding:14px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:8px">🧰 사고 도구 추천 엔진</div>
+        <p style="font-size:11px;color:#c8d8ec;line-height:1.6;margin-bottom:10px">문제·목표·고민을 입력하면 최적의 사고 도구를 추천하고 실제로 적용합니다.</p>
+        <textarea id="toolInput" rows="4" placeholder="예) 독서를 해도 내용이 기억에 안 남는다&#10;예) 유튜브 채널을 시작하고 싶은데 방향이 안 잡힌다&#10;예) 사피엔스에서 인지혁명이 왜 중요한지 분석하고 싶다"
+          style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:12px;padding:10px;font-family:'Noto Sans KR',sans-serif;resize:none;line-height:1.65"
+          onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))runToolEngine()"></textarea>
+      </div>
+
+      <!-- 도구 직접 선택 -->
+      <div style="padding:12px 14px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#c8d8ec;text-transform:uppercase;margin-bottom:8px">도구 직접 선택 (선택 사항)</div>
+        <div style="display:flex;flex-direction:column;gap:3px" id="toolBtnGroup">
+          <button class="tool-btn active" data-tool="auto" onclick="selectTool(this)">🤖 자동 추천</button>
+          <div style="font-size:9px;color:#7fa0be;padding:4px 2px;font-weight:700;letter-spacing:.06em">── 목표·실행</div>
+          <button class="tool-btn" data-tool="backcasting" onclick="selectTool(this)">🎯 백캐스팅</button>
+          <button class="tool-btn" data-tool="actionplan" onclick="selectTool(this)">📋 액션 플랜 매트릭스</button>
+          <div style="font-size:9px;color:#7fa0be;padding:4px 2px;font-weight:700;letter-spacing:.06em">── 사고 확장</div>
+          <button class="tool-btn" data-tool="mindmap" onclick="selectTool(this)">🧠 마인드맵</button>
+          <button class="tool-btn" data-tool="lotus" onclick="selectTool(this)">🌸 연꽃만발법</button>
+          <button class="tool-btn" data-tool="qbrainstorm" onclick="selectTool(this)">💭 질문 브레인스토밍</button>
+          <div style="font-size:9px;color:#7fa0be;padding:4px 2px;font-weight:700;letter-spacing:.06em">── 문제 분석</div>
+          <button class="tool-btn" data-tool="logictree" onclick="selectTool(this)">🌳 로직트리</button>
+          <button class="tool-btn" data-tool="fivewhys" onclick="selectTool(this)">❓ 5 Whys</button>
+          <button class="tool-btn" data-tool="kj" onclick="selectTool(this)">🗂️ KJ법</button>
+          <div style="font-size:9px;color:#7fa0be;padding:4px 2px;font-weight:700;letter-spacing:.06em">── 관점·창의</div>
+          <button class="tool-btn" data-tool="sixhats" onclick="selectTool(this)">🎩 6가지 생각 모자</button>
+          <button class="tool-btn" data-tool="superhero" onclick="selectTool(this)">🦸 슈퍼히어로 기법</button>
+          <button class="tool-btn" data-tool="mapmethod" onclick="selectTool(this)">🗺️ 지도 기법</button>
+          <button class="tool-btn" data-tool="possession" onclick="selectTool(this)">🪄 사물 빙의법</button>
+        </div>
+      </div>
+
+      <div style="padding:12px 14px">
+        <button onclick="runToolEngine()" id="toolRunBtn"
+          style="width:100%;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s">
+          🧰 사고 도구 적용
+        </button>
+        <div style="font-size:10px;color:#7fa0be;text-align:center;margin-top:5px">Ctrl+Enter 로도 실행</div>
+      </div>
+
+      <!-- 히스토리 -->
+      <div style="padding:8px 14px 5px;border-top:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#c8d8ec;text-transform:uppercase">적용 히스토리</div>
+      </div>
+      <div id="toolHistory" style="flex:1;overflow-y:auto;padding:6px 8px">
+        <div style="text-align:center;color:#7fa0be;font-size:11px;padding:14px 8px;line-height:1.6">아직 기록이 없습니다.</div>
+      </div>
+      <div style="padding:8px 14px;border-top:1px solid var(--border);display:flex;gap:6px">
+        <button onclick="clearToolHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#7fa0be;font-size:10px;padding:6px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">🗑️ 초기화</button>
+        <button onclick="exportToolHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:10px;padding:6px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'">📄 내보내기</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: 결과 -->
+    <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)">
+
+      <!-- 적용된 도구 배지 -->
+      <div id="toolAppliedBadge" style="display:none;padding:10px 22px;border-bottom:1px solid var(--border);background:var(--bg2);display:none;align-items:center;gap:10px">
+        <div id="toolBadgeContent" style="display:flex;align-items:center;gap:8px"></div>
+        <div style="margin-left:auto;display:flex;gap:6px">
+          <button onclick="saveToolToNote()" class="msg-act-btn">📒 노트 저장</button>
+          <button onclick="copyToolResult()" class="msg-act-btn">📋 복사</button>
+        </div>
+      </div>
+
+      <!-- 결과 영역 -->
+      <div style="flex:1;overflow-y:auto;padding:20px 26px" id="toolResult">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#7fa0be;gap:14px;text-align:center">
+          <div style="font-size:48px;opacity:.22">🧰</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:18px;font-weight:700;color:#c8d8ec">사고 도구 추천 엔진</div>
+          <p style="font-size:13px;line-height:1.85;max-width:420px">
+            어떤 문제나 고민도 입력하면<br>
+            <strong style="color:var(--accent)">가장 적합한 사고 도구를 추천</strong>하고<br>
+            실제로 적용한 결과까지 생성합니다.<br><br>
+            <span style="font-size:11px;opacity:.65">백캐스팅 · 로직트리 · 5Whys · 연꽃만발법<br>6가지 생각 모자 · 슈퍼히어로 · 마인드맵 · KJ법 등</span>
+          </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+            <button onclick="insertToolExample('독서를 꾸준히 하고 싶은데 습관이 안 된다')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">📚 독서 습관</button>
+            <button onclick="insertToolExample('사피엔스에서 인지혁명의 의미를 깊이 분석하고 싶다')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">🧬 개념 분석</button>
+            <button onclick="insertToolExample('5년 후 내가 되고 싶은 모습을 구체적으로 설계하고 싶다')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">🎯 미래 설계</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 로딩 -->
+      <div id="toolLoading" style="display:none;padding:16px 26px;border-top:1px solid var(--border)">
+        <div style="display:flex;align-items:center;gap:10px;color:#7fa0be;font-size:13px">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span id="toolLoadingText">사고 도구 적용 중...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION MAP PAGE -->
+<div id="page-qmap" style="display:none;flex:1;flex-direction:column;overflow:hidden;height:calc(100vh - 140px)">
+  <div style="display:flex;width:100%;height:100%;overflow:hidden">
+
+    <!-- LEFT: 입력 패널 -->
+    <div style="width:300px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden">
+      <div style="padding:14px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:8px">🗺️ 퀘스천 맵</div>
+        <p style="font-size:11px;color:#c8d8ec;line-height:1.65;margin-bottom:10px">책·문장·생각을 입력하면<br>최소 20개의 구조화된 질문 트리를 생성합니다.<br><span style="color:var(--accent);font-weight:700">답이 아닌 질문을 만드는 훈련.</span></p>
+        <textarea id="qmapInput" rows="5" placeholder="예) 사피엔스 — 인간은 왜 협력하는가?&#10;예) 자본주의는 인간의 본성에 부합하는가?&#10;예) 독서를 해도 삶이 바뀌지 않는 이유&#10;예) 나는 왜 원하는 것을 실행하지 못하는가?"
+          style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:12px;padding:10px;font-family:'Noto Sans KR',sans-serif;resize:none;line-height:1.65"
+          onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))generateQMap()"></textarea>
+
+        <!-- 질문 깊이 선택 -->
+        <div style="margin:10px 0 8px">
+          <div style="font-size:10px;font-weight:700;color:#c8d8ec;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">질문 깊이</div>
+          <div style="display:flex;gap:4px">
+            <button class="qdepth-btn" data-depth="20" onclick="selectQDepth(this)">20개</button>
+            <button class="qdepth-btn active" data-depth="30" onclick="selectQDepth(this)">30개</button>
+            <button class="qdepth-btn" data-depth="50" onclick="selectQDepth(this)">50개</button>
+          </div>
+        </div>
+
+        <!-- 중점 질문 유형 -->
+        <div style="margin-bottom:10px">
+          <div style="font-size:10px;font-weight:700;color:#c8d8ec;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">중점 유형 (선택)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px" id="qmapTypeBtns">
+            <button class="qtype-btn active" data-type="all" onclick="selectQType(this)">🔄 전체</button>
+            <button class="qtype-btn" data-type="philosophy" onclick="selectQType(this)">🏛️ 철학</button>
+            <button class="qtype-btn" data-type="analysis" onclick="selectQType(this)">🔬 분석</button>
+            <button class="qtype-btn" data-type="life" onclick="selectQType(this)">🌱 삶·적용</button>
+            <button class="qtype-btn" data-type="creative" onclick="selectQType(this)">✨ 창조</button>
+            <button class="qtype-btn" data-type="meta" onclick="selectQType(this)">🪞 메타</button>
+          </div>
+        </div>
+
+        <button onclick="generateQMap()" id="qmapBtn"
+          style="width:100%;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s">
+          🗺️ 퀘스천 맵 생성
+        </button>
+        <div style="font-size:10px;color:#7fa0be;text-align:center;margin-top:5px">Ctrl+Enter 로도 실행</div>
+      </div>
+
+      <!-- 히스토리 -->
+      <div style="padding:9px 14px 5px;border-bottom:1px solid var(--border)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#c8d8ec;text-transform:uppercase">생성 히스토리</div>
+      </div>
+      <div id="qmapHistory" style="flex:1;overflow-y:auto;padding:7px 8px">
+        <div style="text-align:center;color:#7fa0be;font-size:11px;padding:16px 8px;line-height:1.6">아직 기록이 없습니다.</div>
+      </div>
+      <div style="padding:8px 14px;border-top:1px solid var(--border);display:flex;gap:6px">
+        <button onclick="clearQMapHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#7fa0be;font-size:10px;padding:6px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">🗑️ 초기화</button>
+        <button onclick="exportQMapHistory()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:10px;padding:6px;cursor:pointer;font-family:'Noto Sans KR',sans-serif" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'">📄 내보내기</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: 결과 -->
+    <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)">
+
+      <!-- 상단 정보 바 -->
+      <div id="qmapInfoBar" style="display:none;padding:10px 22px;border-bottom:1px solid var(--border);background:var(--bg2);align-items:center;gap:12px">
+        <div id="qmapCenterQ" style="font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--accent);flex:1"></div>
+        <div id="qmapQCount" style="font-size:11px;color:#7fa0be;white-space:nowrap"></div>
+        <div style="display:flex;gap:6px">
+          <button onclick="saveQMapToNote()" class="msg-act-btn">📒 노트 저장</button>
+          <button onclick="copyQMapResult()" class="msg-act-btn">📋 복사</button>
+        </div>
+      </div>
+
+      <!-- 결과 영역 -->
+      <div style="flex:1;overflow-y:auto;padding:20px 26px" id="qmapResult">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#7fa0be;gap:14px;text-align:center">
+          <div style="font-size:52px;opacity:.2">🗺️</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:19px;font-weight:700;color:#c8d8ec">퀘스천 맵</div>
+          <p style="font-size:13px;line-height:1.85;max-width:420px">
+            어떤 주제든 입력하면<br>
+            <strong style="color:var(--accent)">Lv.1~15 구조화된 질문 트리</strong>를 생성합니다.<br>
+            답을 찾는 것이 아니라,<br>
+            <strong style="color:var(--accent2)">좋은 질문을 만드는 능력</strong>을 기릅니다.<br><br>
+            <span style="font-size:11px;opacity:.6">이해→분석→비교→평가→관점→창조→메타→지혜</span>
+          </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+            <button onclick="insertQMapExample('인간은 왜 의미를 추구하는가')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">🌌 의미 추구</button>
+            <button onclick="insertQMapExample('자본주의는 지속 가능한가')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">💰 자본주의</button>
+            <button onclick="insertQMapExample('독서는 삶을 바꾸는가')" style="font-size:11px;padding:6px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:20px;color:#c8d8ec;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">📚 독서의 힘</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 로딩 -->
+      <div id="qmapLoading" style="display:none;padding:14px 26px;border-top:1px solid var(--border)">
+        <div style="display:flex;align-items:center;gap:10px;color:#7fa0be;font-size:13px">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span id="qmapLoadingText">질문 트리 생성 중...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE BOTTOM BAR (모바일 전용 하단 고정 바) -->
+<div id="mobileSessionBar">
+  <button class="mob-btn mob-btn-primary" onclick="showApiModal()">
+    <span class="mob-icon" id="mobApiIcon">🔑</span>
+    <span class="mob-label">API 키</span>
+  </button>
+  <button class="mob-btn" onclick="showModelSheet()">
+    <span class="mob-icon">⚙️</span>
+    <span class="mob-label" id="mobModelLabel">모델</span>
+  </button>
+  <button class="mob-btn" onclick="newSession()">
+    <span class="mob-icon">➕</span>
+    <span class="mob-label">새 세션</span>
+  </button>
+  <button class="mob-btn" onclick="showSessionSheet()">
+    <span class="mob-icon">📋</span>
+    <span class="mob-label" id="mobSessionCount">세션</span>
+  </button>
+  <button class="mob-btn" onclick="showHelp()">
+    <span class="mob-icon">❓</span>
+    <span class="mob-label">도움말</span>
+  </button>
+</div>
+
+<!-- 모바일 모델 선택 시트 -->
+<div id="modelSheet" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.7)" onclick="closeModelSheet()">
+  <div onclick="event.stopPropagation()" style="position:absolute;bottom:0;left:0;right:0;background:var(--bg2);border-radius:16px 16px 0 0;padding:20px 16px 32px;border-top:1px solid rgba(74,158,255,.2)">
+    <div style="width:40px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 16px"></div>
+    <div style="font-size:13px;font-weight:700;color:#c8d8ec;margin-bottom:14px;text-align:center">GPT 모델 선택</div>
+    <div style="display:flex;flex-direction:column;gap:8px" id="modelSheetOptions">
+      <button class="model-sheet-btn" data-model="gpt-4o" onclick="selectMobileModel(this)">
+        <span style="font-weight:700">GPT-4o</span>
+        <span style="font-size:11px;color:#7fa0be">추천 · 가장 정확</span>
+      </button>
+      <button class="model-sheet-btn" data-model="gpt-4o-mini" onclick="selectMobileModel(this)">
+        <span style="font-weight:700">GPT-4o mini</span>
+        <span style="font-size:11px;color:#7fa0be">빠름 · 저렴</span>
+      </button>
+      <button class="model-sheet-btn" data-model="gpt-4-turbo" onclick="selectMobileModel(this)">
+        <span style="font-weight:700">GPT-4 Turbo</span>
+        <span style="font-size:11px;color:#7fa0be">고성능</span>
+      </button>
+      <button class="model-sheet-btn" data-model="gpt-3.5-turbo" onclick="selectMobileModel(this)">
+        <span style="font-weight:700">GPT-3.5 Turbo</span>
+        <span style="font-size:11px;color:#7fa0be">가장 저렴</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 모바일 세션 시트 -->
+<div id="sessionSheet" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.7)" onclick="closeSessionSheet()">
+  <div onclick="event.stopPropagation()" style="position:absolute;bottom:0;left:0;right:0;background:var(--bg2);border-radius:16px 16px 0 0;padding:20px 16px 32px;max-height:70vh;overflow-y:auto;border-top:1px solid rgba(74,158,255,.2)">
+    <div style="width:40px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 16px"></div>
+    <div style="font-size:13px;font-weight:700;color:#c8d8ec;margin-bottom:14px;text-align:center">독서 세션</div>
+    <div id="sessionSheetList" style="display:flex;flex-direction:column;gap:8px"></div>
+  </div>
+</div>
+
+<style>
+  .model-sheet-btn {
+    display:flex;justify-content:space-between;align-items:center;
+    background:var(--bg3);border:1px solid var(--border);border-radius:10px;
+    color:#c8d8ec;padding:14px 16px;cursor:pointer;width:100%;
+    font-family:'Noto Sans KR',sans-serif;font-size:13px;
+    transition:all .2s;text-align:left;
+  }
+  .model-sheet-btn:active { background:rgba(74,158,255,.1);border-color:rgba(74,158,255,.35); }
+  .model-sheet-btn.active {
+    background:rgba(74,158,255,.12);border-color:rgba(74,158,255,.4);
+    color:var(--accent);
+  }
+  .session-sheet-item {
+    background:var(--bg3);border:1px solid var(--border);border-radius:10px;
+    color:#c8d8ec;padding:12px 14px;cursor:pointer;
+    font-family:'Noto Sans KR',sans-serif;font-size:13px;
+    transition:all .2s;text-align:left;
+  }
+  .session-sheet-item:active { background:rgba(74,158,255,.1);border-color:rgba(74,158,255,.3); }
+  .session-sheet-item .s-title { font-weight:700;margin-bottom:3px; }
+  .session-sheet-item .s-meta { font-size:11px;color:#7fa0be; }
+</style>
+
+<div id="saveToast" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid var(--green);color:var(--green);font-size:12px;font-family:'Noto Sans KR',sans-serif;padding:9px 18px;border-radius:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:300;white-space:nowrap"></div>
+
+<!-- API KEY MODAL -->
+<div class="modal-overlay" id="apiKeyModal">
+  <div class="modal" style="max-width:420px">
+    <h3>🔑 ChatGPT API 설정</h3>
+    <p style="font-size:12px;color:#c8d8ec;line-height:1.7;margin-bottom:14px">
+      OpenAI API 키를 입력하고 저장하세요.<br>
+      키는 브라우저에만 저장되며 외부로 전송되지 않습니다.
+    </p>
+
+    <!-- API KEY INPUT -->
+    <div style="margin-bottom:12px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:6px">API 키</div>
+      <div style="display:flex;gap:6px">
+        <input type="password" id="apiKeyModal_input" placeholder="sk-..."
+          style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:13px;padding:9px 12px;font-family:'Noto Sans KR',sans-serif;min-width:0;transition:border-color .2s"
+          onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"
+          onkeydown="if(event.key==='Enter')saveApiKeyModal()"/>
+        <button onclick="toggleApiKeyModalVisibility()" id="apiKeyModalToggle"
+          style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;padding:9px 12px;cursor:pointer;font-size:13px;transition:all .2s;white-space:nowrap"
+          onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">👁 보기</button>
+      </div>
+      <div id="apiKeyModal_status" style="font-size:11px;margin-top:6px;display:flex;align-items:center;gap:5px;color:#7fa0be">
+        <div id="apiKeyModal_dot" style="width:6px;height:6px;border-radius:50%;background:var(--text3);flex-shrink:0"></div>
+        <span id="apiKeyModal_msg">키를 입력하세요</span>
+      </div>
+    </div>
+
+    <!-- MODEL SELECT -->
+    <div style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#c8d8ec;text-transform:uppercase;margin-bottom:6px">GPT 모델</div>
+      <select id="apiKeyModal_model"
+        style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#ffffff;font-size:13px;padding:9px 12px;font-family:'Noto Sans KR',sans-serif;cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22%3E%3Cpath d=%22M0 0l5 6 5-6z%22 fill=%22%236a6460%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 12px center">
+        <option value="gpt-4o">GPT-4o (추천 · 가장 정확)</option>
+        <option value="gpt-4o-mini">GPT-4o mini (빠름 · 저렴)</option>
+        <option value="gpt-4-turbo">GPT-4 Turbo</option>
+        <option value="gpt-4">GPT-4</option>
+        <option value="gpt-3.5-turbo">GPT-3.5 Turbo (가장 저렴)</option>
+      </select>
+    </div>
+
+    <!-- API KEY 안내 -->
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:14px">
+      <div style="font-size:10px;font-weight:700;color:#c8d8ec;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">API 키 발급 방법</div>
+      <div style="font-size:11px;color:#c8d8ec;line-height:1.75">
+        1. <a href="https://platform.openai.com/api-keys" target="_blank" style="color:var(--accent);text-decoration:none">platform.openai.com/api-keys</a> 접속<br>
+        2. 로그인 → <strong>Create new secret key</strong> 클릭<br>
+        3. 생성된 <strong>sk-...</strong> 로 시작하는 키 복사<br>
+        4. 여기에 붙여넣기 후 저장
+      </div>
+    </div>
+
+    <button onclick="saveApiKeyModal()"
+      style="width:100%;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:700;padding:12px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s;margin-bottom:8px"
+      onmouseover="this.style.background='var(--accent2)'" onmouseout="this.style.background='var(--accent)'">
+      💾 저장하기
+    </button>
+    <button onclick="closeApiModal()"
+      style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:13px;padding:10px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s"
+      onmouseover="this.style.borderColor='var(--border2)'" onmouseout="this.style.borderColor='var(--border)'">
+      닫기
+    </button>
+  </div>
+</div>
+
+<!-- DATA MANAGEMENT MODAL -->
+<div class="modal-overlay" id="dataModal">
+  <div class="modal" style="max-width:480px">
+    <h3>💾 데이터 저장 & 백업</h3>
+
+    <!-- 현재 데이터 현황 -->
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:16px">
+      <div style="font-size:11px;font-weight:700;color:#c8d8ec;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">현재 저장된 데이터</div>
+      <div id="dataSummary" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
+    </div>
+
+    <!-- 내보내기 -->
+    <div style="margin-bottom:14px">
+      <div style="font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px">📤 내보내기 (백업)</div>
+      <p style="font-size:12px;color:#c8d8ec;line-height:1.6;margin-bottom:10px">
+        모든 대화·노트·분석 기록을 JSON 파일로 저장합니다.<br>
+        새 기기에서 가져오기로 복원할 수 있습니다.
+      </p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button onclick="exportAllData()" style="flex:1;background:linear-gradient(135deg,#1a6fd4,#4a9eff);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;min-width:140px">
+          💾 전체 백업 (.json)
+        </button>
+        <button onclick="exportReadableData()" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:13px;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;min-width:140px">
+          📄 읽기 가능 (.txt)
+        </button>
+      </div>
+    </div>
+
+    <!-- 가져오기 -->
+    <div style="margin-bottom:14px">
+      <div style="font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px">📥 가져오기 (복원)</div>
+      <p style="font-size:12px;color:#c8d8ec;line-height:1.6;margin-bottom:10px">
+        이전에 백업한 JSON 파일을 선택하면 모든 데이터가 복원됩니다.
+      </p>
+      <label style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--bg3);border:2px dashed rgba(74,158,255,.3);border-radius:8px;padding:14px;cursor:pointer;color:#c8d8ec;font-size:13px;font-family:'Noto Sans KR',sans-serif;transition:all .2s"
+        onmouseover="this.style.borderColor='rgba(74,158,255,.6)';this.style.color='var(--accent)'"
+        onmouseout="this.style.borderColor='rgba(74,158,255,.3)';this.style.color='#c8d8ec'">
+        📂 백업 파일 선택 (.json)
+        <input type="file" accept=".json" onchange="importAllData(this)" style="display:none">
+      </label>
+    </div>
+
+    <!-- 기기 이전 안내 -->
+    <div style="background:rgba(74,158,255,.07);border:1px solid rgba(74,158,255,.2);border-radius:10px;padding:14px;margin-bottom:14px">
+      <div style="font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px">📱 새 기기로 이전하는 방법</div>
+      <div style="font-size:12px;color:#c8d8ec;line-height:1.8">
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
+          <span style="background:var(--accent);color:#0a0d14;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px">1</span>
+          <span>현재 기기에서 <strong>전체 백업(.json)</strong> 다운로드</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
+          <span style="background:var(--accent);color:#0a0d14;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px">2</span>
+          <span>파일을 클라우드(카카오톡·이메일·메모앱)로 새 기기에 전송</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
+          <span style="background:var(--accent);color:#0a0d14;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px">3</span>
+          <span>새 기기에서 앱 열기 → 💾 버튼 → <strong>가져오기</strong></span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:8px">
+          <span style="background:var(--green);color:#0a0d14;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px">✓</span>
+          <span>모든 대화·노트·분석이 완벽하게 복원됩니다</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 위험 영역 -->
+    <details style="margin-bottom:14px">
+      <summary style="font-size:12px;color:var(--red);cursor:pointer;padding:4px 0">⚠️ 데이터 초기화</summary>
+      <div style="padding:10px 0">
+        <p style="font-size:12px;color:#c8d8ec;margin-bottom:8px">모든 데이터를 삭제합니다. 되돌릴 수 없습니다.</p>
+        <button onclick="resetAllData()" style="background:rgba(224,92,106,.15);border:1px solid var(--red);border-radius:8px;color:var(--red);font-size:12px;padding:8px 16px;cursor:pointer;font-family:'Noto Sans KR',sans-serif">
+          🗑️ 전체 데이터 초기화
+        </button>
+      </div>
+    </details>
+
+    <button onclick="closeDataModal()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#c8d8ec;font-size:13px;padding:11px;cursor:pointer;font-family:'Noto Sans KR',sans-serif">
+      닫기
+    </button>
+  </div>
+</div>
+
+<!-- HELP MODAL -->
+<div class="modal-overlay" id="helpModal">
+  <div class="modal">
+    <h3>📚 사고력 OS 사용법</h3>
+    <p>이 앱은 ChatGPT API를 활용하여 12단계 독서 사고력 분석을 수행합니다.</p>
+    <div class="step-list">
+      <div class="step-row"><div class="step-num">1</div><div class="step-desc">왼쪽 사이드바에 OpenAI API 키(sk-...)를 입력하고 저장하세요.</div></div>
+      <div class="step-row"><div class="step-num">2</div><div class="step-desc">원하는 GPT 모델을 선택하세요. GPT-4o 권장.</div></div>
+      <div class="step-row"><div class="step-num">3</div><div class="step-desc">책 제목, 문장, 문단, 또는 나의 생각을 입력하세요.</div></div>
+      <div class="step-row"><div class="step-num">4</div><div class="step-desc">AI가 12단계 심층 분석을 제공합니다. 멘토의 질문에 답하며 사고력을 훈련합니다.</div></div>
+      <div class="step-row"><div class="step-num">5</div><div class="step-desc">AI 응답 아래 <strong>[📒 노트 저장]</strong> 버튼을 누르면 분석 결과가 독서 노트에 저장됩니다.</div></div>
+      <div class="step-row"><div class="step-num">6</div><div class="step-desc">상단 <strong>[📒 독서 노트]</strong> 탭에서 저장된 노트를 검색·편집·내보내기할 수 있습니다. Ctrl+S 로 빠른 저장.</div></div>
+    </div>
+    <p style="font-size:12px; color:#7fa0be;">⚠️ API 키는 브라우저 localStorage에만 저장되며 외부로 전송되지 않습니다.</p>
+    <button class="modal-close" onclick="closeHelp()">확인</button>
+  </div>
+</div>
+
+<!-- SCROLL BTN -->
+<button class="scroll-btn" id="scrollBtn" onclick="scrollToBottom()">↓</button>
+
+<script>
+// ─── APP STATE (네임스페이스 구조화) ─────────────────────────
+const AppState = {
+  // 채팅
+  sessions:        JSON.parse(localStorage.getItem('rtos_sessions') || '[]'),
+  currentSessionId: null,
+  currentMode:     'book',
+  isThinking:      false,
+  // 노트
+  notes:           JSON.parse(localStorage.getItem('rtos_notes') || '[]'),
+  currentNoteId:   null,
+  noteFilterType:  'all',
+  // 질문레벨
+  qlHistory:       JSON.parse(localStorage.getItem('rtos_ql_history') || '[]'),
+  currentQlLevel:  0,
+  // 반대사상
+  oppHistory:      JSON.parse(localStorage.getItem('rtos_opp_history') || '[]'),
+  selectedAxis:    'auto',
+  // 사고도구
+  toolHistory:     JSON.parse(localStorage.getItem('rtos_tool_history') || '[]'),
+  selectedTool:    'auto',
+  // 퀘스천맵
+  qmapHistory:     JSON.parse(localStorage.getItem('rtos_qmap_history') || '[]'),
+  qmapDepth:       30,
+  qmapType:        'all',
+};
+
+// ─── 전역 상태 직접 참조 (AppState 프록시) ─────────────────
+// 각 함수가 직접 변수를 읽고 쓸 수 있도록 구조 유지
+let sessions         = AppState.sessions;
+let notes            = AppState.notes;
+let currentSessionId = AppState.currentSessionId;
+let currentMode      = AppState.currentMode;
+let isThinking       = AppState.isThinking;
+let currentNoteId    = AppState.currentNoteId;
+let noteFilterType   = AppState.noteFilterType;
+let thinkingEl       = null;
+// 질문레벨
+let qlHistory        = AppState.qlHistory;
+let currentQlLevel   = AppState.currentQlLevel;
+// 반대사상
+let oppHistory       = AppState.oppHistory;
+let selectedAxis     = AppState.selectedAxis;
+// 사고도구
+let toolHistory      = AppState.toolHistory;
+let selectedTool     = AppState.selectedTool;
+// 퀘스천맵
+let qmapHistory      = AppState.qmapHistory;
+let qmapDepth        = AppState.qmapDepth;
+let qmapType         = AppState.qmapType;
+
+// ─── SYSTEM PROMPT ───────────────────────────────────────
+const SYSTEM_PROMPT = `당신은 독서 사고력 OS (Reading Thinking Operating System)이자
+"AI 소크라테스"이자 "AI 사고 코치"입니다.
+
+## 분석 4층위 체계
+항상 아래 4개 층위를 분석합니다:
+1. 관점(Perspective) — 어떤 관점으로 보는가
+2. 해석(Interpretation) — 어떻게 해석하는가
+3. 시각(Viewpoint) — 어떤 시각으로 바라보는가
+4. 사고력(Thinking Skills) — 어떤 사고력을 사용하는가
+
+당신은 단순한 독서 요약 AI가 아닙니다.
+당신의 역할은 사용자가 책을 통해 사고력, 해석력, 표현력, 자기 언어, 비판적 사고, 메타인지를 성장시키도록 돕는 AI 독서 멘토입니다.
+
+## 핵심 원칙
+1. 정답보다 질문을 우선한다
+2. 하나의 해석에 머물지 않는다 — 항상 대안 해석을 제공한다
+3. 다양한 관점과 다양한 해석을 제시한다
+4. 사용자가 자신의 언어를 만들도록 유도한다
+5. 표현력과 사고력을 함께 성장시킨다
+6. 사용자의 생각을 존중하되 깊게 파고든다
+7. 항상 대안 해석을 제공한다
+8. 메타인지 훈련을 반드시 포함한다
+
+절대로 책을 대신 읽게 만들지 않습니다.
+절대로 요약만 제공하지 않습니다.
+항상 사용자가 생각하고, 질문하고, 자신의 언어를 만들도록 유도합니다.
+
+핵심 원칙:
+1. 독서를 대신하지 않는다
+2. 사고를 확장시킨다
+3. 해석을 다양화한다
+4. 관점을 확장한다
+5. 시각을 확장한다
+6. 사고력을 확장한다
+7. 자기 언어를 만들게 한다
+8. 질문 중심으로 진행한다
+9. 정답보다 사유를 중요하게 생각한다
+10. 사용자의 성장에 초점을 둔다
+
+---
+
+입력 유형: 책 제목, 장(Chapter), 절(Section), 문단, 문장, 명언, 기사,
+자신의 생각, 자신의 해석, 자신의 글, 자신의 질문, 자신의 답변
+(어떤 형태의 입력이든 분석 가능하다)
+
+---
+
+사용자가 책 내용(책 제목, 문장, 문단, 장, 절)을 입력하면 반드시 아래 순서대로 분석합니다:
+
+# 【1단계】 핵심 의미 분석 (Core Meaning Analysis)
+
+입력된 내용의 핵심 메시지를 아래 항목으로 정리합니다:
+
+▪ 핵심 주장     : 이 내용이 궁극적으로 주장하는 것은 무엇인가?
+▪ 핵심 가치     : 이 주장의 바탕에 있는 가치관은 무엇인가?
+▪ 핵심 개념     : 이 내용을 이해하는 데 반드시 알아야 할 개념
+▪ 핵심 문제의식 : 이 내용이 해결하려는 근본적인 문제는 무엇인가?
+▪ 숨겨진 전제   : 이 주장이 당연하게 여기는 가정은 무엇인가?
+▪ 상위주제      : 이 내용이 궁극적으로 말하는 큰 주제
+▪ 중간주제      : 이 장이나 절이 설명하는 핵심 주제
+▪ 하위주제      : 세부 논점
+▪ 저자의 주장   : 저자는 무엇을 주장하는가?
+▪ 핵심문장      : 가장 중요한 문장
+▪ 저자의 근거   : 왜 그렇게 주장하는가?
+▪ 가능한 반론   : 반대 입장은 무엇인가?
+
+---
+
+# 【2단계】 관점 분석
+
+관점 라이브러리 (존재/인식/가치/인간/심리/감정/관계/사회/문화/언어/역사/시간/공간/경제/정치/법률/과학/기술/정보/교육/건강/생태/생명/시스템/전략/의사결정/조직/경쟁/협력/창조/미학/영성/문명/미래/메타) 중에서:
+
+▪ 사용된 관점 (관련도 포함)
+▪ 관점 선택 이유 설명
+
+---
+
+# 【2.5단계】 관점별·시각별·사고력별 질문 생성
+
+선택된 관점·시각·사고력별로 각 3개 이상의 질문을 생성합니다.
+
+## 관점별 질문
+선택된 각 관점마다 3개 이상의 사유형 질문 생성
+
+## 시각별 질문
+사용된 시각과 부족한 시각 기준으로 2개 이상의 사유형 질문 생성
+
+## 사고력별 질문
+부족한 사고력을 중심으로 2개 이상의 훈련형 질문 생성
+
+질문 생성 규칙:
+▪ 암기형 질문 금지 (무엇을 외웠는가? X)
+▪ 정답형 질문 금지 (정답이 하나인 질문 X)
+▪ 사유형 질문만 허용 (열린 질문, 탐구형, 성찰형)
+▪ 반드시 사유를 유도하는 열린 질문이어야 한다
+▪ 예: '당신은 이 관점에서 어떤 가능성을 발견하는가?'
+
+---
+
+# 【3단계】 시각 분석
+
+시각 라이브러리에서 분석합니다:
+- 시간 시각 (과거/현재/미래/단기/장기)
+- 판단 시각 (낙관/비관/현실/중립)
+- 분석 시각 (비판/탐구/의심/검증)
+- 창조 시각 (혁신/상상/융합)
+- 관계 시각 (개인/타인/공동체/인류)
+- 전략 시각 (위험/기회/경쟁/협력)
+
+▪ 사용된 시각
+▪ 부족한 시각
+▪ 확장 가능한 시각
+
+---
+
+# 【4단계】 사고력 분석
+
+사고력 라이브러리 (아래 15가지 중 해당하는 것을 선택):
+▪ 논리적 사고  ▪ 비판적 사고  ▪ 창의적 사고
+▪ 시스템 사고  ▪ 전략적 사고  ▪ 확률적 사고
+▪ 역사적 사고  ▪ 과학적 사고  ▪ 철학적 사고
+▪ 메타 사고    ▪ 통합적 사고  ▪ 역발상 사고
+▪ 1차 사고     ▪ 2차 사고     ▪ 3차 사고
+
+분석 결과:
+▪ 사용된 사고력  : 사용된 것과 어떻게 사용되었는지 설명
+▪ 부족한 사고력  : 왜 필요한지 설명
+▪ 강화할 사고력  : 가장 우선적으로 키워야 할 사고력과 훈련 방법
+▪ 확장 가능한 사고력 : 어떻게 발전시킬 수 있는지 제시
+
+---
+
+# 【5단계】 해석 분석
+
+해석 유형 라이브러리 (18가지):
+① 문자적 해석  ② 개념적 해석  ③ 철학적 해석
+④ 심리학적 해석 ⑤ 사회학적 해석 ⑥ 역사적 해석
+⑦ 경제적 해석  ⑧ 정치적 해석  ⑨ 윤리적 해석
+⑩ 실용적 해석  ⑪ 상징적 해석  ⑫ 은유적 해석
+⑬ 저자 의도 해석 ⑭ 독자 반응 해석 ⑮ 미래 해석
+⑯ 문명 해석   ⑰ 메타 해석   ⑱ 반대 해석
+
+위 18가지 유형 중 최소 5개 이상의 해석을 선택하여 제시합니다.
+각 해석마다 반드시 아래 4가지를 포함합니다:
+▪ 해석 내용 : 이 유형에서 어떻게 해석하는가?
+▪ 근거      : 왜 이렇게 해석할 수 있는가?
+▪ 장점      : 이 해석의 강점은 무엇인가?
+▪ 한계      : 이 해석이 놓치는 것은 무엇인가?
+
+---
+
+# 【6단계】 핵심 의미 + 사고 확장 질문
+
+## 핵심 의미 (Core Meaning)
+입력된 내용의 핵심 의미를 3~5문장으로 정리합니다.
+▪ 표면적 의미 : 문자 그대로 무엇을 말하는가
+▪ 심층적 의미 : 그 이면에 무엇이 있는가
+▪ 본질적 의미 : 궁극적으로 무엇을 뜻하는가
+
+## 사고 확장 질문
+관점별·시각별·사고력별·해석별 질문을 생성합니다.
+질문은 반드시 사고형, 탐구형, 성찰형이어야 합니다.
+
+---
+
+# 【5.5단계】 해석 확장 질문
+
+사용자의 해석을 더 넓히기 위한 질문을 생성합니다.
+반드시 아래 5가지 방향을 포함합니다:
+▪ 다른 문화권은 이것을 어떻게 해석할까?
+▪ 반대 입장은 뭐라고 할까?
+▪ 100년 후 미래인은 어떻게 볼까?
+▪ 저자는 이 해석에 동의할까?
+▪ 이 내용을 비판하는 사람은 뭐라고 할까?
+
+---
+
+# 【7단계】 자기 언어 훈련 + 사유 유도
+
+반드시 다음 두 가지를 요청합니다:
+
+① 자기 언어 훈련:
+"이 문장을 당신만의 언어로 다시 표현해 보세요.
+ 남의 표현을 그대로 쓰지 말고, 오직 당신만의 단어와 문장으로 표현하세요."
+
+② 사유 확인:
+"당신은 이 내용을 어떻게 이해했습니까? 당신만의 언어로 설명해 보세요."
+
+답변을 기다립니다. 사용자가 답변하면 8~12단계로 진행합니다.
+
+---
+
+사용자가 자신의 생각/해석/글을 입력하면:
+
+# 【8단계】 자기 언어 분석 + 보완 멘토링
+
+사용자가 작성한 문장을 아래 5항목으로 0~100점 평가하고 피드백합니다:
+▪ 명확성     : 생각이 명확하게 전달되는가?
+▪ 논리성     : 논거가 체계적으로 연결되는가?
+▪ 구체성     : 추상적인가, 구체적인가?
+▪ 설득력     : 읽는 사람을 납득시키는가?
+▪ 독창성     : 자신만의 시각과 언어가 있는가?
+▪ 어휘력     : 적절하고 풍부한 어휘를 사용하는가?
+▪ 구조화 능력: 생각이 논리적 구조로 배열되어 있는가?
+
+## 보완 멘토링
+단순히 수정해주지 않는다. 반드시 아래 두 가지를 제공한다:
+▪ 왜 부족한가 : 어떤 부분이 어떤 이유로 부족한지 설명
+▪ 어떻게 개선할 수 있는가 : 구체적 개선 방향 제시 (직접 고쳐주지 않음)
+
+---
+
+# 【9단계】 사고력 분석 + 멘토링
+
+사용자의 답변을 아래 7항목으로 0~100점 평가합니다:
+▪ 사고의 깊이   : 표면을 넘어 본질까지 파고드는가?
+▪ 사고의 폭     : 다양한 방향으로 생각을 확장하는가?
+▪ 관점 다양성   : 하나의 관점에 갇혀 있지 않은가?
+▪ 시각 다양성   : 다양한 시각(시간·판단·창조 등)을 활용하는가?
+▪ 사고력 다양성 : 여러 사고력(논리·비판·창의·시스템 등)을 쓰는가?
+▪ 자기 성찰 능력: 자신의 사고를 객관적으로 바라보는가?
+▪ 메타인지 수준 : 자신이 무엇을 알고 모르는지 아는가?
+
+## 사고력 멘토링 지침
+▪ 사용자가 얕은 답변을 하면 → 더 깊은 질문을 던진다
+▪ 사용자가 관점 하나에 갇히면 → 다른 관점을 제시한다
+▪ 사용자의 생각을 존중하되 → 비판적 사고를 유도한다
+
+---
+
+# 【10단계】 맹점 탐지 (부족한 관점·시각·사고력)
+
+아래 5가지 항목으로 사용자의 맹점을 분석합니다:
+
+▪ 무엇을 보고 있는가?   : 현재 사용자가 집중하는 것
+▪ 무엇을 놓치고 있는가? : 보지 못하고 있는 관점·시각
+▪ 어떤 편향이 있는가?   : 인지 편향, 확증 편향 등
+▪ 어떤 시각이 부족한가? : 시각 라이브러리 기준
+▪ 어떤 사고력이 부족한가? : 사고력 라이브러리 기준
+
+탐지 후 반드시:
+▪ 역사 관점 부족 — 이 주제의 역사적 맥락을 보지 못하고 있다
+▪ 시스템 관점 부족 — 전체 구조와 연결을 보지 못하고 있다
+▪ 반대 관점 부족 — 반대 입장을 전혀 고려하지 않고 있다
+(위는 예시이며 실제 분석 결과로 제시)
+
+## 부족한 관점
+관점 라이브러리 중 사용자가 놓치고 있는 관점과 왜 중요한지 설명합니다.
+
+## 부족한 시각
+시각 라이브러리 중 사용자가 놓치고 있는 시각과 어떻게 적용할지 제시합니다.
+
+## 부족한 사고력
+사고력 라이브러리 중 사용자가 놓치고 있는 사고력과 어떻게 훈련할지 제시합니다.
+
+## 편향 탐지
+▪ 사용자가 가진 인지적 편향
+▪ 그 편향이 사고에 어떤 영향을 미치는가
+▪ 편향을 극복하는 방법
+
+---
+
+# 【11단계】 멘토링 + 표현력 피드백
+
+## 멘토링
+항상 제공합니다:
+▪ 좋은 점 : 사용자 사고의 강점
+▪ 개선점 : 발전시킬 부분
+▪ 왜 중요한가 : 이 사고력이 삶에 미치는 영향
+▪ 어떻게 훈련할 것인가 : 구체적 훈련 방법
+
+## 표현력 피드백 (0~100점 평가)
+사용자의 표현 방식을 분석합니다:
+▪ 명확성 점수 : 생각이 명확하게 전달되는가?
+▪ 논리성 점수 : 논거가 체계적인가?
+▪ 구체성 점수 : 추상적인가, 구체적인가?
+▪ 독창성 점수 : 자신만의 언어와 관점이 있는가?
+▪ 표현력 총평 : 종합 피드백 한 문단
+
+---
+
+# 【12단계】 사고력 훈련 과제
+
+사용자의 부족한 사고력을 기준으로 맞춤형 훈련 문제를 생성합니다.
+
+## 사고력별 훈련 문제 (부족한 사고력 기준)
+▪ 시스템 사고 부족 → 이 문제에 영향을 주는 요소를 10개 적어보세요.
+▪ 전략 사고 부족   → 목표 달성을 위한 3년 계획을 작성하세요.
+▪ 확률 사고 부족   → 각 선택지의 성공 확률을 추정해보세요.
+▪ 역발상 사고 부족 → 정반대 입장으로 이 주제를 분석하세요.
+(위는 예시이며, 실제 부족한 사고력에 맞는 문제를 생성)
+
+## 즉시 과제 (오늘 할 수 있는 것)
+3가지 제시. 각 과제는 구체적인 행동으로 표현합니다.
+
+## 심화 과제 (이번 주 내)
+2가지 제시. 더 깊은 사유와 글쓰기를 요구하는 과제.
+
+## 과제 유형 예시
+▪ 반대 관점으로 다시 쓰기
+▪ 100자 자기 언어 요약
+▪ 역사 관점으로 재해석
+▪ 시스템 사고 지도 그리기
+▪ 새로운 해석 3가지 만들기
+▪ 내 삶에 적용하는 글쓰기
+▪ 질문 10개 만들기 (답 없이)
+
+---
+
+---
+
+# 【반대 사상 탐색 시스템】
+
+책 내용이나 주장이 입력될 때 반드시 다음을 수행합니다:
+
+## ① 현재 주장 분석
+▪ 저자의 핵심 주장
+▪ 핵심 가치
+▪ 핵심 전제 (당연하게 여기는 가정)
+
+## ② 반대 주장 생성
+현재 주장과 충돌하는 주장을 생성합니다.
+예: 자유 ↔ 질서 / 개인 ↔ 공동체 / 평등 ↔ 자유 / 전통 ↔ 혁신 / 경쟁 ↔ 협력
+
+## ③ 반대 관점 탐색
+현재 주장과 반대되는 관점을 구체적으로 제시합니다.
+
+## ④ 반대 해석 탐색
+현재 해석과 반대되는 해석을 제시합니다.
+
+## ⑤ 반대 책 추천 (반드시 실행)
+반드시 실제 존재하는 책을 추천합니다.
+형식:
+▪ 책 제목 :
+▪ 저자 :
+▪ 왜 반대되는가 :
+▪ 핵심 차이점 :
+
+## ⑥ 사상 비교
+현재 책 VS 반대 책을 다음 항목으로 비교합니다:
+▪ 인간관 / 자유관 / 사회관 / 윤리관 / 행복관 / 삶의 목적
+
+## ⑦ 사고 확장 질문
+▪ 어느 주장에 더 동의하는가?
+▪ 왜 그렇게 생각하는가?
+▪ 두 주장 모두 맞을 가능성은?
+▪ 어떤 상황에서 각각 타당한가?
+▪ 나는 어떤 전제를 당연하게 생각하고 있는가?
+
+---
+
+# 【질문 레벨 분석】
+
+사용자가 질문이나 답변을 입력할 때마다 반드시 아래 15단계 질문 레벨로 평가합니다.
+
+질문 레벨 정의:
+▪ 레벨 1 (정보 질문) : 무엇인가? 누가? 언제?
+▪ 레벨 2 (이해 질문) : 무슨 뜻인가? 왜 그런가?
+▪ 레벨 3 (분석 질문) : 원인은? 구조는?
+▪ 레벨 4 (비교 질문) : 차이점은? 유사점은?
+▪ 레벨 5 (평가 질문) : 옳은가? 한계는?
+▪ 레벨 6 (적용 질문) : 내 삶에 어떻게 적용하는가?
+▪ 레벨 7 (관점 질문) : 다른 관점은?
+▪ 레벨 8 (해석 질문) : 다른 해석은?
+▪ 레벨 9 (창조 질문) : 새롭게 만들 수 있는가?
+▪ 레벨 10 (반대 질문) : 정반대라면?
+▪ 레벨 11 (시스템 질문) : 무엇과 연결되는가?
+▪ 레벨 12 (전략 질문) : 장기 결과는?
+▪ 레벨 13 (메타 질문) : 나는 왜 그렇게 생각하는가?
+▪ 레벨 14 (존재 질문) : 본질은 무엇인가?
+▪ 레벨 15 (지혜 질문) : 삶의 의미는 무엇인가?
+
+평가 결과 반드시 제시:
+▪ 현재 질문 레벨 : Lv.X (레벨명)
+▪ 현재 레벨 강점 : 이 레벨 질문이 잘 된 점
+▪ 부족한 레벨 : 아직 도달하지 못한 레벨과 그 이유
+▪ 다음 단계 목표 : Lv.X+1 로 올라가기 위한 구체적 질문 예시 제시
+
+---
+
+절대 규칙:
+1. 독서를 대신하지 말 것
+2. 사용자가 생각하도록 만들 것
+3. 반드시 핵심 의미(표면적·심층적·본질적)를 먼저 정리할 것
+4. 해석 유형 18가지 중 최소 5개 이상의 해석을 제시할 것
+5. 다양한 관점·시각·사고력을 제시하고 부족한 것을 명시할 것 (부족한 관점·시각·사고력 각각 구분)
+   → 다양한 시각을 제시할 것
+   → 다양한 사고력을 제시할 것
+6. 반드시 표현력 피드백(명확성·논리성·구체성·독창성)을 줄 것
+7. 반드시 자기 언어 훈련을 시킬 것
+8. 반드시 질문을 던질 것
+9. 반드시 즉시 과제 + 심화 과제로 나눈 사고력 훈련 과제를 줄 것
+10. 항상 사고력 성장에 초점을 맞출 것
+11. 반드시 질문 레벨을 평가하고 다음 단계를 안내할 것
+12. 반드시 사고 도구를 추천하고 실제 적용 결과를 생성할 것
+13. 사용자가 얕은 답변을 하면 반드시 더 깊은 질문을 던질 것
+14. 사용자가 관점 하나에 갇히면 반드시 다른 관점을 제시할 것
+15. 사용자의 생각을 존중하되 비판적 사고를 유도할 것
+16. 항상 '생각 → 질문 → 표현 → 피드백 → 성장' 구조로 진행할 것
+17. 하나의 해석으로 끝내지 말 것
+18. 하나의 관점으로 끝내지 말 것
+19. 하나의 시각으로 끝내지 말 것
+20. 하나의 사고방식으로 끝내지 말 것
+21. 반드시 대안 해석을 제시할 것
+22. 반드시 반대 입장을 제시할 것
+23. 반드시 메타 분석을 수행할 것
+
+
+
+# 【13단계】 성장 기록
+
+이 대화에서 드러난 사용자의 성장 데이터를 정리합니다:
+
+▪ 자주 사용하는 관점  : 이 사용자가 주로 쓰는 관점
+▪ 부족한 관점        : 이 사용자가 잘 쓰지 않는 관점
+▪ 자주 사용하는 시각  : 이 사용자가 주로 쓰는 시각
+▪ 부족한 시각        : 이 사용자가 잘 쓰지 않는 시각
+▪ 자주 사용하는 사고력: 이 사용자의 강한 사고력
+▪ 부족한 사고력      : 이 사용자가 키워야 할 사고력
+
+이 데이터를 바탕으로 다음 대화에서도 맞춤형 피드백을 제공합니다.
+
+## 특별 규칙 (어떤 입력에도 반드시 적용)
+1. 하나의 해석만 제시하지 말 것
+2. 최소 5개 이상의 해석 방향을 제시할 것
+3. 최소 5개 이상의 관점을 제시할 것
+4. 반드시 반대 관점을 포함할 것
+5. 반드시 메타 관점을 포함할 것
+6. 반드시 자기 언어 훈련을 포함할 것
+7. 반드시 표현력 피드백을 포함할 것
+8. 반드시 사고력 피드백을 포함할 것
+
+최종 목표:
+"책을 읽는 사람" → "생각하는 사람"
+"남의 언어를 소비하는 사람" → "자신의 언어를 만드는 사람"
+"한 가지 해석에 머무는 사람" → "수십 개의 관점과 해석을 다루는 사람"
+"Lv.1 정보 질문자" → "Lv.15 지혜 질문자"
+"도구 없이 생각하는 사람" → "사고 도구를 자유자재로 쓰는 사람"
+"정보 소비자" → "사고 생산자"
+"하나의 관점에 갇힌 사람" → "관점을 자유롭게 전환하는 사람"
+"생각하는 사람" → "생각을 설계하는 사람"
+
+---
+
+# 【사고 도구 추천 엔진】
+
+사용자의 문제·목표·질문·독서 내용·사고 패턴을 분석하여 가장 적합한 사고 도구를 선택하고 실제 적용한다.
+도구를 단순 설명하지 않는다. 반드시 실제로 적용하여 결과를 생성한다.
+
+## 사고 도구 라이브러리
+
+### 목표 설계
+▪ 백캐스팅 : 목표 달성 후 역으로 계획 (10년→5년→3년→1년→오늘)
+
+### 실행 설계
+▪ 액션 플랜 매트릭스 : 목표·행동·기한·우선순위·장애물·해결책 표
+
+### 사고 확장
+▪ 마인드맵 : 중심주제→하위주제→연결관계 트리 구조
+▪ 연꽃만발법 : 중심주제→8개 확장→각 확장에서 다시 8개 확장
+
+### 아이디어 정리
+▪ KJ법 : 아이디어 수집→유사 그룹→상위 개념 생성
+
+### 문제 분석
+▪ 로직트리 : 문제→원인→세부원인 트리
+▪ 5 Whys : 왜?를 5번 반복해 근본 원인 탐색
+
+### 관점 전환
+▪ 6가지 생각 모자 : 흰(사실)·빨간(감정)·검은(위험)·노란(장점)·초록(창의)·파란(통합)
+▪ 슈퍼히어로 기법 : 공자·소크라테스·아인슈타인·잡스 등 인물 관점 분석
+
+### 시스템 사고
+▪ 지도 기법 : 요소→관계→흐름→시스템 지도
+
+### 창의성
+▪ 사물 빙의법 : 사물 입장에서 생각 ("내가 책이라면?")
+▪ 질문 브레인스토밍 : 답 없이 질문만 20개 이상 생성
+
+## 도구 추천 규칙
+사용자 입력 분석 후 반드시 수행:
+1. 현재 문제 진단 (목표/원인분석/아이디어/구조이해/실행계획/관점 중 무엇이 부족한가)
+2. 가장 적합한 도구 1~3개 추천 + 이유 설명
+3. 추천 도구를 실제로 적용하여 결과 생성
+4. 필요 시 복합 도구 연결 (백캐스팅→로직트리→5Whys→연꽃만발→액션플랜)
+
+## 사고력별 도구 매핑
+▪ 시스템 사고 부족 → 지도 기법·로직트리
+▪ 원인 분석 부족 → 5 Whys
+▪ 창의성 부족 → 연꽃만발법·사물 빙의법
+▪ 관점 부족 → 6가지 생각 모자·슈퍼히어로 기법
+▪ 실행력 부족 → 액션 플랜 매트릭스
+▪ 목표 불명확 → 백캐스팅
+▪ 질문력 부족 → 퀘스천 맵
+
+---
+
+# 【퀘스천 맵 (Question Map)】
+
+사용자가 문장·문단·책 내용·생각을 입력할 때, 퀘스천 맵 생성이 가능하면 반드시 수행한다.
+
+## 목표
+답을 찾는 것이 아니라 좋은 질문을 만드는 것.
+
+## 질문 유형 라이브러리
+▪ 이해 질문 (Lv.2) : 무엇인가? 무슨 뜻인가? 왜 중요한가?
+▪ 분석 질문 (Lv.3) : 원인은? 구조는? 관계는?
+▪ 비교 질문 (Lv.4) : 비슷한 것은? 다른 것은?
+▪ 평가 질문 (Lv.5) : 장점은? 단점은? 한계는?
+▪ 관점 질문 (Lv.7) : 역사 관점은? 경제 관점은? 심리 관점은?
+▪ 시각 질문 : 장기 시각은? 미래 시각은? 비판 시각은?
+▪ 사고력 질문 : 시스템 사고로 보면? 전략 사고로 보면? 철학 사고로 보면?
+▪ 반대 질문 (Lv.10) : 정반대라면? 틀렸다면? 반대 근거는?
+▪ 창조 질문 (Lv.9) : 새로운 해석은? 새로운 방법은?
+▪ 메타 질문 (Lv.13) : 나는 왜 그렇게 생각하는가? 무엇을 놓치고 있는가?
+▪ 지혜 질문 (Lv.15) : 삶에 어떤 의미가 있는가? 어떻게 살아야 하는가?
+
+## 출력 형식
+1. 중심 질문 정의
+2. 질문 트리 생성 (최소 20개, 유형별 구조화)
+3. 질문 레벨 분석 (각 질문의 Lv 표시)
+4. 핵심 질문 추천 (가장 중요한 3개)
+5. 사유 순서 추천 (어떤 순서로 생각할 것인가)
+
+## 규칙
+▪ 질문만 나열하지 않는다 — 질문 간의 관계를 보여준다
+▪ 질문 레벨(Lv.1~15)을 각 질문 옆에 표시한다
+▪ 답을 제공하지 않는다 — 오직 질문만 생성한다`;
+
+
+
+// ─── API 공통 유틸 ────────────────────────────────────────
+/**
+ * OpenAI API 공통 호출 유틸
+ * @param {string} prompt - 사용자 프롬프트
+ * @param {number} maxTokens - 최대 토큰 수
+ * @param {number} temperature - 창의성 (0~1)
+ * @returns {Promise<string>} AI 응답 텍스트
+ * @throws {Error} API 키 없음 / 네트워크 오류 / API 오류
+ */
+async function callGPT(prompt, maxTokens = 2000, temperature = 0.7) {
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); throw new Error('API_KEY_MISSING'); }
+
+  const model = document.getElementById('modelSelect')?.value
+             || document.getElementById('apiKeyModal_model')?.value
+             || 'gpt-4o';
+
+  let res;
+  try {
+    res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages: [{ role: 'user', content: prompt }],
+        max_tokens: maxTokens,
+        temperature,
+      }),
+    });
+  } catch (networkErr) {
+    throw new Error('네트워크 오류가 발생했습니다. 인터넷 연결을 확인해 주세요.');
+  }
+
+  if (!res.ok) {
+    const errBody = await res.json().catch(() => ({}));
+    const msg = errBody.error?.message || `HTTP ${res.status}`;
+    const STATUS_MESSAGES = {
+      401: 'API 키가 올바르지 않습니다. 🔑 버튼을 눌러 다시 설정하세요.',
+      402: 'OpenAI 크레딧이 부족합니다. platform.openai.com 에서 충전하세요.',
+      429: '요청이 너무 많습니다. 잠시 후 다시 시도해 주세요.',
+      500: 'OpenAI 서버 오류입니다. 잠시 후 다시 시도해 주세요.',
+    };
+    throw new Error(STATUS_MESSAGES[res.status] || msg);
+  }
+
+  const data = await res.json();
+  return data.choices[0]?.message?.content ?? '';
+}
+
+// ─── INIT ────────────────────────────────────────────────
+
+
+// ─── API KEY ─────────────────────────────────────────────
+function saveApiKey() {
+  const key = document.getElementById('apiKey').value.trim();
+  if (!key) { setStatus('err', '키를 입력하세요'); return; }
+  if (!key.startsWith('sk-')) { setStatus('err', '올바른 형식이 아닙니다 (sk-...)'); return; }
+  localStorage.setItem('rtos_apikey', key);
+  localStorage.setItem('rtos_model', document.getElementById('modelSelect').value);
+  setStatus('ok', '저장 완료 ✓');
+  updateApiHeaderBtn(true);
+}
+
+function setStatus(type, msg) {
+  const dot = document.getElementById('statusDot');
+  const txt = document.getElementById('statusText');
+  if (dot) {
+    dot.className = 'status-dot ' + (type === 'ok' ? 'ok' : 'err');
+    // settingsBar의 dot도 업데이트
+    dot.style.background = type === 'ok' ? 'var(--green)' : 'var(--red)';
+    dot.style.boxShadow = type === 'ok' ? '0 0 6px rgba(46,204,135,.5)' : 'none';
+  }
+  if (txt) txt.textContent = msg;
+}
+
+function updateSettingsBarStatus(hasKey) {
+  const dot = document.getElementById('statusDot');
+  if (dot) {
+    dot.style.background = hasKey ? 'var(--green)' : 'var(--red)';
+    dot.style.boxShadow = hasKey ? '0 0 6px rgba(46,204,135,.5)' : 'none';
+  }
+}
+
+function syncModalModel(model) {
+  const mm = document.getElementById('apiKeyModal_model');
+  if (mm) mm.value = model;
+  if (typeof updateMobileBar === 'function') updateMobileBar();
+}
+
+function renderSessionQuickList() {
+  const el = document.getElementById('sessionQuickList');
+  if (!el) return;
+  if (!sessions.length) {
+    el.innerHTML = '';
+    return;
+  }
+  el.innerHTML = sessions.slice(0, 5).map(s =>
+    `<button class="session-quick-btn ${s.id === currentSessionId ? 'active' : ''}"
+      onclick="loadSession('${escHtml(s.id)}')" title="${escHtml(s.title)}">
+      ${escHtml(s.title.slice(0, 12))}${s.title.length > 12 ? '…' : ''}
+    </button>`
+  ).join('');
+}
+
+// ─── API KEY MODAL ────────────────────────────────────────
+function showApiModal() {
+  const modal = document.getElementById('apiKeyModal');
+  const savedKey = localStorage.getItem('rtos_apikey');
+  const savedModel = localStorage.getItem('rtos_model');
+  const inp = document.getElementById('apiKeyModal_input');
+  const mdl = document.getElementById('apiKeyModal_model');
+  if (savedKey) { inp.value = savedKey; setModalStatus('ok', '저장된 키가 있습니다'); }
+  else { inp.value = ''; setModalStatus('none', '키를 입력하세요'); }
+  if (savedModel && mdl) mdl.value = savedModel;
+  modal.classList.add('open');
+  setTimeout(() => inp.focus(), 100);
+}
+
+function closeApiModal() {
+  document.getElementById('apiKeyModal').classList.remove('open');
+}
+
+function saveApiKeyModal() {
+  const key = document.getElementById('apiKeyModal_input').value.trim();
+  if (!key) { setModalStatus('err', '키를 입력하세요'); return; }
+  if (!key.startsWith('sk-')) { setModalStatus('err', '올바른 형식이 아닙니다 (sk-...)'); return; }
+  const model = document.getElementById('apiKeyModal_model').value;
+  localStorage.setItem('rtos_apikey', key);
+  localStorage.setItem('rtos_model', model);
+  // 설정 바 입력 동기화
+  const apiInput = document.getElementById('apiKey');
+  if (apiInput) apiInput.value = key;
+  const modelSel = document.getElementById('modelSelect');
+  if (modelSel) modelSel.value = model;
+  setStatus('ok', 'API 키 저장됨');
+  setModalStatus('ok', '저장 완료 ✓');
+  updateApiHeaderBtn(true);
+  updateSettingsBarStatus(true);
+  if (typeof updateMobileBar === 'function') updateMobileBar();
+  setTimeout(closeApiModal, 800);
+}
+
+function setModalStatus(type, msg) {
+  const dot = document.getElementById('apiKeyModal_dot');
+  const txt = document.getElementById('apiKeyModal_msg');
+  if (!dot || !txt) return;
+  dot.style.background = type==='ok' ? 'var(--green)' : type==='err' ? 'var(--red)' : 'var(--text3)';
+  txt.textContent = msg;
+}
+
+function toggleApiKeyModalVisibility() {
+  const inp = document.getElementById('apiKeyModal_input');
+  const btn = document.getElementById('apiKeyModalToggle');
+  if (inp.type === 'password') { inp.type = 'text'; btn.textContent = '🙈 숨기기'; }
+  else { inp.type = 'password'; btn.textContent = '👁 보기'; }
+}
+
+function updateApiHeaderBtn(hasKey) {
+  const btn = document.getElementById('apiKeyHeaderBtn');
+  if (!btn) return;
+  if (hasKey) {
+    btn.style.borderColor = 'var(--green)';
+    btn.style.color = 'var(--green)';
+    btn.title = 'API 키 설정됨 (클릭해서 변경)';
+  } else {
+    btn.style.borderColor = 'var(--red)';
+    btn.style.color = 'var(--red)';
+    btn.title = 'API 키를 설정하세요!';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const apiModal = document.getElementById('apiKeyModal');
+  if (apiModal) apiModal.addEventListener('click', function(e){ if(e.target===this) closeApiModal(); });
+});
+
+
+// ─── SESSION ─────────────────────────────────────────────
+function newSession() {
+  const id = Date.now().toString();
+  const session = { id, title: '새 독서 세션', messages: [], createdAt: new Date().toLocaleDateString('ko-KR') };
+  sessions.unshift(session);
+  saveSessions();
+  loadSession(id);
+}
+
+function loadSession(id) {
+  currentSessionId = id;
+  const s = sessions.find(x => x.id === id);
+  if (!s) return;
+  document.getElementById('welcome').style.display = 'none';
+  const chatArea = document.getElementById('chatArea');
+  // remove all messages but keep welcome
+  [...chatArea.querySelectorAll('.msg')].forEach(el => el.remove());
+  s.messages.forEach(m => appendMessageDOM(m.role, m.content, false));
+  renderSessions();
+  renderSessionQuickList();
+  scrollToBottom();
+}
+
+function saveSessions() {
+  localStorage.setItem('rtos_sessions', JSON.stringify(sessions));
+}
+
+function renderSessions() {
+  const el = document.getElementById('sessionList');
+  if (!sessions.length) {
+    el.innerHTML = '<div class="session-empty">아직 세션이 없습니다.<br>책 내용을 입력해 분석을 시작하세요.</div>';
+    return;
+  }
+  el.innerHTML = sessions.map(s => `
+    <div class="session-item ${s.id === currentSessionId ? 'active' : ''}" onclick="loadSession('${s.id}')">
+      <div class="session-title">${escHtml(s.title)}</div>
+      <div class="session-meta">${s.createdAt} · ${s.messages.length}개 메시지</div>
+      <button class="session-del" onclick="deleteSession(event,'${s.id}')" title="세션 삭제">✕</button>
+    </div>
+  `).join('');
+}
+
+function deleteSession(e, id) {
+  e.stopPropagation();
+  if (!confirm('이 세션을 삭제하시겠습니까?')) return;
+  sessions = sessions.filter(s => s.id !== id);
+  if (currentSessionId === id) {
+    currentSessionId = null;
+    const chatArea = document.getElementById('chatArea');
+    [...chatArea.querySelectorAll('.msg')].forEach(el => el.remove());
+    document.getElementById('welcome').style.display = 'block';
+  }
+  saveSessions();
+  renderSessions();
+}
+
+
+
+function clearHistory() {
+  if (!confirm('현재 세션을 초기화하시겠습니까?')) return;
+  if (currentSessionId) {
+    const s = sessions.find(x => x.id === currentSessionId);
+    if (s) { s.messages = []; saveSessions(); }
+  }
+  const chatArea = document.getElementById('chatArea');
+  [...chatArea.querySelectorAll('.msg')].forEach(el => el.remove());
+  document.getElementById('welcome').style.display = 'block';
+  renderSessions();
+}
+
+// ─── MODE ────────────────────────────────────────────────
+const modeHints = {
+  book: '📖 책 내용을 입력하면 12단계 사고력 분석을 시작합니다',
+  myThought: '✏️ 책에 대한 나의 생각·해석을 입력하면 8~12단계 평가·멘토링을 합니다',
+  question: '❓ AI 독서 멘토에게 자유롭게 질문하세요'
+};
+
+function setMode(el, mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('modeHint').textContent = modeHints[mode];
+  const ta = document.getElementById('userInput');
+  if (mode === 'book') ta.placeholder = '책 제목, 문장, 문단, 장·절 내용을 입력하세요...';
+  else if (mode === 'myThought') ta.placeholder = '이 책/내용에 대한 나의 생각, 해석, 감상을 자유롭게 작성하세요...';
+  else ta.placeholder = '독서 멘토에게 질문하세요...';
+}
+
+// ─── SEND ────────────────────────────────────────────────
+async function sendMessage() {
+  if (isThinking) return;
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); return; }
+
+  const ta = document.getElementById('userInput');
+  const text = ta.value.trim();
+  if (!text) return;
+
+  // ensure session
+  if (!currentSessionId) {
+    const id = Date.now().toString();
+    const s = { id, title: text.slice(0, 30) + (text.length > 30 ? '...' : ''), messages: [], createdAt: new Date().toLocaleDateString('ko-KR') };
+    sessions.unshift(s);
+    currentSessionId = id;
+    saveSessions();
+    document.getElementById('welcome').style.display = 'none';
+  }
+
+  const session = sessions.find(x => x.id === currentSessionId);
+
+  // add user prefix by mode
+  let prefixed = text;
+  if (currentMode === 'myThought') prefixed = `[나의 생각/해석] ${text}`;
+  else if (currentMode === 'question') prefixed = `[질문] ${text}`;
+
+  ta.value = '';
+  autoResize(ta);
+  appendMessage('user', text);
+  session.messages.push({ role: 'user', content: prefixed });
+  saveSessions();
+
+  // update session title
+  if (session.messages.length === 1) {
+    session.title = text.slice(0, 35) + (text.length > 35 ? '...' : '');
+    saveSessions();
+    renderSessions();
+  }
+
+  isThinking = true;
+  document.getElementById('sendBtn').disabled = true;
+  showThinking();
+  showProgress(5, '분석 준비 중...');
+
+  try {
+    const model = document.getElementById('modelSelect').value;
+    localStorage.setItem('rtos_model', model);
+
+    const messages = [
+      { role: 'system', content: SYSTEM_PROMPT },
+      ...session.messages.map(m => ({ role: m.role, content: m.content }))
+    ];
+
+    showProgress(20, '독서 구조 분석 중...');
+
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        max_tokens: 4096,
+        temperature: 0.7,
+        stream: false
+      })
+    });
+
+    showProgress(80, '사고 확장 분석 중...');
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.error?.message || `API 오류 (${res.status})`);
+    }
+
+    const data = await res.json();
+    const reply = data.choices[0].message.content;
+
+    hideThinking();
+    showProgress(100, '분석 완료!');
+    setTimeout(() => hideProgress(), 800);
+
+    appendMessage('ai', reply);
+    session.messages.push({ role: 'assistant', content: reply });
+    saveSessions();
+    renderSessions();
+
+  } catch (e) {
+    hideThinking();
+    hideProgress();
+    const errMsg = e.message === 'API_KEY_MISSING' ? '🔑 API 키가 설정되지 않았습니다. 상단 🔑 버튼을 눌러 설정해주세요.' : `⚠️ 오류: ${e.message}`;
+    appendMessage('ai', errMsg);
+  }
+
+  isThinking = false;
+  document.getElementById('sendBtn').disabled = false;
+}
+
+// ─── DOM HELPERS ─────────────────────────────────────────
+function appendMessage(role, content) {
+  appendMessageDOM(role, content, true);
+}
+
+function appendMessageDOM(role, content, animate) {
+  const chatArea = document.getElementById('chatArea');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  if (!animate) div.style.animation = 'none';
+
+  const isAI = role === 'ai' || role === 'assistant';
+  const msgId = 'msg_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
+  div.innerHTML = `
+    <div class="msg-avatar">${isAI ? '📖' : '👤'}</div>
+    <div class="msg-body">
+      <div class="msg-name">${isAI ? '사고력 OS' : '나'}</div>
+      <div class="msg-content" id="${msgId}">${isAI ? formatAIResponse(content) : escHtml(content)}</div>
+      ${isAI ? `<div style="display:flex;gap:5px;margin-top:8px;opacity:0;transition:opacity .2s" class="msg-btns">
+        <button class="msg-act-btn" onclick="saveAiToNote('${msgId}')">📒 노트 저장</button>
+        <button class="msg-act-btn" onclick="copyAiMsg('${msgId}')">📋 복사</button>
+      </div>` : ''}
+    </div>`;
+  div.addEventListener('mouseenter', () => { const b=div.querySelector('.msg-btns'); if(b) b.style.opacity='1'; });
+  div.addEventListener('mouseleave', () => { const b=div.querySelector('.msg-btns'); if(b) b.style.opacity='0'; });
+  chatArea.appendChild(div);
+  scrollToBottom();
+}
+
+function formatAIResponse(text) {
+  let html = escHtml(text);
+
+  // Stage headers 【N단계】
+  html = html.replace(/【(\d+단계[^】]*)】/g, '<div class="stage-badge">$1</div>');
+
+  // Section headers starting with # 
+  html = html.replace(/^# (.+)$/gm, '<div class="section-header">$1</div>');
+  html = html.replace(/^## (.+)$/gm, '<div class="sub-header">$1</div>');
+
+  // Bold ▪ items
+  html = html.replace(/^▪ (.+)$/gm, '<div style="margin: 4px 0 4px 0; font-size:13.5px;"><span style="color:var(--accent);font-weight:700;">▪</span> $1</div>');
+
+  // Score patterns like "명확성 : 78점"
+  html = html.replace(/([가-힣a-zA-Z\s]+)\s*[:：]\s*(\d+)점/g, '<span style="color:var(--accent2); font-weight:700;">$1 $2점</span>');
+
+  // Highlight boxes for important lines
+  html = html.replace(/^&gt;&gt; (.+)$/gm, '<div class="highlight-box">$1</div>');
+  html = html.replace(/^→ (.+)$/gm, '<div class="highlight-box">→ $1</div>');
+
+  // Bold **text**
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong style="color:var(--accent2)">$1</strong>');
+
+  // Newlines
+  html = html.replace(/\n/g, '<br>');
+
+  return html;
+}
+
+// ─── 문자열 이스케이프 유틸 (XSS 방어, 단일 통합) ────────────
+function escHtml(t) {
+  if (t === null || t === undefined) return '';
+  return String(t)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+// 하위 호환 별칭
+const escapeHtml = escHtml;
+const esc3 = escHtml;
+
+function showThinking() {
+  const chatArea = document.getElementById('chatArea');
+  thinkingEl = document.createElement('div');
+  thinkingEl.className = 'msg ai';
+  thinkingEl.id = 'thinkingMsg';
+  thinkingEl.innerHTML = `
+    <div class="msg-avatar">📖</div>
+    <div class="msg-body">
+      <div class="msg-name">독서 사고력 OS</div>
+      <div class="thinking">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span id="thinkingText">12단계 분석 중...</span>
+      </div>
+    </div>
+  `;
+  chatArea.appendChild(thinkingEl);
+  scrollToBottom();
+}
+
+function hideThinking() {
+  const el = document.getElementById('thinkingMsg');
+  if (el) el.remove();
+  thinkingEl = null;
+}
+
+function showProgress(pct, label) {
+  document.getElementById('stageProgress').classList.add('visible');
+  document.getElementById('stageLabel').textContent = label;
+  document.getElementById('stageBarFill').style.width = pct + '%';
+  document.getElementById('stagePercent').textContent = pct + '%';
+}
+
+function hideProgress() {
+  document.getElementById('stageProgress').classList.remove('visible');
+  document.getElementById('stageBarFill').style.width = '0%';
+}
+
+// ─── INPUT ───────────────────────────────────────────────
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 180) + 'px';
+}
+
+function insertExample(text) {
+  document.getElementById('userInput').value = text;
+  autoResize(document.getElementById('userInput'));
+  document.getElementById('userInput').focus();
+}
+
+// ─── SCROLL ──────────────────────────────────────────────
+function scrollToBottom() {
+  const ca = document.getElementById('chatArea');
+  ca.scrollTop = ca.scrollHeight;
+}
+
+function setupScroll() {
+  const ca = document.getElementById('chatArea');
+  ca.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollBtn');
+    const atBottom = ca.scrollHeight - ca.scrollTop - ca.clientHeight < 100;
+    btn.classList.toggle('visible', !atBottom);
+  });
+}
+
+// ─── MODAL ───────────────────────────────────────────────
+function showHelp() {
+  document.getElementById('helpModal').classList.add('open');
+}
+
+function closeHelp() {
+  document.getElementById('helpModal').classList.remove('open');
+}
+
+document.getElementById('helpModal').addEventListener('click', function(e) {
+  if (e.target === this) closeHelp();
+});
+
+// model select auto-save
+document.getElementById('modelSelect').addEventListener('change', function() {
+  localStorage.setItem('rtos_model', this.value);
+  // 모달 select도 동기화
+  const mm = document.getElementById('apiKeyModal_model');
+  if (mm) mm.value = this.value;
+});
+
+// ─── 공통 유틸 함수 ─────────────────────────────────────────
+
+/**
+ * 파일 다운로드 유틸 (URL 메모리 자동 해제)
+ * @param {string} content - 파일 내용
+ * @param {string} filename - 저장 파일명
+ * @param {string} [type='text/plain;charset=utf-8'] - MIME 타입
+ */
+function downloadFile(content, filename, type = 'text/plain;charset=utf-8') {
+  const blob = new Blob([content], { type });
+  const url  = URL.createObjectURL(blob);
+  const a    = Object.assign(document.createElement('a'), { href: url, download: filename });
+  a.click();
+  // 메모리 해제 (즉시 해제 시 일부 브라우저에서 다운로드 실패하므로 지연)
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// ─── 공통 유틸 함수 ─────────────────────────────────────────
+/**
+ * 결과 영역에 에러 메시지를 표시
+ * @param {string} resultId - 결과를 표시할 요소 ID
+ * @param {Error|string} err - 에러 객체 또는 메시지
+ */
+function showErrorResult(resultId, err) {
+  const el = document.getElementById(resultId);
+  if (!el) return;
+  const msg = (err instanceof Error ? err.message : String(err)) || '알 수 없는 오류';
+  const isApiKey = msg === 'API_KEY_MISSING';
+  el.innerHTML = `<div style="background:rgba(224,92,106,.1);border:1px solid var(--red);
+    border-radius:10px;padding:16px 18px;color:var(--red);font-size:13px;line-height:1.7">
+    ${isApiKey
+      ? '🔑 API 키가 설정되지 않았습니다. 상단 🔑 버튼을 눌러 설정해주세요.'
+      : `⚠️ ${escHtml(msg)}`}
+  </div>`;
+}
+
+/**
+ * 로딩 상태 토글
+ * @param {string} btnId - 버튼 ID
+ * @param {string} loadingId - 로딩 요소 ID
+ * @param {boolean} isLoading - 로딩 상태
+ * @param {string} defaultText - 기본 버튼 텍스트
+ */
+function setLoadingState(btnId, loadingId, isLoading, defaultText) {
+  const btn = document.getElementById(btnId);
+  const loader = document.getElementById(loadingId);
+  if (btn) { btn.disabled = isLoading; if (!isLoading) btn.textContent = defaultText; }
+  if (loader) loader.style.display = isLoading ? 'block' : 'none';
+}
+
+// ─── PAGE SWITCH ──────────────────────────────────────────
+function switchPage(page) {
+  ['chat','notes','qlevel','opposite','tools','qmap'].forEach(p => {
+    const el = document.getElementById('page-'+p);
+    if (el) el.style.display = p===page ? 'flex' : 'none';
+    // 서브탭 active 처리
+    const t = document.getElementById('tab-'+p);
+    if (t) {
+      if (t.classList.contains('sub-tab')) {
+        t.classList.toggle('active', p===page);
+      } else {
+        t.style.background = p===page ? 'var(--bg2)' : 'transparent';
+        t.style.color = p===page ? 'var(--accent)' : '#7fa0be';
+        t.style.border = p===page ? '1px solid var(--border)' : 'none';
+      }
+    }
+  });
+  if (page === 'qlevel') renderQlLevelMap();
+  // 선택 탭 자동 스크롤 (서브탭바)
+  const activeTab = document.getElementById('tab-'+page);
+  if (activeTab) {
+    activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+  const hasKey = !!localStorage.getItem('rtos_apikey');
+  updateApiHeaderBtn(hasKey);
+  if (typeof updateMobileBar === 'function') updateMobileBar();
+}
+
+// ─── QUESTION LEVEL SYSTEM ───────────────────────────────
+const QL_LEVELS = [
+  { lv:1,  name:'정보 질문',   icon:'🔍', desc:'무엇인가? 누가? 언제?',           color:'#5b9bd5' },
+  { lv:2,  name:'이해 질문',   icon:'💡', desc:'무슨 뜻인가? 왜 그런가?',         color:'#5b9bd5' },
+  { lv:3,  name:'분석 질문',   icon:'🔬', desc:'원인은? 구조는?',                  color:'#4caf87' },
+  { lv:4,  name:'비교 질문',   icon:'⚖️', desc:'차이점은? 유사점은?',              color:'#4caf87' },
+  { lv:5,  name:'평가 질문',   icon:'📊', desc:'옳은가? 한계는?',                  color:'#4caf87' },
+  { lv:6,  name:'적용 질문',   icon:'🛠️', desc:'내 삶에 어떻게 적용하는가?',      color:'#c8a96e' },
+  { lv:7,  name:'관점 질문',   icon:'🔭', desc:'다른 관점은?',                     color:'#c8a96e' },
+  { lv:8,  name:'해석 질문',   icon:'🎨', desc:'다른 해석은?',                     color:'#c8a96e' },
+  { lv:9,  name:'창조 질문',   icon:'✨', desc:'새롭게 만들 수 있는가?',           color:'#9b7fd4' },
+  { lv:10, name:'반대 질문',   icon:'🔄', desc:'정반대라면?',                      color:'#9b7fd4' },
+  { lv:11, name:'시스템 질문', icon:'🕸️', desc:'무엇과 연결되는가?',              color:'#9b7fd4' },
+  { lv:12, name:'전략 질문',   icon:'♟️', desc:'장기 결과는?',                    color:'#d4a26b' },
+  { lv:13, name:'메타 질문',   icon:'🪞', desc:'나는 왜 그렇게 생각하는가?',      color:'#d4a26b' },
+  { lv:14, name:'존재 질문',   icon:'🌌', desc:'본질은 무엇인가?',                 color:'#e8c98e' },
+  { lv:15, name:'지혜 질문',   icon:'🌟', desc:'삶의 의미는 무엇인가?',            color:'#e8c98e' },
+];
+
+// (AppState에서 관리: let qlHistory)
+// (AppState에서 관리: let currentQlLevel)
+
+function renderQlLevelMap(activeLevel) {
+  const wrap = document.getElementById('qlLevelMap');
+  if (!wrap) return;
+  wrap.innerHTML = QL_LEVELS.map(l => {
+    const isActive = l.lv === activeLevel;
+    const isPast = activeLevel && l.lv < activeLevel;
+    const opacity = activeLevel ? (isPast ? '0.5' : (isActive ? '1' : '0.3')) : '0.6';
+    return `<div title="Lv.${l.lv} ${l.name}" style="
+      display:flex;align-items:center;justify-content:center;gap:3px;
+      padding:4px 7px;border-radius:20px;font-size:10px;font-weight:700;
+      cursor:default;transition:all .3s;
+      background:${isActive ? l.color+'33' : 'var(--bg3)'};
+      border:1px solid ${isActive ? l.color : 'var(--border)'};
+      color:${isActive ? l.color : 'var(--text3)'};
+      opacity:${opacity};
+      transform:${isActive ? 'scale(1.08)' : 'scale(1)'}
+    ">
+      <span>${l.icon}</span><span>Lv.${l.lv}</span>
+    </div>`;
+  }).join('');
+}
+
+async function analyzeQLevel() {
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); return; }
+  const text = document.getElementById('qlInput').value.trim();
+  if (!text) return;
+
+  document.getElementById('qlResult').innerHTML = '';
+  setLoadingState('qlBtn', 'qlLoading', true, '🎯 레벨 분석하기');
+
+  const prompt = `다음 질문/생각을 15단계 질문 레벨 시스템으로 분석하세요.
+
+입력: "${text}"
+
+레벨 정의:
+Lv.1 정보 질문(무엇/누가/언제) / Lv.2 이해 질문(무슨 뜻/왜) / Lv.3 분석 질문(원인/구조) / Lv.4 비교 질문(차이/유사) / Lv.5 평가 질문(옳은가/한계) / Lv.6 적용 질문(내 삶 적용) / Lv.7 관점 질문(다른 관점) / Lv.8 해석 질문(다른 해석) / Lv.9 창조 질문(새롭게 만들기) / Lv.10 반대 질문(정반대라면) / Lv.11 시스템 질문(무엇과 연결) / Lv.12 전략 질문(장기 결과) / Lv.13 메타 질문(왜 그렇게 생각하는가) / Lv.14 존재 질문(본질) / Lv.15 지혜 질문(삶의 의미)
+
+반드시 다음 형식으로 정확하게 답하세요:
+
+【현재 질문 레벨】
+▪ 레벨 : Lv.X (레벨명)
+▪ 레벨 번호(숫자만) : X
+
+【강점 분석】
+이 질문이 잘 된 점을 구체적으로 설명하세요.
+
+【부족한 레벨】
+현재보다 높은 레벨로 아직 도달하지 못한 이유를 설명하세요.
+
+【다음 단계 목표】
+▪ 목표 : Lv.(X+1) (레벨명)
+▪ 업그레이드 질문 예시 3개 :
+  1. ...
+  2. ...
+  3. ...
+
+【종합 성장 조언】
+이 질문자가 Lv.15 지혜 질문자로 성장하기 위한 핵심 조언을 제시하세요.`;
+
+  try {
+    const model = document.getElementById('modelSelect').value;
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+      body: JSON.stringify({ model, messages: [{ role:'user', content:prompt }], max_tokens:2000, temperature:0.7 })
+    });
+    if (!res.ok) { const e=await res.json(); throw new Error(e.error?.message||`API 오류 (${res.status})`); }
+    const data = await res.json();
+    const reply = data.choices[0].message.content;
+
+    // 레벨 번호 추출
+    const lvMatch = reply.match(/레벨 번호\(숫자만\)\s*:\s*(\d+)/);
+    const detectedLevel = lvMatch ? parseInt(lvMatch[1]) : 0;
+    currentQlLevel = detectedLevel;
+
+    // 히스토리 저장
+    const lvInfo = QL_LEVELS.find(l => l.lv === detectedLevel) || {};
+    qlHistory.unshift({
+      id: Date.now().toString(),
+      input: text.slice(0,60) + (text.length>60?'...':''),
+      fullInput: text,
+      level: detectedLevel,
+      levelName: lvInfo.name || '알 수 없음',
+      result: reply,
+      date: new Date().toLocaleString('ko-KR')
+    });
+    localStorage.setItem('rtos_ql_history', JSON.stringify(qlHistory));
+    renderQlHistory();
+    renderQlLevelMap(detectedLevel);
+
+    // 결과 렌더링
+    const lvDef = QL_LEVELS.find(l => l.lv === detectedLevel);
+    document.getElementById('qlResult').innerHTML = `
+      <div style="animation:fadeUp .35s ease">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding:16px 20px;background:var(--bg2);border-radius:12px;border:1px solid ${lvDef?lvDef.color+'44':'var(--border)'}">
+          <div style="font-size:36px">${lvDef?lvDef.icon:'🎯'}</div>
+          <div>
+            <div style="font-size:11px;color:#7fa0be;margin-bottom:3px">현재 질문 레벨</div>
+            <div style="font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700;color:${lvDef?lvDef.color:'var(--accent)'}">Lv.${detectedLevel} ${lvDef?lvDef.name:''}</div>
+            <div style="font-size:12px;color:#c8d8ec;margin-top:2px">${lvDef?lvDef.desc:''}</div>
+          </div>
+          <div style="margin-left:auto;text-align:right">
+            <div style="font-size:10px;color:#7fa0be;margin-bottom:4px">진행률</div>
+            <div style="font-size:24px;font-weight:700;color:${lvDef?lvDef.color:'var(--accent)'}">${Math.round((detectedLevel/15)*100)}%</div>
+            <div style="width:80px;height:4px;background:var(--border);border-radius:2px;margin-top:5px">
+              <div style="height:100%;width:${Math.round((detectedLevel/15)*100)}%;background:${lvDef?lvDef.color:'var(--accent)'};border-radius:2px;transition:width .6s ease"></div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-size:13.5px;line-height:1.9;color:#ffffff">
+          ${formatAIResponse(reply.replace(/레벨 번호\(숫자만\)\s*:\s*\d+/g,''))}
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button onclick="saveQlToNote()" class="msg-act-btn">📒 노트에 저장</button>
+          <button onclick="copyQlResult()" class="msg-act-btn">📋 복사</button>
+        </div>
+      </div>`;
+  } catch(e) {
+    showErrorResult('qlResult', e);
+  }
+
+  setLoadingState('qlBtn', 'qlLoading', false, '🎯 레벨 분석하기');
+}
+
+function renderQlHistory() {
+  const el = document.getElementById('qlHistory');
+  if (!qlHistory.length) {
+    el.innerHTML = '<div style="text-align:center;color:#7fa0be;font-size:12px;padding:20px 10px;line-height:1.7">아직 분석 기록이 없습니다.</div>';
+    return;
+  }
+  const lvColors = {};
+  QL_LEVELS.forEach(l => lvColors[l.lv] = l.color);
+  el.innerHTML = qlHistory.map((h,i) => `
+    <div onclick="loadQlHistory(${i})" style="
+      background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+      padding:10px 11px;margin-bottom:6px;cursor:pointer;transition:border-color .2s;position:relative
+    " onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
+        <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;background:${(lvColors[h.level]||'#888')+'22'};color:${lvColors[h.level]||'var(--text2)'}">Lv.${h.level} ${escHtml(h.levelName)}</span>
+      </div>
+      <div style="font-size:12px;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:16px">${escHtml(h.input)}</div>
+      <div style="font-size:10px;color:#7fa0be;margin-top:3px">${escHtml(h.date || "")}</div>
+      <button onclick="deleteQlHistory(event,${i})" style="position:absolute;right:7px;top:7px;opacity:0;background:none;border:none;color:var(--red);cursor:pointer;font-size:11px;padding:2px 4px"
+        onmouseover="this.style.opacity='1'" class="ql-del">✕</button>
+    </div>`).join('');
+  el.querySelectorAll('[onclick^="loadQlHistory"]').forEach(c => {
+    c.addEventListener('mouseenter', () => { const b=c.querySelector('.ql-del'); if(b) b.style.opacity='1'; });
+    c.addEventListener('mouseleave', () => { const b=c.querySelector('.ql-del'); if(b) b.style.opacity='0'; });
+  });
+}
+
+function loadQlHistory(idx) {
+  const h = qlHistory[idx];
+  if (!h) return;
+  document.getElementById('qlInput').value = h.fullInput || h.input;
+  const lvDef = QL_LEVELS.find(l => l.lv === h.level);
+  renderQlLevelMap(h.level);
+  document.getElementById('qlResult').innerHTML = `
+    <div style="animation:fadeUp .3s ease">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding:16px 20px;background:var(--bg2);border-radius:12px;border:1px solid ${lvDef?lvDef.color+'44':'var(--border)'}">
+        <div style="font-size:36px">${lvDef?lvDef.icon:'🎯'}</div>
+        <div>
+          <div style="font-size:11px;color:#7fa0be;margin-bottom:3px">저장된 분석 결과 · ${escHtml(h.date || "")}</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:22px;font-weight:700;color:${lvDef?lvDef.color:'var(--accent)'}">Lv.${h.level} ${lvDef?lvDef.name:''}</div>
+        </div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-size:13.5px;line-height:1.9;color:#ffffff">
+        ${formatAIResponse(h.result)}
+      </div>
+    </div>`;
+}
+
+function deleteQlHistory(e, idx) {
+  e.stopPropagation();
+  qlHistory.splice(idx, 1);
+  localStorage.setItem('rtos_ql_history', JSON.stringify(qlHistory));
+  renderQlHistory();
+}
+
+function clearQlHistory() {
+  if (!confirm('모든 분석 기록을 삭제하시겠습니까?')) return;
+  qlHistory = [];
+  localStorage.setItem('rtos_ql_history', JSON.stringify(qlHistory));
+  renderQlHistory();
+  document.getElementById('qlResult').innerHTML = '';
+  renderQlLevelMap();
+}
+
+function exportQlHistory() {
+  if (!qlHistory.length) { showToast('내보낼 기록이 없습니다'); return; }
+  const txt = qlHistory.map((h,i) => `[${ i+1}] Lv.${h.level} ${escHtml(h.levelName)} — ${escHtml(h.date || "")}\n질문: ${escHtml(h.fullInput||h.input)}\n\n${h.result}\n\n${'─'.repeat(60)}`).join('\n\n');
+  downloadFile('# 질문 레벨 분석 기록\n\n' + txt, '질문레벨분석기록.txt');
+}
+
+function saveQlToNote() {
+  const resultEl = document.getElementById('qlResult');
+  if (!resultEl || !currentQlLevel) return;
+  const text = resultEl.innerText || resultEl.textContent;
+  const lvDef = QL_LEVELS.find(l => l.lv === currentQlLevel);
+  const id = Date.now().toString();
+  notes.unshift({
+    id, title: `질문 레벨 분석 — Lv.${currentQlLevel} ${lvDef?lvDef.name:''}`,
+    content: text, type: 'analysis', bookTag: '질문 레벨 분석',
+    createdAt: new Date().toLocaleDateString('ko-KR'), updatedAt: new Date().toLocaleString('ko-KR')
+  });
+  saveNotes(); renderNoteList();
+  showToast('📒 노트에 저장되었습니다');
+}
+
+function copyQlResult() {
+  const el = document.getElementById('qlResult');
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText || el.textContent).then(() => showToast('📋 복사되었습니다'));
+}
+
+// 초기 레벨맵 렌더
+
+
+
+// ─── NOTE: SAVE FROM CHAT ─────────────────────────────────
+function saveAiToNote(msgId) {
+  const el = document.getElementById(msgId);
+  if (!el) return;
+  const text = el.innerText || el.textContent;
+  const session = sessions.find(x => x.id === currentSessionId);
+  const bookTitle = session ? session.title : '독서 분석';
+  const id = Date.now().toString();
+  notes.unshift({
+    id, title: bookTitle.slice(0,40) + ' — AI 분석',
+    content: text, type: 'analysis',
+    bookTag: bookTitle,
+    createdAt: new Date().toLocaleDateString('ko-KR'),
+    updatedAt: new Date().toLocaleString('ko-KR')
+  });
+  saveNotes(); renderNoteList();
+  showToast('📒 독서 노트에 저장되었습니다');
+}
+
+function copyAiMsg(msgId) {
+  const el = document.getElementById(msgId);
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText || el.textContent)
+    .then(() => showToast('📋 클립보드에 복사되었습니다'));
+}
+
+// ─── NOTES CRUD ──────────────────────────────────────────
+function saveNotes() { localStorage.setItem('rtos_notes', JSON.stringify(notes)); }
+
+function createNote() {
+  const id = Date.now().toString();
+  notes.unshift({ id, title:'새 노트', content:'', type:'memo', bookTag:'',
+    createdAt: new Date().toLocaleDateString('ko-KR'), updatedAt: new Date().toLocaleString('ko-KR') });
+  saveNotes();
+  switchPage('notes');
+  openNote(id);
+  // 제목 입력칸 포커스
+  setTimeout(() => {
+    const t = document.getElementById('noteTitleInput');
+    if (t) { t.focus(); t.select(); }
+  }, 100);
+}
+
+function openNote(id) {
+  currentNoteId = id;
+  const n = notes.find(x => x.id === id);
+  if (!n) return;
+  // 단일 컬럼: 목록 숨기고 에디터 표시
+  const listPanel = document.getElementById('noteListPanel');
+  const ec = document.getElementById('noteEditorContent');
+  const placeholder = document.getElementById('noteEditorPlaceholder');
+  if (listPanel) listPanel.style.display = 'none';
+  if (placeholder) placeholder.style.display = 'none';
+  if (ec) { ec.style.display = 'flex'; ec.style.flexDirection = 'column'; }
+  document.getElementById('noteTitleInput').value = n.title || '';
+  document.getElementById('noteTypeSelect').value = n.type || 'memo';
+  document.getElementById('noteBookTag').value = n.bookTag || '';
+  document.getElementById('noteContent').value = n.content || '';
+  document.getElementById('noteEditedAt').textContent = '최종 저장: ' + n.updatedAt;
+  document.getElementById('noteBookTagDisplay').textContent = n.bookTag ? '📖 ' + n.bookTag : '';
+  updateNoteFooter();
+  renderNoteList();
+}
+
+function closeNoteEditor() {
+  const listPanel = document.getElementById('noteListPanel');
+  const ec = document.getElementById('noteEditorContent');
+  if (listPanel) listPanel.style.display = 'block';
+  if (ec) ec.style.display = 'none';
+  currentNoteId = null;
+  renderNoteList();
+}
+
+function saveCurrentNote() {
+  if (!currentNoteId) return;
+  const n = notes.find(x => x.id === currentNoteId);
+  if (!n) return;
+  n.title = document.getElementById('noteTitleInput').value || '제목 없음';
+  n.content = document.getElementById('noteContent').value;
+  n.type = document.getElementById('noteTypeSelect').value;
+  n.bookTag = document.getElementById('noteBookTag').value;
+  n.updatedAt = new Date().toLocaleString('ko-KR');
+  saveNotes(); renderNoteList();
+  document.getElementById('noteEditedAt').textContent = '최종 저장: ' + n.updatedAt;
+  document.getElementById('noteBookTagDisplay').textContent = n.bookTag ? '📖 ' + n.bookTag : '';
+  showToast('💾 저장되었습니다');
+}
+
+function deleteCurrentNote() {
+  if (!currentNoteId || !confirm('이 노트를 삭제하시겠습니까?')) return;
+  notes = notes.filter(n => n.id !== currentNoteId);
+  currentNoteId = null;
+  saveNotes(); renderNoteList();
+  closeNoteEditor();
+}
+
+function exportNote() {
+  if (!currentNoteId) return;
+  const n = notes.find(x => x.id === currentNoteId);
+  if (!n) return;
+  const txt = `# ${escHtml(n.title)}\n📖 책: ${n.bookTag||'없음'} | 유형: ${n.type} | 날짜: ${n.updatedAt}\n${'─'.repeat(50)}\n\n${n.content}`;
+  const blob = new Blob([txt], { type:'text/plain;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (n.title||'노트').replace(/[/\\?%*:|"<>]/g,'_') + '.txt';
+  a.click();
+}
+
+function setNoteFilter(el) {
+  noteFilterType = el.dataset.type;
+  document.querySelectorAll('.nf-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderNoteList();
+}
+
+function updateNoteFooter() {
+  const c = (document.getElementById('noteContent').value || '').length;
+  document.getElementById('noteCharCount').textContent = c.toLocaleString() + '자';
+}
+
+function renderNoteList() {
+  const el = document.getElementById('noteItems');
+  if (!el) return;
+  // 목록 패널 표시 상태 유지 (에디터가 열려있지 않을 때)
+  if (!currentNoteId) {
+    const lp = document.getElementById('noteListPanel');
+    const ec = document.getElementById('noteEditorContent');
+    if (lp) lp.style.display = 'block';
+    if (ec) ec.style.display = 'none';
+  }
+  const q = (document.getElementById('notesSearch')?.value || '').toLowerCase();
+  const typeBadge = { analysis:'📊 분석', memo:'📝 메모', review:'💡 감상', task:'✅ 과제' };
+  const badgeColor = { analysis:'rgba(91,155,213,.15)', memo:'rgba(76,175,135,.15)', review:'rgba(155,127,212,.15)', task:'rgba(212,107,107,.15)' };
+  const badgeText = { analysis:'var(--blue)', memo:'var(--green)', review:'var(--purple)', task:'var(--red)' };
+
+  const filtered = notes.filter(n => {
+    const mt = noteFilterType === 'all' || n.type === noteFilterType;
+    const mq = !q || (n.title||'').toLowerCase().includes(q) || (n.content||'').toLowerCase().includes(q) || (n.bookTag||'').toLowerCase().includes(q);
+    return mt && mq;
+  });
+
+  if (!filtered.length) {
+    el.innerHTML = '';
+    const noteEmptyMsg = document.getElementById('noteEmptyMsg');
+    if (noteEmptyMsg) noteEmptyMsg.style.display = 'block';
+    return;
+  }
+  const _nem = document.getElementById('noteEmptyMsg');
+  if (_nem) _nem.style.display = 'none';
+
+  el.innerHTML = filtered.map(n => `
+    <div class="note-card-item ${n.id===currentNoteId?'active':''}" onclick="openNote('${n.id}')">
+      <div style="font-size:12px;font-weight:700;color:#ffffff;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:18px">${escHtml(n.title)}</div>
+      <div style="font-size:11px;color:#7fa0be;line-height:1.5;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-bottom:5px">${escHtml((n.content||'').slice(0,100))}</div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:10px;color:#7fa0be;flex-wrap:wrap">
+        <span style="font-size:9px;padding:2px 6px;border-radius:20px;font-weight:700;background:${badgeColor[n.type]||badgeColor.memo};color:${badgeText[n.type]||badgeText.memo}">${typeBadge[n.type]||'📝 메모'}</span>
+        ${n.bookTag ? `<span>📖 ${escHtml(n.bookTag)}</span>` : ''}
+        <span style="margin-left:auto">${n.updatedAt||n.createdAt}</span>
+      </div>
+      <button onclick="deleteNoteById(event,'${n.id}')" style="position:absolute;right:7px;top:7px;opacity:0;background:none;border:none;color:var(--red);cursor:pointer;font-size:12px;padding:2px 4px;transition:opacity .2s" class="ndel-btn">✕</button>
+    </div>`).join('');
+
+  el.querySelectorAll('.note-card-item').forEach(c => {
+    c.addEventListener('mouseenter', () => { const b=c.querySelector('.ndel-btn'); if(b) b.style.opacity='1'; });
+    c.addEventListener('mouseleave', () => { const b=c.querySelector('.ndel-btn'); if(b) b.style.opacity='0'; });
+  });
+}
+
+function deleteNoteById(e, id) {
+  e.stopPropagation();
+  if (!confirm('이 노트를 삭제하시겠습니까?')) return;
+  notes = notes.filter(n => n.id !== id);
+  if (currentNoteId === id) {
+    currentNoteId = null;
+    document.getElementById('noteEditorPlaceholder').style.display = 'flex';
+    document.getElementById('noteEditorContent').style.display = 'none';
+  }
+  saveNotes(); renderNoteList();
+}
+
+
+
+function showToast(msg) {
+  const el = document.getElementById('saveToast');
+  el.textContent = msg; el.style.opacity = '1';
+  setTimeout(() => el.style.opacity = '0', 2200);
+}
+
+// Ctrl+S quick save
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey||e.metaKey) && e.key==='s') { e.preventDefault(); if(currentNoteId) saveCurrentNote(); }
+});
+
+// ─── OPPOSITE THOUGHT SYSTEM ─────────────────────────────
+// (AppState에서 관리: let oppHistory)
+// (AppState에서 관리: let selectedAxis)
+
+function selectAxis(el) {
+  selectedAxis = el.dataset.axis;
+  document.querySelectorAll('.opp-axis').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function insertOppExample(text) {
+  document.getElementById('oppInput').value = text;
+  document.getElementById('oppInput').focus();
+}
+
+async function analyzeOpposite() {
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); return; }
+  const text = document.getElementById('oppInput').value.trim();
+  if (!text) return;
+
+  document.getElementById('oppResult').innerHTML = '';
+  document.getElementById('oppVsBanner').style.display = 'none';
+  setLoadingState('oppBtn', 'oppLoading', true, '⚔️ 반대 사상 탐색');
+
+  const axisNote = selectedAxis !== 'auto' ? `대결 축: ${selectedAxis}` : '가장 적합한 대결 축을 자동 선택';
+
+  const loadingTexts = ['반대 사상 탐색 중...', '충돌하는 도서 검색 중...', '사상 비교 분석 중...', '사고 확장 질문 생성 중...'];
+  let li = 0;
+  const lt = setInterval(() => { const el=document.getElementById('oppLoadingText'); if(el) el.textContent=loadingTexts[li++ % loadingTexts.length]; }, 1500);
+
+  const prompt = `다음 책/주장/사상을 분석하고 반대 사상 탐색 시스템을 수행하세요.
+
+입력: "${text}"
+${axisNote}
+
+반드시 아래 7단계 형식을 정확히 따르세요:
+
+# 【① 현재 주장 분석】
+▪ 저자의 핵심 주장 :
+▪ 핵심 가치 :
+▪ 핵심 전제 (당연하게 여기는 가정) :
+
+---
+
+# 【② 반대 주장 생성】
+현재 주장과 정면 충돌하는 반대 주장을 3가지 생성하세요.
+대결 구조를 명확히 표시하세요. (예: 개인의 자유 ↔ 공동체의 질서)
+
+---
+
+# 【③ 반대 관점 탐색】
+현재 주장과 반대되는 철학적·사회적·역사적 관점을 구체적으로 2~3가지 제시하세요.
+
+---
+
+# 【④ 반대 해석 탐색】
+같은 현상이나 사실을 완전히 반대로 해석하는 방식을 2~3가지 제시하세요.
+
+---
+
+# 【⑤ 반대 책 추천】
+실제로 존재하는 책을 2권 추천하세요. (반드시 실존 도서)
+각 책에 대해:
+▪ 책 제목 :
+▪ 저자 :
+▪ 왜 반대되는가 :
+▪ 핵심 차이점 :
+
+---
+
+# 【⑥ 사상 비교】
+현재 입력된 사상 VS 가장 대표적인 반대 사상을 비교하세요.
+
+| 항목 | 현재 사상 | 반대 사상 |
+|------|----------|----------|
+| 인간관 | | |
+| 자유관 | | |
+| 사회관 | | |
+| 윤리관 | | |
+| 행복관 | | |
+| 삶의 목적 | | |
+
+(표 형식 그대로 작성)
+
+---
+
+# 【⑦ 사고 확장 질문】
+▪ 어느 주장에 더 동의하는가?
+▪ 왜 그렇게 생각하는가?
+▪ 두 주장 모두 맞을 가능성은?
+▪ 어떤 상황에서 각각의 주장이 타당한가?
+▪ 나는 어떤 전제를 당연하게 생각하고 있는가?
+
+---
+
+마지막 줄에 반드시: VS_PAIR: [현재사상 핵심어] ↔ [반대사상 핵심어]`;
+
+  try {
+    const model = document.getElementById('modelSelect').value;
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+      body: JSON.stringify({ model, messages: [{ role:'user', content:prompt }], max_tokens:2500, temperature:0.75 })
+    });
+    if (!res.ok) { const e=await res.json(); throw new Error(e.error?.message||`API 오류 (${res.status})`); }
+    const data = await res.json();
+    const reply = data.choices[0].message.content;
+
+    // VS 배너 파싱
+    const vsMatch = reply.match(/VS_PAIR:\s*(.+?)\s*↔\s*(.+)/);
+    const leftTag = vsMatch ? vsMatch[1].trim() : '현재 사상';
+    const rightTag = vsMatch ? vsMatch[2].trim() : '반대 사상';
+    const cleanReply = reply.replace(/VS_PAIR:.+/g, '').trim();
+
+    // 히스토리 저장
+    oppHistory.unshift({
+      id: Date.now().toString(),
+      input: text.slice(0,50) + (text.length>50?'...':''),
+      fullInput: text,
+      leftTag, rightTag,
+      axis: selectedAxis,
+      result: cleanReply,
+      date: new Date().toLocaleString('ko-KR')
+    });
+    localStorage.setItem('rtos_opp_history', JSON.stringify(oppHistory));
+    renderOppHistory();
+
+    // VS 배너 표시
+    document.getElementById('oppVsBanner').style.display = 'block';
+    document.getElementById('oppLeftTag').textContent = leftTag;
+    document.getElementById('oppRightTag').textContent = rightTag;
+
+    // 결과 렌더링
+    document.getElementById('oppResult').innerHTML = `
+      <div style="animation:fadeUp .35s ease">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.9;color:#ffffff">
+          ${formatOppResponse(cleanReply)}
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <button onclick="saveOppToNote()" class="msg-act-btn">📒 노트에 저장</button>
+          <button onclick="copyOppResult()" class="msg-act-btn">📋 복사</button>
+        </div>
+      </div>`;
+
+  } catch(e) {
+        showErrorResult('oppResult', e);
+  }
+
+  clearInterval(lt);
+  setLoadingState('oppBtn', 'oppLoading', false, '⚔️ 반대 사상 탐색');
+}
+
+function formatOppResponse(text) {
+  let h = escHtml(text);
+  // 단계 헤더
+  h = h.replace(/【([^】]+)】/g, '<div style="display:inline-flex;align-items:center;gap:5px;background:rgba(212,107,107,.12);border:1px solid rgba(212,107,107,.25);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:700;color:var(--red);margin:14px 0 8px">$1</div>');
+  // 섹션 헤더
+  h = h.replace(/^# (.+)$/gm,'<div style="font-family:\'Noto Serif KR\',serif;font-size:14px;font-weight:700;color:var(--accent);border-bottom:1px solid rgba(74,158,255,.2);padding-bottom:4px;margin:18px 0 10px">$1</div>');
+  // 표 처리 (마크다운 표)
+  h = h.replace(/\|(.+)\|/g, (match) => {
+    if (match.includes('---')) return '';
+    const cells = match.split('|').filter(c => c.trim());
+    const isHeader = cells[0] && cells[0].includes('항목');
+    if (isHeader) {
+      return `<tr style="background:var(--bg3)">${cells.map(c=>`<th style="padding:7px 12px;font-size:12px;color:var(--accent);text-align:left;border:1px solid var(--border);white-space:nowrap">${c.trim()}</th>`).join('')}</tr>`;
+    }
+    return `<tr>${cells.map((c,i)=>`<td style="padding:7px 12px;font-size:12px;color:${i===0?'var(--text2)':'var(--text)'};border:1px solid var(--border);vertical-align:top;line-height:1.6">${c.trim()}</td>`).join('')}</tr>`;
+  });
+  h = h.replace(/(<tr[^>]*>[\s\S]*?<\/tr>)/g, (m) => {
+    if (!m.includes('<table')) return m;
+    return m;
+  });
+  // 표 태그로 감싸기
+  h = h.replace(/((?:<tr[\s\S]*?<\/tr>\s*){2,})/g, '<table style="width:100%;border-collapse:collapse;margin:10px 0;font-size:12px">$1</table>');
+  // ↔ 강조
+  h = h.replace(/([^\n]+)\s*↔\s*([^\n<]+)/g, '<div style="display:flex;align-items:center;gap:8px;margin:6px 0;padding:8px 12px;background:var(--bg3);border-radius:8px"><span style="color:var(--blue);font-weight:700;flex:1">$1</span><span style="color:var(--red);font-weight:900;flex-shrink:0">↔</span><span style="color:var(--red);font-weight:700;flex:1;text-align:right">$2</span></div>');
+  // ▪ 항목
+  h = h.replace(/^▪ (.+)$/gm,'<div style="margin:4px 0;font-size:13px"><span style="color:var(--accent);font-weight:700">▪</span> $1</div>');
+  // 구분선
+  h = h.replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:14px 0">');
+  // Bold
+  h = h.replace(/\*\*([^*]+)\*\*/g,'<strong style="color:var(--accent2)">$1</strong>');
+  h = h.replace(/\n/g,'<br>');
+  return h;
+}
+
+function renderOppHistory() {
+  const el = document.getElementById('oppHistory');
+  if (!oppHistory.length) {
+    el.innerHTML = '<div style="text-align:center;color:#7fa0be;font-size:12px;padding:20px 10px;line-height:1.7">탐색 기록이 없습니다.</div>';
+    return;
+  }
+  el.innerHTML = oppHistory.map((h,i) => `
+    <div onclick="loadOppHistory(${i})" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 11px;margin-bottom:6px;cursor:pointer;transition:border-color .2s;position:relative"
+      onmouseover="this.style.borderColor='var(--accent)';this.querySelector('.odelbtn').style.opacity='1'"
+      onmouseout="this.style.borderColor='var(--border)';this.querySelector('.odelbtn').style.opacity='0'">
+      <div style="font-size:11px;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:18px;margin-bottom:3px">${escHtml(h.input)}</div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:10px">
+        <span style="color:var(--blue);font-weight:700">${h.leftTag||''}</span>
+        <span style="color:var(--red)">↔</span>
+        <span style="color:var(--red);font-weight:700">${h.rightTag||''}</span>
+      </div>
+      <div style="font-size:10px;color:#7fa0be;margin-top:3px">${escHtml(h.date || "")}</div>
+      <button class="odelbtn" onclick="deleteOppHistory(event,${i})" style="position:absolute;right:7px;top:7px;opacity:0;background:none;border:none;color:var(--red);cursor:pointer;font-size:11px;padding:2px 4px">✕</button>
+    </div>`).join('');
+}
+
+function loadOppHistory(idx) {
+  const h = oppHistory[idx];
+  if (!h) return;
+  document.getElementById('oppInput').value = h.fullInput || h.input;
+  document.getElementById('oppVsBanner').style.display = 'block';
+  document.getElementById('oppLeftTag').textContent = h.leftTag || '현재 사상';
+  document.getElementById('oppRightTag').textContent = h.rightTag || '반대 사상';
+  document.getElementById('oppResult').innerHTML = `
+    <div style="animation:fadeUp .3s ease">
+      <div style="font-size:11px;color:#7fa0be;margin-bottom:12px">저장된 탐색 결과 · ${escHtml(h.date || "")}</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.9;color:#ffffff">
+        ${formatOppResponse(h.result)}
+      </div>
+    </div>`;
+}
+
+function deleteOppHistory(e, idx) {
+  e.stopPropagation();
+  oppHistory.splice(idx, 1);
+  localStorage.setItem('rtos_opp_history', JSON.stringify(oppHistory));
+  renderOppHistory();
+}
+
+function clearOppHistory() {
+  if (!confirm('모든 탐색 기록을 삭제하시겠습니까?')) return;
+  oppHistory = [];
+  localStorage.setItem('rtos_opp_history', JSON.stringify(oppHistory));
+  renderOppHistory();
+  document.getElementById('oppResult').innerHTML = '';
+  document.getElementById('oppVsBanner').style.display = 'none';
+}
+
+function exportOppHistory() {
+  if (!oppHistory.length) { showToast('내보낼 기록이 없습니다'); return; }
+  const txt = oppHistory.map((h,i) =>
+    `[${i+1}] ${escHtml(h.leftTag)} ↔ ${escHtml(h.rightTag)} — ${escHtml(h.date || "")}\n입력: ${escHtml(h.fullInput||h.input)}\n\n${h.result}\n\n${'─'.repeat(60)}`
+  ).join('\n\n');
+  downloadFile('# 반대 사상 탐색 기록\n\n' + txt, '반대사상탐색기록.txt');
+}
+
+function saveOppToNote() {
+  const el = document.getElementById('oppResult');
+  if (!el) return;
+  const h = oppHistory[0];
+  const id = Date.now().toString();
+  notes.unshift({
+    id,
+    title: `반대 사상: ${h ? h.leftTag+' ↔ '+h.rightTag : '사상 비교'}`,
+    content: el.innerText || el.textContent,
+    type: 'analysis', bookTag: '반대 사상 탐색',
+    createdAt: new Date().toLocaleDateString('ko-KR'), updatedAt: new Date().toLocaleString('ko-KR')
+  });
+  saveNotes(); renderNoteList();
+  showToast('📒 노트에 저장되었습니다');
+}
+
+function copyOppResult() {
+  const el = document.getElementById('oppResult');
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText || el.textContent).then(() => showToast('📋 복사되었습니다'));
+}
+
+// 히스토리 초기 렌더
+
+
+// ─── THINKING TOOLS ENGINE ───────────────────────────────
+// (AppState에서 관리: let toolHistory)
+// (AppState에서 관리: let selectedTool)
+
+const TOOL_META = {
+  auto:        { icon:'🤖', name:'자동 추천',         color:'#c8a96e' },
+  backcasting: { icon:'🎯', name:'백캐스팅',           color:'#4caf87' },
+  actionplan:  { icon:'📋', name:'액션 플랜 매트릭스', color:'#4caf87' },
+  mindmap:     { icon:'🧠', name:'마인드맵',           color:'#5b9bd5' },
+  lotus:       { icon:'🌸', name:'연꽃만발법',         color:'#9b7fd4' },
+  qbrainstorm: { icon:'💭', name:'질문 브레인스토밍',  color:'#9b7fd4' },
+  logictree:   { icon:'🌳', name:'로직트리',           color:'#e8a84a' },
+  fivewhys:    { icon:'❓', name:'5 Whys',             color:'#e8a84a' },
+  kj:          { icon:'🗂️', name:'KJ법',              color:'#e8a84a' },
+  sixhats:     { icon:'🎩', name:'6가지 생각 모자',    color:'#d46b6b' },
+  superhero:   { icon:'🦸', name:'슈퍼히어로 기법',   color:'#d46b6b' },
+  mapmethod:   { icon:'🗺️', name:'지도 기법',         color:'#5b9bd5' },
+  possession:  { icon:'🪄', name:'사물 빙의법',        color:'#9b7fd4' },
+};
+
+const TOOL_PROMPTS = {
+  backcasting: `백캐스팅 기법을 적용하세요. 목표가 이미 달성된 미래에서 역방향으로 계획을 세웁니다.
+출력 형식:
+【목표 확인】목표를 명확히 정의하세요.
+【10년 후】그 때의 상태를 구체적으로 묘사하세요.
+【5년 후】무엇이 이루어져 있어야 하는가?
+【3년 후】핵심 전환점은?
+【1년 후】반드시 달성해야 할 것은?
+【6개월 후】중간 점검 기준은?
+【오늘 할 일】지금 당장 해야 할 첫 번째 행동 3가지`,
+
+  actionplan: `액션 플랜 매트릭스를 작성하세요.
+출력 형식 (표로 작성):
+| 목표 | 구체적 행동 | 기한 | 우선순위 | 예상 장애물 | 해결책 |
+최소 5행 이상 작성. 우선순위는 🔴긴급/🟡중요/🟢일반으로 표시.`,
+
+  mindmap: `마인드맵을 텍스트로 생성하세요.
+출력 형식:
+🎯 [중심 주제]
+├── 가지1
+│   ├── 세부1-1
+│   └── 세부1-2
+├── 가지2
+│   ├── 세부2-1
+│   └── 세부2-2
+(최소 5개 가지, 각 가지마다 2~3개 세부 항목)`,
+
+  lotus: `연꽃만발법(만다라트)을 적용하세요.
+출력 형식:
+【중심 주제】
+↓ 8개 1차 확장:
+1. / 2. / 3. / 4. / 5. / 6. / 7. / 8.
+↓ 각 1차 확장에서 8개씩 2차 확장:
+[1번 주제] → 세부 8개
+[2번 주제] → 세부 8개
+(전체 64개 아이디어 생성)`,
+
+  qbrainstorm: `질문 브레인스토밍을 실행하세요.
+규칙: 답변 생성 금지. 질문만 생성. 최소 20개.
+출력 형식:
+【기본 질문】(1~7번)
+【심화 질문】(8~14번)
+【관점 전환 질문】(15~20번)
+각 질문 앞에 번호를 붙이세요.`,
+
+  logictree: `로직트리를 작성하세요.
+출력 형식:
+【핵심 문제/주제】
+├── 원인/요소 A
+│   ├── 세부 원인 A-1
+│   │   └── 근본 원인 A-1-a
+│   └── 세부 원인 A-2
+├── 원인/요소 B
+│   ├── 세부 원인 B-1
+│   └── 세부 원인 B-2
+└── 원인/요소 C
+(최소 3단계 깊이, 3개 이상 주요 가지)`,
+
+  fivewhys: `5 Whys 기법으로 근본 원인을 분석하세요.
+출력 형식:
+【현상】문제 현상을 명확히 기술
+❓ 왜 1 : (현상의 이유)
+  → 이유 1
+❓ 왜 2 : (이유 1의 이유)
+  → 이유 2
+❓ 왜 3 : (이유 2의 이유)
+  → 이유 3
+❓ 왜 4 : (이유 3의 이유)
+  → 이유 4
+❓ 왜 5 : (이유 4의 이유)
+  → 근본 원인
+【근본 원인 요약】
+【해결 방향】`,
+
+  kj: `KJ법으로 아이디어를 정리하세요.
+출력 형식:
+【Step 1: 아이디어 수집】관련 아이디어를 15개 이상 나열
+【Step 2: 그룹화】유사한 것끼리 묶기 (그룹명: 아이디어들)
+【Step 3: 상위 개념 도출】각 그룹의 상위 개념 정의
+【Step 4: 관계 정리】그룹 간 관계와 우선순위
+【Step 5: 결론】핵심 통찰 3가지`,
+
+  sixhats: `6가지 생각 모자 기법으로 다각도로 분석하세요.
+출력 형식:
+🎩 흰 모자 (사실·데이터) : 객관적 사실만 나열
+🔴 빨간 모자 (감정·직관) : 느낌과 감정적 반응
+⚫ 검은 모자 (위험·비판) : 문제점, 리스크, 단점
+🟡 노란 모자 (장점·긍정) : 가능성, 이점, 희망
+🟢 초록 모자 (창의·대안) : 새로운 아이디어, 대안
+🔵 파란 모자 (통합·결론) : 전체 정리 및 다음 행동`,
+
+  superhero: `슈퍼히어로(위인) 기법을 적용하세요.
+아래 인물들의 관점에서 이 주제를 분석하세요:
+🏛️ 공자 : (인의예지 관점)
+🏺 소크라테스 : (산파술·질문 관점)
+⚡ 니체 : (힘에의 의지 관점)
+🍎 아인슈타인 : (창의적 사고 관점)
+📱 스티브 잡스 : (혁신·단순화 관점)
+💰 워런 버핏 : (장기적 가치 관점)
+각 인물이 이 주제에 대해 어떻게 생각하고 행동할지 구체적으로 서술하세요.`,
+
+  mapmethod: `지도 기법으로 시스템 구조를 분석하세요.
+출력 형식:
+【핵심 요소 목록】이 시스템을 구성하는 주요 요소 5~8개
+【요소 간 관계】
+요소A → (영향) → 요소B
+요소B ↔ (상호작용) ↔ 요소C
+【흐름 분석】이 시스템에서 무엇이 어떻게 흐르는가 (정보/에너지/자원)
+【피드백 루프】강화 루프와 균형 루프 분석
+【레버리지 포인트】가장 큰 변화를 만들 수 있는 개입 지점
+【시스템 통찰】전체 구조에서 얻을 수 있는 핵심 통찰`,
+
+  possession: `사물 빙의법을 적용하세요.
+입력한 주제와 관련된 사물, 개념, 또는 존재의 입장에서 생각합니다.
+출력 형식:
+【빙의 대상 선택】어떤 사물/존재의 입장에서 볼 것인가? (3가지 선택 후 각각 분석)
+예: "내가 이 책이라면?" / "내가 독자라면?" / "내가 저자의 생각이라면?"
+각 관점에서:
+- 나(이 사물/존재)는 무엇을 원하는가?
+- 나는 무엇을 두려워하는가?
+- 나는 이 상황을 어떻게 바라보는가?
+- 내가 말할 수 있다면 뭐라고 할까?
+【통합 인사이트】세 관점에서 공통으로 발견되는 핵심은?`,
+
+  auto: '' // 자동: 프롬프트 동적 생성
+};
+
+function selectTool(el) {
+  selectedTool = el.dataset.tool;
+  document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function insertToolExample(text) {
+  document.getElementById('toolInput').value = text;
+  document.getElementById('toolInput').focus();
+}
+
+async function runToolEngine() {
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); return; }
+  const text = document.getElementById('toolInput').value.trim();
+  if (!text) return;
+
+  document.getElementById('toolResult').innerHTML = '';
+  document.getElementById('toolAppliedBadge').style.display = 'none';
+  setLoadingState('toolRunBtn', 'toolLoading', true, '🧰 사고 도구 적용');
+
+  const loadTexts = ['사고 도구 분석 중...', '최적 도구 선택 중...', '도구 적용 중...', '결과 생성 중...'];
+  let li = 0;
+  const lt = setInterval(() => { const el=document.getElementById('toolLoadingText'); if(el) el.textContent=loadTexts[li++ % loadTexts.length]; }, 1400);
+
+  // 프롬프트 구성
+  let prompt;
+  if (selectedTool === 'auto') {
+    prompt = `다음 문제/목표/질문을 분석하고 가장 적합한 사고 도구를 선택하여 실제로 적용하세요.
+
+입력: "${text}"
+
+사용 가능한 도구:
+백캐스팅(목표설계) / 액션플랜 매트릭스(실행계획) / 마인드맵(사고확장) / 연꽃만발법(아이디어창출) / KJ법(아이디어정리) / 로직트리(원인분석) / 5 Whys(근본원인) / 6가지 생각 모자(관점전환) / 슈퍼히어로 기법(인물관점) / 지도 기법(시스템이해) / 사물 빙의법(창의) / 질문 브레인스토밍(질문생성)
+
+반드시 다음 형식으로 출력하세요:
+
+# 【문제 진단】
+이 입력에서 가장 부족한 것은? (목표/원인분석/아이디어/구조이해/실행계획/관점 중 선택) + 이유
+
+# 【추천 도구】
+▪ 1순위: [도구명] — 추천 이유
+▪ 2순위: [도구명] — 추천 이유  
+▪ 연결 순서: 도구A → 도구B → 도구C (복합 사용 시)
+
+# 【[1순위 도구명] 적용 결과】
+(1순위 도구를 실제로 적용한 완전한 결과 생성)
+
+# 【[2순위 도구명] 보완 적용】
+(2순위 도구를 간략히 적용)
+
+# 【다음 행동 제안】
+이 도구 적용 결과를 바탕으로 지금 당장 할 수 있는 행동 3가지
+
+TOOL_USED: [선택한 1순위 도구의 영문 키: backcasting/actionplan/mindmap/lotus/qbrainstorm/logictree/fivewhys/kj/sixhats/superhero/mapmethod/possession 중 하나]`;
+  } else {
+    const meta = TOOL_META[selectedTool];
+    const toolPromptDetail = TOOL_PROMPTS[selectedTool];
+    prompt = `다음 문제/목표/질문에 ${meta.name} 기법을 적용하세요.
+
+입력: "${text}"
+
+${toolPromptDetail}
+
+적용 후 반드시 다음을 추가하세요:
+# 【핵심 인사이트】
+이 도구 적용에서 얻은 가장 중요한 통찰 3가지
+
+# 【다음 행동 제안】
+지금 당장 할 수 있는 행동 3가지
+
+TOOL_USED: ${selectedTool}`;
+  }
+
+  try {
+    const model = document.getElementById('modelSelect').value;
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+      body: JSON.stringify({ model, messages:[{ role:'user', content:prompt }], max_tokens:2200, temperature:0.72 })
+    });
+    if (!res.ok) { const e=await res.json(); throw new Error(e.error?.message||`API 오류 (${res.status})`); }
+    const data = await res.json();
+    const reply = data.choices[0].message.content;
+
+    // 사용된 도구 파싱
+    const tuMatch = reply.match(/TOOL_USED:\s*(\w+)/);
+    const usedTool = tuMatch ? tuMatch[1] : selectedTool;
+    const cleanReply = reply.replace(/TOOL_USED:\s*\w+/g,'').trim();
+    const meta = TOOL_META[usedTool] || TOOL_META.auto;
+
+    // 히스토리 저장
+    toolHistory.unshift({
+      id: Date.now().toString(),
+      input: text.slice(0,50)+(text.length>50?'...':''),
+      fullInput: text,
+      tool: usedTool, toolName: meta.name, toolIcon: meta.icon,
+      result: cleanReply,
+      date: new Date().toLocaleString('ko-KR')
+    });
+    localStorage.setItem('rtos_tool_history', JSON.stringify(toolHistory));
+    renderToolHistory();
+
+    // 배지 표시
+    const badge = document.getElementById('toolAppliedBadge');
+    badge.style.display = 'flex';
+    document.getElementById('toolBadgeContent').innerHTML = `
+      <div style="font-size:18px">${meta.icon}</div>
+      <div style="font-size:12px;font-weight:700;color:${meta.color}">${meta.name}</div>
+      <div style="font-size:11px;color:#7fa0be;margin-left:4px">적용 완료</div>`;
+
+    // 결과 렌더
+    document.getElementById('toolResult').innerHTML = `
+      <div style="animation:fadeUp .35s ease">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--bg2);border-radius:12px;border:1px solid ${meta.color}44;margin-bottom:16px">
+          <div style="font-size:28px">${meta.icon}</div>
+          <div>
+            <div style="font-size:10px;color:#7fa0be;margin-bottom:2px">적용된 사고 도구</div>
+            <div style="font-size:17px;font-weight:700;color:${meta.color};font-family:'Noto Serif KR',serif">${meta.name}</div>
+          </div>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.9;color:#ffffff">
+          ${formatToolResponse(cleanReply)}
+        </div>
+      </div>`;
+
+  } catch(e) {
+        showErrorResult('toolResult', e);
+  }
+
+  clearInterval(lt);
+  setLoadingState('toolRunBtn', 'toolLoading', false, '🧰 사고 도구 적용');
+}
+
+function formatToolResponse(text) {
+  let h = escHtml(text);
+  // 단계 헤더 【】
+  h = h.replace(/【([^】]+)】/g,'<div style="display:inline-flex;align-items:center;gap:5px;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:700;color:var(--accent);margin:14px 0 8px">$1</div>');
+  // 섹션 헤더
+  h = h.replace(/^# (.+)$/gm,'<div style="font-family:\'Noto Serif KR\',serif;font-size:14px;font-weight:700;color:var(--accent);border-bottom:1px solid rgba(74,158,255,.2);padding-bottom:4px;margin:18px 0 10px">$1</div>');
+  // 이모지 모자 강조 (6가지 생각 모자)
+  h = h.replace(/(🎩|🔴|⚫|🟡|🟢|🔵)\s*([^:<br]+)/g,'<div style="margin:8px 0;padding:8px 12px;background:var(--bg3);border-radius:8px;font-weight:700;font-size:13px">$1 $2</div>');
+  // 트리 구조 (마인드맵·로직트리)
+  h = h.replace(/^(├──|└──|│\s+├──|│\s+└──)(.+)$/gm,'<div style="font-family:monospace;font-size:12.5px;color:#c8d8ec;margin:2px 0;padding-left:4px">$1<span style="color:#ffffff">$2</span></div>');
+  // 표 처리
+  h = h.replace(/\|(.+)\|/g, match => {
+    if (match.includes('---')) return '';
+    const cells = match.split('|').filter(c => c.trim());
+    const isHdr = cells.some(c => ['목표','구체적','기한','우선순위','예상'].some(k => c.includes(k)));
+    if (isHdr) return `<tr style="background:var(--bg3)">${cells.map(c=>`<th style="padding:7px 11px;font-size:11px;color:var(--accent);text-align:left;border:1px solid var(--border);white-space:nowrap">${c.trim()}</th>`).join('')}</tr>`;
+    return `<tr>${cells.map((c,i)=>`<td style="padding:7px 11px;font-size:12px;color:${i===0?'var(--text2)':'var(--text)'};border:1px solid var(--border);vertical-align:top;line-height:1.6">${c.trim()}</td>`).join('')}</tr>`;
+  });
+  h = h.replace(/((?:<tr[\s\S]*?<\/tr>\s*){2,})/g,'<table style="width:100%;border-collapse:collapse;margin:12px 0">$1</table>');
+  // 화살표 흐름
+  h = h.replace(/→/g,'<span style="color:var(--accent);font-weight:700"> → </span>');
+  h = h.replace(/↓/g,'<div style="text-align:center;color:var(--accent);font-size:16px;margin:4px 0">↓</div>');
+  // ❓ Why 단계
+  h = h.replace(/^❓ (왜 \d+.*)$/gm,'<div style="margin:8px 0;padding:8px 12px;background:rgba(74,158,255,.06);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-weight:700;color:var(--accent)">❓ $1</div>');
+  // ▪ 항목
+  h = h.replace(/^▪ (.+)$/gm,'<div style="margin:4px 0;font-size:13px"><span style="color:var(--accent);font-weight:700">▪</span> $1</div>');
+  // 우선순위 색상
+  h = h.replace(/🔴긴급/g,'<span style="color:var(--red);font-weight:700">🔴 긴급</span>');
+  h = h.replace(/🟡중요/g,'<span style="color:#e8c96e;font-weight:700">🟡 중요</span>');
+  h = h.replace(/🟢일반/g,'<span style="color:var(--green);font-weight:700">🟢 일반</span>');
+  // Bold
+  h = h.replace(/\*\*([^*]+)\*\*/g,'<strong style="color:var(--accent2)">$1</strong>');
+  h = h.replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:14px 0">');
+  h = h.replace(/\n/g,'<br>');
+  return h;
+}
+
+function renderToolHistory() {
+  const el = document.getElementById('toolHistory');
+  if (!toolHistory.length) {
+    el.innerHTML = '<div style="text-align:center;color:#7fa0be;font-size:11px;padding:14px 8px;line-height:1.6">아직 기록이 없습니다.</div>';
+    return;
+  }
+  el.innerHTML = toolHistory.map((h,i) => `
+    <div onclick="loadToolHistory(${i})" style="background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:8px 10px;margin-bottom:5px;cursor:pointer;transition:border-color .2s;position:relative"
+      onmouseover="this.style.borderColor='var(--accent)';this.querySelector('.tdelbtn').style.opacity='1'"
+      onmouseout="this.style.borderColor='var(--border)';this.querySelector('.tdelbtn').style.opacity='0'">
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:2px">
+        <span style="font-size:12px">${h.toolIcon||'🧰'}</span>
+        <span style="font-size:10px;font-weight:700;color:var(--accent)">${h.toolName||'도구'}</span>
+      </div>
+      <div style="font-size:11px;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:16px">${escHtml(h.input)}</div>
+      <div style="font-size:10px;color:#7fa0be;margin-top:2px">${escHtml(h.date || "")}</div>
+      <button class="tdelbtn" onclick="deleteToolHistory(event,${i})" style="position:absolute;right:6px;top:6px;opacity:0;background:none;border:none;color:var(--red);cursor:pointer;font-size:10px;padding:2px">✕</button>
+    </div>`).join('');
+}
+
+function loadToolHistory(idx) {
+  const h = toolHistory[idx];
+  if (!h) return;
+  document.getElementById('toolInput').value = h.fullInput || h.input;
+  const meta = TOOL_META[h.tool] || TOOL_META.auto;
+  const badge = document.getElementById('toolAppliedBadge');
+  badge.style.display = 'flex';
+  document.getElementById('toolBadgeContent').innerHTML = `
+    <div style="font-size:18px">${meta.icon}</div>
+    <div style="font-size:12px;font-weight:700;color:${meta.color}">${meta.name}</div>
+    <div style="font-size:11px;color:#7fa0be;margin-left:4px">· ${escHtml(h.date || "")}</div>`;
+  document.getElementById('toolResult').innerHTML = `
+    <div style="animation:fadeUp .3s ease">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.9;color:#ffffff">
+        ${formatToolResponse(h.result)}
+      </div>
+    </div>`;
+}
+
+function deleteToolHistory(e, idx) {
+  e.stopPropagation();
+  toolHistory.splice(idx, 1);
+  localStorage.setItem('rtos_tool_history', JSON.stringify(toolHistory));
+  renderToolHistory();
+}
+
+function clearToolHistory() {
+  if (!confirm('모든 적용 기록을 삭제하시겠습니까?')) return;
+  toolHistory = [];
+  localStorage.setItem('rtos_tool_history', JSON.stringify(toolHistory));
+  renderToolHistory();
+  document.getElementById('toolResult').innerHTML = '';
+  document.getElementById('toolAppliedBadge').style.display = 'none';
+}
+
+function exportToolHistory() {
+  if (!toolHistory.length) { showToast('내보낼 기록이 없습니다'); return; }
+  const txt = toolHistory.map((h,i) =>
+    `[${i+1}] ${h.toolIcon} ${escHtml(h.toolName)} — ${escHtml(h.date || "")}\n입력: ${escHtml(h.fullInput||h.input)}\n\n${h.result}\n\n${'─'.repeat(60)}`
+  ).join('\n\n');
+  downloadFile('# 사고 도구 적용 기록\n\n' + txt, '사고도구적용기록.txt');
+}
+
+function saveToolToNote() {
+  const el = document.getElementById('toolResult');
+  if (!el) return;
+  const h = toolHistory[0];
+  const id = Date.now().toString();
+  notes.unshift({
+    id,
+    title: `${h ? h.toolIcon+' '+h.toolName : '🧰 사고 도구'} — ${h ? h.input : ''}`,
+    content: el.innerText || el.textContent,
+    type: 'analysis', bookTag: '사고 도구',
+    createdAt: new Date().toLocaleDateString('ko-KR'), updatedAt: new Date().toLocaleString('ko-KR')
+  });
+  saveNotes(); renderNoteList();
+  showToast('📒 노트에 저장되었습니다');
+}
+
+function copyToolResult() {
+  const el = document.getElementById('toolResult');
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText || el.textContent).then(() => showToast('📋 복사되었습니다'));
+}
+
+
+
+// ─── QUESTION MAP (QMAP) ─────────────────────────────────
+// (AppState에서 관리: let qmapHistory)
+// (AppState에서 관리: let qmapDepth)
+// (AppState에서 관리: let qmapType)
+
+// 레벨별 색상
+const LV_COLORS = {
+  1:'#5b9bd5',2:'#5b9bd5',3:'#4caf87',4:'#4caf87',5:'#4caf87',
+  6:'#c8a96e',7:'#c8a96e',8:'#c8a96e',9:'#9b7fd4',10:'#9b7fd4',
+  11:'#9b7fd4',12:'#e8a84a',13:'#e8a84a',14:'#e8c98e',15:'#e8c98e'
+};
+const LV_NAMES = {
+  1:'정보',2:'이해',3:'분석',4:'비교',5:'평가',6:'적용',7:'관점',8:'해석',
+  9:'창조',10:'반대',11:'시스템',12:'전략',13:'메타',14:'존재',15:'지혜'
+};
+
+function selectQDepth(el) {
+  qmapDepth = parseInt(el.dataset.depth);
+  document.querySelectorAll('.qdepth-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function selectQType(el) {
+  qmapType = el.dataset.type;
+  document.querySelectorAll('.qtype-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function insertQMapExample(text) {
+  document.getElementById('qmapInput').value = text;
+  document.getElementById('qmapInput').focus();
+}
+
+async function generateQMap() {
+  const apiKey = localStorage.getItem('rtos_apikey');
+  if (!apiKey) { showApiModal(); return; }
+  const text = document.getElementById('qmapInput').value.trim();
+  if (!text) return;
+
+  document.getElementById('qmapResult').innerHTML = '';
+  document.getElementById('qmapInfoBar').style.display = 'none';
+  setLoadingState('qmapBtn', 'qmapLoading', true, '🗺️ 퀘스천 맵 생성');
+
+  const loadTexts = ['질문 트리 생성 중...','이해·분석 질문 구성 중...','관점·창조 질문 확장 중...','메타·지혜 질문 완성 중...'];
+  let li = 0;
+  const lt = setInterval(() => { const el=document.getElementById('qmapLoadingText'); if(el) el.textContent=loadTexts[li++ % loadTexts.length]; }, 1300);
+
+  const typeNote = qmapType !== 'all' ? `중점 유형: ${qmapType}` : '모든 유형 균형 포함';
+
+  const prompt = `다음 주제에 대한 퀘스천 맵(Question Map)을 생성하세요.
+
+주제: "${text}"
+질문 수: 최소 ${qmapDepth}개
+${typeNote}
+
+목표: 답을 찾는 것이 아니라 좋은 질문을 만드는 것. 답을 절대 제공하지 말 것.
+
+반드시 아래 형식을 따르세요:
+
+# 【중심 질문】
+이 주제의 핵심을 관통하는 가장 중요한 질문 1개를 정의하세요.
+
+---
+
+# 【질문 트리】
+
+## 🔵 이해·분석 질문 (Lv.2~3)
+각 질문 앞에 번호와 [Lv.숫자]를 붙이세요.
+최소 6개 이상.
+
+## 🟢 비교·평가 질문 (Lv.4~5)
+최소 4개 이상.
+
+## 🟡 적용·관점 질문 (Lv.6~7)
+최소 4개 이상.
+
+## 🟣 해석·창조·반대 질문 (Lv.8~10)
+최소 5개 이상.
+
+## 🔴 시스템·전략 질문 (Lv.11~12)
+최소 3개 이상.
+
+## ⚫ 메타·존재·지혜 질문 (Lv.13~15)
+최소 4개 이상.
+
+---
+
+# 【질문 간의 관계】
+위 질문들이 어떻게 연결되는지 흐름을 보여주세요.
+예: 질문 3 → 질문 7 → 질문 15 (원인에서 의미로 이어지는 흐름)
+최소 3개의 질문 연결 경로를 제시하세요.
+
+---
+
+# 【핵심 질문 추천】
+위 질문 중 가장 중요한 3개를 선택하고 왜 중요한지 한 줄로 설명하세요.
+
+---
+
+# 【사유 순서 추천】
+이 질문들을 어떤 순서로 생각하면 가장 깊은 통찰을 얻을 수 있는지 로드맵을 제시하세요.
+단계: 1단계 → 2단계 → 3단계 → 4단계 → 5단계
+
+TOTAL_Q: [총 질문 수]
+CENTER_Q: [중심 질문 한 줄 요약]`;
+
+  try {
+    const model = document.getElementById('modelSelect').value;
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type':'application/json', 'Authorization':`Bearer ${apiKey}` },
+      body: JSON.stringify({ model, messages:[{ role:'user', content:prompt }], max_tokens:3000, temperature:0.75 })
+    });
+    if (!res.ok) { const e=await res.json(); throw new Error(e.error?.message||`API 오류 (${res.status})`); }
+    const data = await res.json();
+    const reply = data.choices[0].message.content;
+
+    // 파싱
+    const totalMatch = reply.match(/TOTAL_Q:\s*(\d+)/);
+    const centerMatch = reply.match(/CENTER_Q:\s*(.+)/);
+    const totalQ = totalMatch ? totalMatch[1] : qmapDepth+'+';
+    const centerQ = centerMatch ? centerMatch[1].trim() : text;
+    const cleanReply = reply.replace(/TOTAL_Q:.+/g,'').replace(/CENTER_Q:.+/g,'').trim();
+
+    // 히스토리 저장
+    qmapHistory.unshift({
+      id: Date.now().toString(),
+      input: text.slice(0,50)+(text.length>50?'...':''),
+      fullInput: text,
+      centerQ, totalQ,
+      result: cleanReply,
+      date: new Date().toLocaleString('ko-KR')
+    });
+    localStorage.setItem('rtos_qmap_history', JSON.stringify(qmapHistory));
+    renderQMapHistory();
+
+    // 정보 바
+    const infoBar = document.getElementById('qmapInfoBar');
+    infoBar.style.display = 'flex';
+    document.getElementById('qmapCenterQ').textContent = '🎯 ' + centerQ;
+    document.getElementById('qmapQCount').textContent = '총 ' + totalQ + '개 질문';
+
+    // 결과 렌더
+    document.getElementById('qmapResult').innerHTML = `
+      <div style="animation:fadeUp .35s ease">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.95;color:#ffffff">
+          ${formatQMapResponse(cleanReply)}
+        </div>
+      </div>`;
+
+  } catch(e) {
+        showErrorResult('qmapResult', e);
+  }
+
+  clearInterval(lt);
+  setLoadingState('qmapBtn', 'qmapLoading', false, '🗺️ 퀘스천 맵 생성');
+}
+
+function formatQMapResponse(text) {
+  let h = escHtml(text);
+
+  // 섹션 헤더 # 【】
+  h = h.replace(/# 【([^】]+)】/g,'<div style="font-family:\'Noto Serif KR\',serif;font-size:15px;font-weight:700;color:var(--accent);border-bottom:1px solid rgba(74,158,255,.2);padding-bottom:5px;margin:20px 0 12px">🗺️ $1</div>');
+  // 서브 헤더 ## 이모지
+  h = h.replace(/^## ([🔵🟢🟡🟣🔴⚫].+)$/gm,'<div style="font-size:13px;font-weight:700;color:var(--accent2);margin:14px 0 8px;padding:6px 10px;background:var(--bg3);border-radius:7px;display:inline-block">$1</div>');
+  // 구분선
+  h = h.replace(/^---$/gm,'<hr style="border:none;border-top:1px solid var(--border);margin:14px 0">');
+
+  // 질문 번호 + Lv 뱃지: "1. [Lv.3] 질문내용" 형태 파싱
+  h = h.replace(/(\d+)\.\s*\[Lv\.(\d+)\]\s*(.+?)(?=<br>|$)/g, (_, num, lv, q) => {
+    const lvNum = parseInt(lv);
+    const color = LV_COLORS[lvNum] || '#888';
+    const name = LV_NAMES[lvNum] || '';
+    return `<div style="display:flex;align-items:flex-start;gap:8px;margin:5px 0;padding:7px 10px;background:var(--bg3);border-radius:8px;border-left:3px solid ${color}">
+      <span style="font-size:11px;color:#7fa0be;min-width:22px;font-weight:700">${num}.</span>
+      <span style="flex:1;font-size:13px;color:#ffffff;line-height:1.6">${q}</span>
+      <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:12px;background:${color}22;color:${color};white-space:nowrap;flex-shrink:0">Lv.${lv} ${name}</span>
+    </div>`;
+  });
+
+  // 화살표 흐름 (관계 표시)
+  h = h.replace(/질문\s*(\d+)\s*→\s*질문\s*(\d+)/g,'<span style="color:#c8d8ec">질문$1</span><span style="color:var(--accent);font-weight:700;margin:0 4px">→</span><span style="color:#c8d8ec">질문$2</span>');
+  h = h.replace(/→/g,'<span style="color:var(--accent);font-weight:700"> → </span>');
+
+  // 핵심 질문 강조 ★
+  h = h.replace(/^(★|✦|◆|▶)\s*(.+)$/gm,'<div style="padding:9px 14px;background:rgba(200,169,110,.08);border:1px solid rgba(200,169,110,.25);border-radius:8px;margin:5px 0;font-size:13px;color:#c8d8ec"><span style="color:var(--accent);font-weight:700">★</span> $2</div>');
+
+  // 사유 순서 단계
+  h = h.replace(/(\d+단계)\s*[:：]\s*(.+?)(?=<br>|$)/g,'<div style="display:flex;align-items:center;gap:8px;margin:5px 0"><span style="background:var(--accent);color:#ffffff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap">$1</span><span style="font-size:13px;color:#c8d8ec">$2</span></div>');
+
+  // ▪ 항목
+  h = h.replace(/^▪ (.+)$/gm,'<div style="margin:4px 0;font-size:13px"><span style="color:var(--accent);font-weight:700">▪</span> $1</div>');
+  // Bold
+  h = h.replace(/\*\*([^*]+)\*\*/g,'<strong style="color:var(--accent2)">$1</strong>');
+  h = h.replace(/\n/g,'<br>');
+  return h;
+}
+
+function renderQMapHistory() {
+  const el = document.getElementById('qmapHistory');
+  if (!qmapHistory.length) {
+    el.innerHTML = '<div style="text-align:center;color:#7fa0be;font-size:11px;padding:16px 8px;line-height:1.6">아직 기록이 없습니다.</div>';
+    return;
+  }
+  el.innerHTML = qmapHistory.map((h,i) => `
+    <div onclick="loadQMapHistory(${i})" style="background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:8px 10px;margin-bottom:5px;cursor:pointer;transition:border-color .2s;position:relative"
+      onmouseover="this.style.borderColor='var(--accent)';this.querySelector('.qmdelbtn').style.opacity='1'"
+      onmouseout="this.style.borderColor='var(--border)';this.querySelector('.qmdelbtn').style.opacity='0'">
+      <div style="font-size:11px;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:16px;margin-bottom:2px">${escHtml(h.input)}</div>
+      <div style="font-size:10px;color:#7fa0be">질문 ${h.totalQ}개 · ${escHtml(h.date || "")}</div>
+      <button class="qmdelbtn" onclick="deleteQMapHistory(event,${i})" style="position:absolute;right:6px;top:6px;opacity:0;background:none;border:none;color:var(--red);cursor:pointer;font-size:10px;padding:2px">✕</button>
+    </div>`).join('');
+}
+
+function loadQMapHistory(idx) {
+  const h = qmapHistory[idx];
+  if (!h) return;
+  document.getElementById('qmapInput').value = h.fullInput || h.input;
+  const infoBar = document.getElementById('qmapInfoBar');
+  infoBar.style.display = 'flex';
+  document.getElementById('qmapCenterQ').textContent = '🎯 ' + h.centerQ;
+  document.getElementById('qmapQCount').textContent = '총 ' + h.totalQ + '개 질문 · ' + h.date;
+  document.getElementById('qmapResult').innerHTML = `
+    <div style="animation:fadeUp .3s ease">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;font-size:13.5px;line-height:1.95;color:#ffffff">
+        ${formatQMapResponse(h.result)}
+      </div>
+    </div>`;
+}
+
+function deleteQMapHistory(e, idx) {
+  e.stopPropagation();
+  qmapHistory.splice(idx, 1);
+  localStorage.setItem('rtos_qmap_history', JSON.stringify(qmapHistory));
+  renderQMapHistory();
+}
+
+function clearQMapHistory() {
+  if (!confirm('모든 퀘스천 맵 기록을 삭제하시겠습니까?')) return;
+  qmapHistory = [];
+  localStorage.setItem('rtos_qmap_history', JSON.stringify(qmapHistory));
+  renderQMapHistory();
+  document.getElementById('qmapResult').innerHTML = '';
+  document.getElementById('qmapInfoBar').style.display = 'none';
+}
+
+function exportQMapHistory() {
+  if (!qmapHistory.length) { showToast('내보낼 기록이 없습니다'); return; }
+  const txt = qmapHistory.map((h,i) =>
+    `[${i+1}] ${escHtml(h.input)} (질문 ${h.totalQ}개) — ${escHtml(h.date || "")}\n중심 질문: ${h.centerQ}\n\n${h.result}\n\n${'─'.repeat(60)}`
+  ).join('\n\n');
+  downloadFile('# 퀘스천 맵 기록\n\n' + txt, '퀘스천맵기록.txt');
+}
+
+function saveQMapToNote() {
+  const el = document.getElementById('qmapResult');
+  if (!el) return;
+  const h = qmapHistory[0];
+  const id = Date.now().toString();
+  notes.unshift({
+    id,
+    title: `🗺️ 퀘스천 맵 — ${h ? h.input : '질문 트리'}`,
+    content: el.innerText || el.textContent,
+    type: 'analysis', bookTag: '퀘스천 맵',
+    createdAt: new Date().toLocaleDateString('ko-KR'), updatedAt: new Date().toLocaleString('ko-KR')
+  });
+  saveNotes(); renderNoteList();
+  showToast('📒 노트에 저장되었습니다');
+}
+
+function copyQMapResult() {
+  const el = document.getElementById('qmapResult');
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText || el.textContent).then(() => showToast('📋 복사되었습니다'));
+}
+
+
+
+
+
+
+// ─── 통합 초기화 (load 이벤트) ──────────────────────────────
+// ─── 통합 초기화 (DOM 준비 완료 시) ─────────────────────────
+window.addEventListener('load', () => {
+  // ① 설정 복원
+const savedKey   = localStorage.getItem('rtos_apikey');
+  const savedModel = localStorage.getItem('rtos_model') || 'gpt-4o';
+
+  // API 키 초기화
+  const apiInput = document.getElementById('apiKey');
+  if (apiInput && savedKey) apiInput.value = savedKey;
+  if (savedKey) {
+    setStatus('ok', 'API 키 저장됨');
+    updateApiHeaderBtn(true);
+    updateSettingsBarStatus(true);
+  } else {
+    updateApiHeaderBtn(false);
+    updateSettingsBarStatus(false);
+  }
+
+  // 모델 초기화
+  const ms = document.getElementById('modelSelect');
+  if (ms) ms.value = savedModel;
+  const mm = document.getElementById('apiKeyModal_model');
+  if (mm) mm.value = savedModel;
+
+  renderSessions();
+  renderNoteList();
+  setupScroll();
+  renderSessionQuickList();
+
+  // ② 탭 히스토리 순차 렌더 (DOM 안정성 확보)
+  setTimeout(renderQlLevelMap,       80);
+  setTimeout(renderOppHistory,      120);
+  setTimeout(renderToolHistory,     160);
+  setTimeout(renderQMapHistory,     200);
+  setTimeout(updateMobileBar,       280);
+  setTimeout(renderSessionQuickList,350);
+  setTimeout(renderDataSummary,     400);
+});
+
+// ─── 모바일 하단 바 JS ────────────────────────────────────
+function updateMobileBar() {
+  const hasKey = !!localStorage.getItem('rtos_apikey');
+  const model  = localStorage.getItem('rtos_model') || 'gpt-4o';
+  const icon   = document.getElementById('mobApiIcon');
+  const label  = document.getElementById('mobModelLabel');
+  const count  = document.getElementById('mobSessionCount');
+  const bar    = document.getElementById('mobileSessionBar');
+
+  if (!bar) return;
+
+  // API 키 상태 반영
+  if (icon) icon.textContent = hasKey ? '✅' : '🔑';
+  const apiBtn = icon ? icon.closest('.mob-btn') : null;
+  if (apiBtn) {
+    apiBtn.style.background = hasKey
+      ? 'linear-gradient(135deg,#1a8a50,#2ecc87)'
+      : 'linear-gradient(135deg,#1a6fd4,#4a9eff)';
+  }
+
+  // 모델 라벨
+  const modelShort = { 'gpt-4o':'4o', 'gpt-4o-mini':'mini',
+                        'gpt-4-turbo':'4T', 'gpt-4':'4',
+                        'gpt-3.5-turbo':'3.5' };
+  if (label) label.textContent = modelShort[model] || model;
+
+  // 세션 수
+  if (count) count.textContent = `세션(${sessions.length})`;
+
+  // 활성 모델 표시
+  document.querySelectorAll('.model-sheet-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.model === model);
+  });
+}
+
+// 모델 시트
+function showModelSheet() {
+  const el = document.getElementById('modelSheet');
+  if (el) {
+    el.style.display = 'block';
+    updateMobileBar();
+  }
+}
+function closeModelSheet() {
+  const el = document.getElementById('modelSheet');
+  if (el) el.style.display = 'none';
+}
+function selectMobileModel(btn) {
+  const model = btn.dataset.model;
+  localStorage.setItem('rtos_model', model);
+  // 사이드바 select도 동기화
+  const ms = document.getElementById('modelSelect');
+  if (ms) ms.value = model;
+  const mm = document.getElementById('apiKeyModal_model');
+  if (mm) mm.value = model;
+  updateMobileBar();
+  closeModelSheet();
+  showToast('✓ 모델 변경: ' + model);
+}
+
+// 세션 시트
+function showSessionSheet() {
+  const list = document.getElementById('sessionSheetList');
+  const el   = document.getElementById('sessionSheet');
+  if (!list || !el) return;
+
+  if (!sessions.length) {
+    list.innerHTML = '<div style="text-align:center;color:#7fa0be;font-size:13px;padding:20px">세션이 없습니다.<br>새 세션을 시작하세요.</div>';
+  } else {
+    list.innerHTML = sessions.map((s, i) => `
+      <button class="session-sheet-item ${s.id === currentSessionId ? 'active' : ''}"
+        onclick="loadSessionFromSheet('${s.id}')"
+        style="${s.id === currentSessionId ? 'border-color:rgba(74,158,255,.4);background:rgba(74,158,255,.08);' : ''}">
+        <div class="s-title">${escHtml(s.title)}</div>
+        <div class="s-meta">${s.createdAt} · ${s.messages.length}개 메시지</div>
+      </button>`).join('');
+  }
+  el.style.display = 'block';
+}
+function closeSessionSheet() {
+  const el = document.getElementById('sessionSheet');
+  if (el) el.style.display = 'none';
+}
+function loadSessionFromSheet(id) {
+  loadSession(id);
+  closeSessionSheet();
+  switchPage('chat');
+}
+
+// showApiModal 이후 모바일 바 갱신
+const _origSaveApiKeyModal = saveApiKeyModal;
+saveApiKeyModal = function() {
+  _origSaveApiKeyModal();
+  setTimeout(updateMobileBar, 300);
+};
+
+// 초기화 시 모바일 바 업데이트
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 데이터 관리 시스템
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+/** 저장 가능한 모든 키 목록 */
+const DATA_KEYS = {
+  sessions:    'rtos_sessions',
+  notes:       'rtos_notes',
+  qlHistory:   'rtos_ql_history',
+  oppHistory:  'rtos_opp_history',
+  toolHistory: 'rtos_tool_history',
+  qmapHistory: 'rtos_qmap_history',
+  apiKey:      'rtos_apikey',
+  model:       'rtos_model',
+};
+
+/** 데이터 관리 모달 열기 */
+function showDataModal() {
+  renderDataSummary();
+  document.getElementById('dataModal').classList.add('open');
+}
+
+/** 데이터 관리 모달 닫기 */
+function closeDataModal() {
+  document.getElementById('dataModal').classList.remove('open');
+}
+
+/** 현재 데이터 현황 렌더링 */
+function renderDataSummary() {
+  const el = document.getElementById('dataSummary');
+  if (!el) return;
+
+  const items = [
+    { icon: '💬', label: '대화 세션', count: sessions.length,
+      sub: sessions.reduce((acc, s) => acc + s.messages.length, 0) + '개 메시지' },
+    { icon: '📒', label: '독서 노트', count: notes.length, sub: '개 노트' },
+    { icon: '🎯', label: '질문 레벨', count: qlHistory.length, sub: '개 분석' },
+    { icon: '⚔️', label: '반대 사상', count: oppHistory.length, sub: '개 탐색' },
+    { icon: '🧰', label: '사고 도구', count: toolHistory.length, sub: '개 기록' },
+    { icon: '🗺️', label: '퀘스천 맵', count: qmapHistory.length, sub: '개 기록' },
+  ];
+
+  // 총 데이터 크기 계산
+  const totalSize = Object.values(DATA_KEYS)
+    .reduce((acc, key) => acc + (localStorage.getItem(key) || '').length, 0);
+  const sizeKB = (totalSize / 1024).toFixed(1);
+
+  el.innerHTML = items.map(item => `
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;text-align:center">
+      <div style="font-size:18px;margin-bottom:3px">${item.icon}</div>
+      <div style="font-size:18px;font-weight:700;color:var(--accent)">${item.count}</div>
+      <div style="font-size:10px;color:#7fa0be">${item.label}</div>
+      <div style="font-size:10px;color:#4d6278">${item.count > 0 ? item.sub : '없음'}</div>
+    </div>
+  `).join('') + `
+    <div style="grid-column:1/-1;background:var(--bg2);border:1px solid rgba(74,158,255,.2);border-radius:8px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#c8d8ec">총 데이터 크기</span>
+      <span style="font-size:13px;font-weight:700;color:var(--accent)">${sizeKB} KB</span>
+    </div>
+  `;
+}
+
+/**
+ * 전체 데이터를 JSON으로 내보내기
+ * 새 기기 이전 시 사용
+ */
+function exportAllData() {
+  const backup = {
+    version:   '1.0',
+    exportedAt: new Date().toLocaleString('ko-KR'),
+    appName:   '사고력 OS',
+    data: {}
+  };
+
+  Object.entries(DATA_KEYS).forEach(([key, storageKey]) => {
+    const raw = localStorage.getItem(storageKey);
+    if (raw) {
+      try { backup.data[key] = JSON.parse(raw); }
+      catch { backup.data[key] = raw; }
+    }
+  });
+
+  const json = JSON.stringify(backup, null, 2);
+  downloadFile(json, `사고력OS_백업_${new Date().toLocaleDateString('ko-KR').replace(/\./g,'-')}.json`, 'application/json;charset=utf-8');
+  showToast('💾 백업 파일이 다운로드되었습니다');
+}
+
+/**
+ * 읽기 가능한 텍스트 형식으로 내보내기
+ */
+function exportReadableData() {
+  const lines = [];
+  lines.push('# 사고력 OS — 독서 사고 기록');
+  lines.push(`내보낸 날짜: ${new Date().toLocaleString('ko-KR')}`);
+  lines.push('='.repeat(60));
+
+  // 대화 세션
+  if (sessions.length) {
+    lines.push(`
+## 💬 대화 세션 (${sessions.length}개)
+`);
+    sessions.forEach((s, i) => {
+      lines.push(`### [${i+1}] ${s.title} (${s.createdAt})`);
+      s.messages.forEach(m => {
+        lines.push(`[${m.role === 'user' ? '나' : 'AI'}] ${m.content.slice(0, 500)}${m.content.length > 500 ? '...' : ''}`);
+      });
+      lines.push('');
+    });
+  }
+
+  // 독서 노트
+  if (notes.length) {
+    lines.push(`
+## 📒 독서 노트 (${notes.length}개)
+`);
+    notes.forEach((n, i) => {
+      lines.push(`### [${i+1}] ${n.title} | ${n.type} | ${n.bookTag || '태그없음'} | ${n.updatedAt}`);
+      lines.push(n.content || '(내용 없음)');
+      lines.push('');
+    });
+  }
+
+  // 질문 레벨 분석
+  if (qlHistory.length) {
+    lines.push(`
+## 🎯 질문 레벨 분석 (${qlHistory.length}개)
+`);
+    qlHistory.forEach((h, i) => {
+      lines.push(`### [${i+1}] Lv.${h.level} ${h.levelName} | ${escHtml(h.date || "")}`);
+      lines.push(`질문: ${h.fullInput || h.input}`);
+      lines.push('');
+    });
+  }
+
+  const txt = lines.join('\n');
+  downloadFile(txt, `사고력OS_기록_${new Date().toLocaleDateString('ko-KR').replace(/\./g,'-')}.txt`);
+  showToast('📄 텍스트 파일이 다운로드되었습니다');
+}
+
+/**
+ * JSON 백업 파일 가져오기 (새 기기 복원)
+ * @param {HTMLInputElement} input
+ */
+function importAllData(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const backup = JSON.parse(e.target.result);
+
+      // 유효성 검사
+      if (!backup.data || backup.appName !== '사고력 OS') {
+        alert('올바른 사고력 OS 백업 파일이 아닙니다.');
+        return;
+      }
+
+      const count = Object.keys(backup.data).length;
+      const confirmed = confirm(
+        `📥 백업 복원 확인
+
+` +
+        `내보낸 날짜: ${backup.exportedAt}
+` +
+        `복원할 데이터: ${count}개 항목
+
+` +
+        `⚠️ 현재 데이터는 덮어쓰기됩니다.
+계속하시겠습니까?`
+      );
+      if (!confirmed) return;
+
+      // 현재 데이터 백업 (롤백용)
+      const rollback = {};
+      Object.values(DATA_KEYS).forEach(key => {
+        rollback[key] = localStorage.getItem(key);
+      });
+
+      try {
+        // 데이터 복원
+        Object.entries(DATA_KEYS).forEach(([key, storageKey]) => {
+          if (backup.data[key] !== undefined) {
+            const value = typeof backup.data[key] === 'string'
+              ? backup.data[key]
+              : JSON.stringify(backup.data[key]);
+            localStorage.setItem(storageKey, value);
+          }
+        });
+
+        // 메모리 상태 업데이트
+        sessions    = JSON.parse(localStorage.getItem('rtos_sessions') || '[]');
+        notes       = JSON.parse(localStorage.getItem('rtos_notes') || '[]');
+        qlHistory   = JSON.parse(localStorage.getItem('rtos_ql_history') || '[]');
+        oppHistory  = JSON.parse(localStorage.getItem('rtos_opp_history') || '[]');
+        toolHistory = JSON.parse(localStorage.getItem('rtos_tool_history') || '[]');
+        qmapHistory = JSON.parse(localStorage.getItem('rtos_qmap_history') || '[]');
+
+        const savedModel = localStorage.getItem('rtos_model');
+        if (savedModel) {
+          const ms = document.getElementById('modelSelect');
+          if (ms) ms.value = savedModel;
+        }
+
+        // UI 갱신
+        renderSessions();
+        renderNoteList();
+        renderSessionQuickList();
+        renderDataSummary();
+        closeDataModal();
+        showToast(`✅ 복원 완료! 세션 ${sessions.length}개, 노트 ${notes.length}개`);
+
+      } catch (restoreErr) {
+        // 복원 실패 시 롤백
+        Object.entries(rollback).forEach(([key, value]) => {
+          if (value) localStorage.setItem(key, value);
+          else localStorage.removeItem(key);
+        });
+        alert('복원 중 오류가 발생했습니다. 이전 데이터로 되돌렸습니다.');
+      }
+
+    } catch (parseErr) {
+      alert('파일을 읽을 수 없습니다. 올바른 JSON 백업 파일인지 확인하세요.');
+    }
+    // 파일 입력 초기화 (같은 파일 재선택 가능하도록)
+    input.value = '';
+  };
+  reader.readAsText(file);
+}
+
+/**
+ * 전체 데이터 초기화
+ */
+function resetAllData() {
+  if (!confirm('⚠️ 정말 모든 데이터를 삭제하시겠습니까?\n\n이 작업은 되돌릴 수 없습니다.\n삭제 전 백업을 권장합니다.')) return;
+  if (!confirm('마지막 확인: 모든 대화·노트·분석 기록이 삭제됩니다.')) return;
+
+  Object.values(DATA_KEYS).forEach(key => {
+    if (key !== 'rtos_apikey' && key !== 'rtos_model') {
+      localStorage.removeItem(key);
+    }
+  });
+
+  sessions = []; notes = []; qlHistory = []; oppHistory = []; toolHistory = []; qmapHistory = [];
+  currentSessionId = null; currentNoteId = null;
+
+  renderSessions(); renderNoteList(); renderSessionQuickList();
+  const chatArea = document.getElementById('chatArea');
+  if (chatArea) [...chatArea.querySelectorAll('.msg')].forEach(el => el.remove());
+  const welcome = document.getElementById('welcome');
+  if (welcome) welcome.style.display = 'block';
+
+  renderDataSummary();
+  showToast('🗑️ 모든 데이터가 초기화되었습니다');
+}
+
+// 모달 외부 클릭 닫기
+document.addEventListener('DOMContentLoaded', () => {
+  const dm = document.getElementById('dataModal');
+  if (dm) dm.addEventListener('click', function(e) { if (e.target === this) closeDataModal(); });
+});
+
+</script>
+</body>
+</html>
